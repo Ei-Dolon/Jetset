@@ -1,0 +1,58 @@
+SEO Check / Audit for:
+jetsetlux.com	61%
+
+Website general content SEO needs to be addressed.
+
+META tags
+Ensure all completed correctly - correct format and length.
+meta description missing
+
+Page Headings - Review and improve headings structure.
+Ensure headings used correctly to logically sub divide a page, header number should indicate inportance or detail level of information. Ensure headings are long enough, and the words within them also occur in that sections content text.
+H1 is too short.
+Heading levels are missing, should not skip levels, instead reformat css to correctly show each level.
+H4 missing.
+
+Images
+Missing alt attribute - FIX
+Search engines index images via their alt attribute - simple way to get more search terms and higher quantity of vital terms into search engine results.
+
+Page content - word number
+require at least 800 words in a page
+jetsetlux.com main page 283 words
+
+
+Website performance is bad:
+
+The page response time is slow (1:35 seconds). The response time should be less than 0.4 seconds. Slow websites are bad for search engine bots and also result in bad user experience.
+
+This page loads 33 CSS files. This may affect the page load time negatively.
+
+This page loads 32 JavaScript files. This may affect the load time negatively.
+
+
+Additional tasks:
+Backlinks missing - auds navigation through website.
+
+Promote website in social media.
+
+
+Robots.txt
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Sitemap: https://jetsetlux.com/wp-sitemap.xml
+
+Most important keywords
+Keyword	Result
+LUX	68%
+JETSET LUX	67%
+Jetset	63%
+EXPLORE	50%
+Jetset Token	49%
+Beta	46%
+destinations	38%
+MIAMI	38%
+ANGELES	38%
+VEGAS	38%
+
