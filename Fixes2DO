@@ -1,0 +1,62 @@
+A. site wide email address
+
+A i. 
+Really need an email address setup for both websites because having a gmail address looks cheap, it should be for example:
+contact@jetsetlux.com
+contact@jetsettoken.com
+or
+enquiry@jetsetlux.com
+enquiry@jetsettoken.com
+
+then use grep to search and replace any gmail.com with domain name email
+
+B. current email at bottom of every page is just text, not clickable as expected.
+
+B i.
+Current email at bottom of every page is just text it should be a mailto: link
+<a href="mailto:contact@jetsetlux.com?subject=Contact%20Us">contact@jetsetlux.com</a>
+or a full parameter version:
+<a href="mailto:contact@jetsetlux.com,info@jetsetlux.com,?cc=admin@jetsetlux.com&bcc=Dan@eidoloncs.co.uk&subject=Contact%20Us&body=Please%20add%20complete%20relevant%20info.">Contact Us</a>
+
+
+B ii.
+Trawling robots will scrape all pages for email addresses with or without mailto
+So could implement via a single line javascript that appends the known part ie. the domain name we are on, then adding the contact name from the page body where the script was called.
+Will defeat all but higher end scrapers.
+script is javascript that is placed in header:
+
+<script type="text/javascript">
+	function contactEmail(name)
+	{
+	location.href = "mailto:" + name + "@jetsetlux.com?subject=Contact%20Us&body=Please%20add%20complete%20relevant%20info.">Contact Us</a>
+	}
+</script>
+
+In the text it is called:
+<button class="emailBtn" onclick='contactEmail("contact")'>Contact Us</button>
+
+
+
+1. Main home/ index page:
+1a. log out link in top nav bar links to a 301 missing page
+logically before loggin out ned ability to log in 1st
+https://jetsetlux.com/index.php/my-account/customer-logout/?_wpnonce=29c3622a0f
+
+1b. very 1st btn 'BOOK NOW' does nothing - 
+connect it to a action
+
+1.c LEARN MORE -> buttons on the page all go to top of the page
+link to info pages
+
+2. Exclusive locations page
+https://jetsetlux.com/index.php/services/locations/
+2 a. Exclusive locations page has no navigation bar nor to most people any obvious way to main page
+it only has a tiny blue link at top of page that links to it self
+Add navigation banners to top/header and bottom/footer
+2 b. Make images clickable anchors to more info and booking form for that location
+
+3. Exclusive packages
+3 a.
+Make images clickable anchors to more info and booking form for that location
+Either make features section stand out way more with font sizes and colour etc.
+or move it to top of page with packages below
