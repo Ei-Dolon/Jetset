@@ -1,0 +1,49 @@
+#	Pages contain backlink	Status
+1	http://www.similarsites.com/site/jetsettoken.com	Success
+2	http://www.alexa.com/siteinfo/jetsettoken.com	Success
+3	http://www.builtwith.com/jetsettoken.com	Success
+4	http://whois.domaintools.com/jetsettoken.com	Success
+5	https://aboutus.org/jetsettoken.com	Success
+6	http://www.who.is/whois/jetsettoken.com/	Success
+7	http://www.sitedossier.com/site/jetsettoken.com	Success
+8	http://www.serpanalytics.com/#competitor/jetsettoken.com/summary//1	Success
+9	http://www.robtex.com/dns/jetsettoken.com.html	Success
+10	https://www.quantcast.com/jetsettoken.com	Success
+11	http://toolbar.netcraft.com/site_report?url=jetsettoken.com	Success
+12	https://www.worthofweb.com/website-value/jetsettoken.com/	Success
+13	http://www.siteprice.org/website-worth/jetsettoken.com	Success
+14	http://www.siteworthtraffic.com/report/jetsettoken.com	Success		https://www.siteworthtraffic.com/report/jetsettoken.com
+15	http://siteranker.com/SiteInfo.aspx?url=jetsettoken.com/&E=1	Success
+16	https://www.whois.com/whois/jetsettoken.com	Success								https://www.whois.com/whois/jetsetlux.com
+17	http://www.statshow.com/www/jetsettoken.com/	Success
+18	http://www.websitedown.info/jetsettoken.com	Success
+19	http://www.folkd.com/detail/jetsettoken.com	Success
+20	http://www.domainwhoisinfo.com/jetsettoken.com	Success
+21	https://www.semrush.com/info/jetsettoken.com	Success
+22	http://web.horde.to/jetsettoken.com	Success
+23	https://www.woorank.com/en/www/jetsettoken.com	Success
+24	http://scamanalyze.com/check/jetsettoken.com.html	Success
+25	http://www.infositeshow.com/sites/jetsettoken.com	Success
+26	http://www.viewwhois.com/jetsettoken.com/	Success
+27	http://jetsettoken.com.hypestat.com/	Success
+28	https://www.webwiki.de/jetsettoken.com	Success
+29	http://ranking.websearch.com/siteinfo.aspx?url=jetsettoken.com	Success
+30	https://web.archive.org/web/*/jetsettoken.com/	Success
+31	https://www.dnswhois.info/jetsettoken.com	Success
+32	http://ranking.crawler.com/SiteInfo.aspx?url=jetsettoken.com/	Success
+33	https://mywot.com/en/scorecard/jetsettoken.com	Success
+34	https://whois.de/jetsettoken.com	Success
+35	http://www.statscrop.com/www/jetsettoken.com	Success
+36	https://similarto.us/jetsettoken.com/	Success
+37	http://website.informer.com/jetsettoken.com	Success		https://website.informer.com/jetsettoken.com -> nfo.jetsettoken.txt
+38	https://w3techs.com/sites/info/jetsettoken.com	Success
+39	https://www.spyfu.com/overview/domain?query=jetsettoken.com	Success
+40	https://be1.ru/stat/jetsettoken.com	Success
+41	https://a.pr-cy.ru/jetsettoken.com/	Success
+42	https://www.seoptimer.com/jetsettoken.com	Success
+43	https://www.addtoany.com/share/?linkname=&linkurl=jetsettoken.com	Success
+44	http://500v.net/site/jetsettoken.com/	Success
+45	https://whoislookupdb.com/whois-jetsettoken.com	Success
+46	https://www.rbls.org/jetsettoken.com	Success
+47	http://whois.phurix.co.uk/jetsettoken.com/	Success	X
+48	https://hqindex.org/jetsettoken.com	Success
