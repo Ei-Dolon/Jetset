@@ -1,0 +1,54 @@
+Architecture of Decentralized Applications (dApps)
+dApps also require the frontend to connect to a blockchain node before sending requests to the dApp's backend, which consists of smart contracts deployed on chain.
+While running blockchain nodes yourself might reduce your dependency on any provider, it is resource intensive.
+
+Architecture of Decentralized Applications (dApps)
+
+Decentralized applications (dApps) are transforming the digital landscape by offering users autonomy, security, and transparency.
+Unlike traditional applications that rely on centralized servers, dApps are (partly or entirely) built on decentralized technology.
+In this article, we’ll explore the full stack architecture of a dApp, encompassing the frontend, hosting, wallets, smart contracts, access to nodes, data storage, and other potential components.
+
+User <-> Browser	<-> Signer/Wallet <-> 	[ 					] <-> Storage/DB	<-----------,
+							<-> Internet	<-------> 	[	Frontend	]											|				Oracles
+										-Hosting			[___________] <-> Centralized Backend	<--'					|
+																		^		^					^								_________V___________
+																		|		|					|								[			Blockchain			]
+																		|		`--------->	Indexer <-------------->	[ Node----Node----Node	]
+																		|															[  |     X    |      X    |		]
+																		`-------------------------------------------> Node------Node-----Node	]
+																																	L____________________]
+
+Blockchain Architecture:
+Block structure:
+1. Header: It is used to identify the particular block in the entire blockchain. It handles all blocks in the blockchain.
+	A block header is hashed periodically by miners by changing the nonce value as part of normal mining activity, also
+	Three sets of block metadata are contained in the block header.
+2. Previous Block Address/ Hash: It is used to connect the i+1th block to the ith block using the hash.
+	In short, it is a reference to the hash of the previous (parent) block in the chain.
+3. Timestamp: It is a system verify the data into the block and assigns a time or date of creation for digital documents.
+	The timestamp is a string of characters that uniquely identifies the document or event and indicates when it was created.
+4. Nonce: A nonce number which uses only once. It is a central part of the proof of work in the block.
+	It is compared to the live target if it is smaller or equal to the current target.
+	People who mine, test, and eliminate many Nonce per second until they find that Valuable Nonce is valid.
+5. Merkel Root: It is a type of data structure frame of different blocks of data.
+	A Merkle Tree stores all the transactions in a block by producing a digital fingerprint of the entire transaction.
+	It allows the users to verify whether a transaction can be included in a block or not.
+
+
+a blockchain wallet never stores any cryptocurrencies. It contains the record of transactions performed by the users. It also stores the public and private keys of the user.
+
+
+EVM is written in C++ and uses LLVM as its compiler
+general purpose Smart Contract Virtual Machine
+ensures that all transactions and smart contracts made on the Ethereum blockchain are executed in correct and expected manner as desired by the smart contract code.
+It serves as a platform for decentralized applications (DApps) to be created on and executed on.
+
+
+dApps need
+web hosting to store and run application files,
+server software to operate program logic,
+a database to store data, and a
+user to interact with the web apps front-end via a browser.
+
+ the database files and much of the application logic is not stored on a server in is storedb and executed on the blockchain
+ embedded in a blockchain, they have direct access to the blockchain’s capabilities and value structures, such as Tokenized ownership and identity management, which make user authentication and payment processing very  easy.
