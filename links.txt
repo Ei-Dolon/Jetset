@@ -29,10 +29,13 @@ More links:
 linktr.ee/JetSetTokenJ
 
 
-
+;************************
 Development:
+;************************
 
+;************************
 Resources - Docs
+;************************
 https://docs.bnbchain.org/docs/overview
 
 https://www.bnbchain.org/en/developers
@@ -44,15 +47,17 @@ https://www.bnbchain.org/en/blog/building-on-opbnb-and-bnb-greenfield-theres-ton
 https://nodereal.io/tutorials/how-to-verify-a-smart-contract-on-fncyscan-bsctrace/
 
 
-
+;************************
 Resources - Tools
+;************************
 
 BNB CHAIN Developer Tooling Landscape
 https://nodereal.io/bnb-dev-tools?ref=bnbchain.ghost.io
 
 
-
+;************************
 Solidity Code Quality:
+
 Solhint
 https://github.com/protofire/solhint
 
@@ -68,6 +73,7 @@ https://github.com/crytic/slither
 Echidna
 https://github.com/crytic/echidna
 
+;************************
 Front-End Programming:
 
 Web3.js
@@ -76,7 +82,7 @@ https://github.com/web3/web3.js
 Ethers.js
 https://docs.ethers.org/ethers.js/v3.0/html/
 
-
+;************************
 Back-End Programming:
 
 Web3.py
@@ -90,8 +96,9 @@ Net Web3
 
 Ruby Web3
 
-
+;************************
 IDE:
+
 BSC Studio
 https://github.com/ObsidianLabs/BNB-Studio/blob/master/README.md
 	Docker
@@ -106,7 +113,9 @@ Intellij Solidity Plugin
 ChainIDE
 https://chainide.com
 
+;************************
 Development Framework:
+
 Truffle
 https://trufflesuite.com/boxes/BSC-Truffle-Starter-Box/
 
@@ -116,38 +125,44 @@ Waffle
 
 OpenZeppelin
 https://www.openzeppelin.com/defender
+
 HardHat
 
 Starton
 
-
+;************************
 Wallet SDK:
+
 Venly
 https://www.venly.io/product/wallet-solutions
+
 Sequence.app
 
 Web3Auth
 
 BSC Connector
 
-
+;************************
 MPC Wallets/Multisig:
+
 Qredo
 
 Gnosis
 
 Particle Network
 
-
+;************************
 Decentralized Storage:
+
 IPFS
 
 Arweave
 
 pinata.cloud
 
-
+;************************
 Data Oracles:
+
 Binance Oracle
 
 Band Protocol
@@ -156,8 +171,9 @@ Chainlink
 
 Pyth
 
-
+;************************
 Blockchain Access:
+
 Block Explorers:
 BscScan
 
@@ -165,7 +181,7 @@ BSCTrace
 
 MINTSCAN
 
-
+;************************
 Node and Archive Services:
 
 NodeReal
@@ -190,7 +206,7 @@ Gomu
 
 Bounce Finance
 
-
+;************************
 NFT Tools:
 
 NFTScan
@@ -201,22 +217,22 @@ Venly
 
 NFTrade
 
-
+;************************
 Data Indexing:
 PARSIQ
 
 Nakji
 
-
+;************************
 Browser:
 Opera
 
-
+;************************
 Gasless Solutions:
 
 Biconomy
 
-
+;************************
 Security Audit:
 
 CertiK
@@ -241,7 +257,7 @@ Consensys Diligence
 
 Zokyo
 
-
+;************************
 Analytics & Dashboards:
 
 Dune
@@ -260,7 +276,7 @@ Footprint Analytics
 
 Web3Go
 
-
+;************************
 Payment Gateway:
 
 Binance Connect
@@ -277,7 +293,7 @@ SuperFluid
 
 Pip
 
-
+;************************
 DAO Tools:
 
 Tally
@@ -290,12 +306,12 @@ Snapshot
 
 HQ.xyz
 
-
+;************************
 Gaming Tools:
 
 GameSpace
 
-
+;************************
 Decentralized Identity/Social Graph:
 
 SPACE ID
@@ -314,7 +330,7 @@ NFTrade
 
 Element
 
-
+;************************
 Cross-chain Bridges:
 
 Celer cBridge
@@ -327,7 +343,7 @@ Ren Project
 
 HashFlow
 
-
+;************************
 Wallets:
 
 Binance Wallet
@@ -366,17 +382,192 @@ Onto
 
 Slope
 
-
+;************************
 dApp Store:
 
 dApp Bay
 
 Magic Square
 
-
+;************************
 Token Approval Tools:
 
 BscScan
 
 RevokeCash
+
+;************************
+Development - c++
+;************************
+
+malinka
+https://github.com/LefterisJP/malinka
+Malinka is a project management Emacs package for C/C++
+It acts as a glue between different C/C++ packages to provide them with the right data for a project. All the data are organized and can be configured on a per project basis. The packages that malinka can work with are:
+
+rtags
+Rtags help the user jump around the code easily and provide integration with many clang utilities like Clang fixits. The main functionality that malinka provides is to properly populate and communicate the compiler commands to the rtags daemons depending on the project you are working on.
+If you have not installed rtags yet, visit their github page and read more information about how you can acquire and use rtags. Alternatively if you used el-get to get malinka rtags should have been downloaded and built as a dependency
+
+auto-complete
+
+flycheck
+Optionally and if you also have flycheck with the clang syntax-checker activated, malinka will communicate to flycheck’s clang syntax checker the appropriate cpp-defines and include-paths so that flycheck can do its syntax checking.
+
+projectile
+If you are using projectile then malinka can provide projectile with the compile and test commands to build and test your project respectively. Projectile also helps with the detection of root directory for projects.
+
+optional:
+
+magit
+
+helm
+
+
+;************************
+Frontend Development - Website/dApp:
+;************************
+
+The part of a website where the user interacts directly is termed as front end. It is also referred to as the ‘client side’ of the application.
+
+HTML: used to make the structure of a website.
+CSS: used to style a website.
+JavaScript: provides dynamic behavior to a website.
+
+
+CSS Frameworks
+	Bootstrap: Bootstrap is a free and open-source tool collection for creating responsive websites and web applications.
+		It is the most popular CSS framework for developing responsive, mobile-first websites.
+		Now websites are perfect for all browsers (IE, Firefox, and Chrome) and for all sizes of screens (Desktop, Tablets, Phablets, and Phones).
+	Tailwind CSS
+	Bulma
+	Foundation
+	Primer CSS
+	Spectre CSS
+	Materialize CSS
+	Onsen UI
+	Semantic UI
+	Blaze UI
+	Pure CSS
+	Tachyons
+
+CSS Preprocessors
+	SASS
+	LESS
+
+JavaScript
+	Package Manager
+		npm
+		yarn
+	ES6
+	TypeScript
+	JavaScript Frameworks
+		AngularJS
+			Angular ngx Bootstrap
+			Angular PrimeNG
+		VueJS
+			NuxtJS
+		script.aculo.us
+	JavaScript Libraries
+		jQuery
+			jQuery UI
+			jQuery Mobile
+			jQWidgets
+			jQuery EasyUI
+		ReactJS
+			NextJS
+			Ant Design
+			React Desktop
+			React Rebass
+			React Bootstrap
+			React Reactstrap
+			BlueprintJS
+			React Suite
+			React.js Evergreen
+			React Material UI
+		P5.js
+		Fabric.js
+		D3.js
+		Collect.js
+		Underscore.js
+		Lodash
+		TensorFlow.js
+
+Ember.js
+Handlebar.js
+Backbone.js
+
+
+Web3. js is a collection of libraries that allow users to interact between smart contracts and the front end.
+It is used to develop websites that can interact with different blockchains.
+
+Ethereum-based applications can interact with developers through a set of APIs provided by Web3.js.
+These APIs include:
+	Web3: It is the main interface for interacting with Ethereum Blockchain. It provides functions for interacting with contracts, accounts, and the Ethereum main network or test network.
+	Eth: It is an interface for interacting with the Ethereum network. It provides functions for querying the network and sending transactions.
+	Contract: It provides an interface for interacting with smart contracts. It provides the functionality for interacting, deploying, and listening to events from deployed smart contracts.
+
+
+;************************
+Backend  Development - Website/dApp:
+;************************
+
+Backend is the server side of a website.
+It is part of the website that users cannot see and interact with.
+It is the portion of software that does not come in direct contact with the users.
+It is used to store and arrange data.
+
+Back End Frameworks and Technology:
+
+PHP: PHP is a server-side scripting language designed specifically for web development.
+
+	Framework: Laravel
+
+	CMS: WordPress, Joomla, Drupal, Magento
+
+	Testing: PHPUnit
+
+	Package Manager: Composer
+
+
+Python: Python is a programming language that lets you work quickly and integrate systems more efficiently.
+
+	Framework: Django, Flask
+
+	Package Manager: Python PIP
+
+
+Node.js: An open source and cross-platform runtime environment for executing JavaScript code outside a browser.
+	It provides an event-driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side applications using JavaScript.
+	Use NodeJS for building back-end services like APIs, Web App, or Mobile App.
+	VPS servers offer base capabilities and environment to integrate Node.js apps with developer tools and APIs.
+	https://nodejs.org/en/download/
+
+	Framework: Express
+
+	Package Manager: npm, yarn
+
+
+Java: Java is one of the most popular and widely used programming languages. It is highly scalable.
+
+	Framework: Spring, Hibernate
+
+C#
+	Framework: .NET
+
+
+Ruby
+	Framework: Ruby on Rails
+
+
+Golang
+
+
+Storage:
+
+Database:
+	NoSql Database: MongoDB
+	Relation Database: MySQL, Postgre SQL, MariaDB
+
+
 
