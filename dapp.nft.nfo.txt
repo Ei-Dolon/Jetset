@@ -1,0 +1,26 @@
+two methods:
+1: unique nft minting
+booking and paying for a property, vehicle, service, bill (eg restaurant bill) mints a unique nft at that point in time, that allows the use of the nft to take control of the real world asset or remove a debit at the time of the booking (included within the nft metadata, along with amount paid, currency used, value of currency at that time in USD/USDT, value paid in USD/USDT),
+
+changing a booking (read in nft1) to another booking requires using the platform to ensure the new booking is feasible (nft2 data), in which case the gas charges of cancelling the 1st nft and gas charges to mint the new nft, also need to include provision for changes in nft value - compare value paid of 1st nft with value of 2nd nft
+cmp nft1.val, nft2.val -> result, deltavalue
+result=0 equal
+result=-1 means nft1.val > nft2.val
+	offer refund difference stored in deltavalue as  jetset or bnb to users registered wallet which is hardcoded into metadata
+result=1 means nft1.val < nft2.val
+	requires an additional payment for the new nft
+	request payment of deltavalue from user wallet in bnb or jetset (20% reduction in cost)
+	
+
+2: nft for each asset minted 1st
+nft with all relevant metadata eg unique id, property address, satnav location, etc.
+nft ownership remains with owner of property, however transfer of ownership for a period can be minted upon payment via the platform
+
+again changing a booking will involve platform opening and reading nft1 then determining nft2 data from available days to rent property, once feasible data chosen, dif in value calculated, resolved and then gas fees releasing nft1 and minting nft2 to be paid out of wallet
+
+rules:
+rental period has to be sequential days within a range of days that has a min and max days value.
+gas fee calulator to be included to estimate fees in minting and releasing/destroying an nft
+so mint not started unless booking payment and gas fees are available in wallet.
+each account is tied to a wallet on the bnb smart chain
+each day for each property can have a dif value, a booking is caluated by summation of all days included within booking eg. days in june,July, aug higher value than off peak season days
