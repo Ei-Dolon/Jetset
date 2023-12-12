@@ -1,0 +1,23 @@
+Fixes Done:
+
+Create GitHub project - detailing changes site creation, maintenance, updates, SEO, and dApp development
+
+Created info@jetselux.com
+
+Replaced email bitmave@gmail.com with info@jetselux.com in site footer and contacts page
+
+Added META Description tag <160 characters
+<meta name="description" content="JETSET Token (JTS/JET) - A Luxury Lifestyle and Wellness Utility Token, discounts luxury property and luxury vehicle rentals, and gain extra benefits." /> 
+
+Added mobile view tag
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Added secondary META tags:
+<meta name="keywords" content="jetset, JET, JTS, token, BEP-20, BNB, utility, chain, block, luxury, lifestyle, rental, property, vegas, Angeles, LA, Miami, vehicle, wellness" /> 
+<meta name="robots" content="index, follow" /> 
+<meta charset="UTF-8" /> 
+
+Add for certik page re
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+
+Link in jetsettoken page navigation menu to Lux site changed from http://nftjetsettoken.com/ to https://www.jetsetlux.com/
