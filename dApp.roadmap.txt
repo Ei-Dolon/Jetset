@@ -1,0 +1,22 @@
+Jetset dApp roadmap:
+
+- Each stage must be completed before the next can begin.
+- All stages must be successfully passed before the first beta version can be released on BSC Mainnet
+(Bear in mind that solidity itself is only at v0.8.20 and therefore is still in beta itself)
+
+1. Code a test frontend GUI/UX that links to the Book Now link on jetsetlux.com.
+Fields accept null values thus allowing negotiation through the frontend.
+From dev/core group feedback can add extra fields, change layout until we have model prototype that will work with at least luxury property rental bu ideally will be designed that it can be used for a whole range of luxury rental and wellness lifestyle sectors.
+
+1a. During this development i will be working on a range of frameworks and libraries including node.js/express.js and bsc studio/docker via VS Code as well as Remix and Truffle to create the code hooks.
+
+2. Once prototype ready, we can hook in the code to correctly process and validate data entry to the fields, initially testing on a locally run node, but then moving to use web3 or json RPC provider to link to the BSC Testnet node.
+Already created testnet node with QuickNode (User: Anokdan Project: Jetset).
+Using BNB from a testnet faucet, can create the backend solidity coded reNFT system, then we can use test wallets loaded with BNB to purchase JST and then book rental property's via the NFT method implemented.
+This will test frontend, frontend to backend linking and node use. as well as the backend smart contracts that control the NFT generation and use.
+
+3. Testing and debugging - Once it is working we can release a limited alpha version to a few testers (recommended by @Mickhaloi from the telegram group).
+
+4. Once working and secure, we can  release our first beta version on the mainnet.
+
+5. Additional luxury rental and wellness lifestyle products added to dApp.
