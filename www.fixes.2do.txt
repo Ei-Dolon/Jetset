@@ -42,17 +42,259 @@ In the text it is called:
 logically before loggin out ned ability to log in 1st
 https://jetsetlux.com/index.php/my-account/customer-logout/?_wpnonce=29c3622a0f
 
-1b. very 1st btn 'BOOK NOW' does nothing - 
-connect it to a action
+1b. very 1st btn 'BOOK NOW' does 
+Conventions - Site wide data protocol:
 
-1.c LEARN MORE -> buttons on the page all go to top of the page
-link to info pages
+Any spaces in a filename are replaced by the underscore character ("_").
+
+Filenames brief descriptive names in lowercase, with underscore used to separate words if needed.
+
+Full extensions used e.g. html rather than htm
+
+URLs brief descriptive names in lowercase,words can be separated by hyphens as an aid to use and readability for users.
+
+Indents are 1 tab, which is 4 spaces.
+
+UNIX/Linux/Android line termination used.
+
+Character encoding is UTF-8.
+
+Script files have a header comment block describing functionality, individual scripted functions have single line comment description of use and inputs and outputs (if any), global variables are kept to an absolute minimum to maintain data abstraction of classes, methods, procedures, functions.
+
+
+;************************
+Site wide:
+;************************
+
+Site wide email addresses
+
+Really need an email address setup for both websites:
+@jetsetlux.com
+@jetsettoken.com
+
+info
+contact
+hi
+enquiry
+
+jetset
+jst
+nft
+lux
+
+sales
+support
+bookings
+
+deadmail - catch all 
+logs - DMARK address
+
+bitmave
+ceo
+webmaster
+admin
+
+Trawling spam bots will scrape all pages for email addresses with or without mailto
+So could implement via a single line javascript that appends the known part ie. the domain name we are on, then adding the contact name from the page body where the script was called.
+Will defeat all but higher end scrapers.
+script is javascript that is placed in header
+<script type="text/javascript">
+		function contactjetset(name, subject)
+			{
+			location.href = "mailto:" + name + "@jetsetlux.com?subject=" + subject + "&body=?";
+			}
+</script>
+
+In the body it is called:
+<button class="emailBtn" onclick='contactjetset("info", "Contact%20Us")'>Contact Us</button>
+
+
+sitemap.xml canonical pages to use the main domain, have pages requested via www subdomain redirected to main domain
+
+.htaccess
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ HTTPS://jetsetlux.com%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+ensure .htaccess has as little work as possible  so as to speed up the site
+have it rewrite http to https
+301 redirection of http to https page 
+have it redirect www to canonical
+//chk if 404.html requires naming within htaccess or being placed in root is enough
+
+404 page created to present a usable page if the URL is entered incorrectly
+
+// ensure hostringer test gives high scoring for desktop and mobile - fix all elements it brings up as not optimal
+
+;************************
+HEAD
+;************************
+
+Start each page in standard format:
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+	<title></title>
+
+	<meta name="Title" content="">
+
+	<meta name="Description" content="">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta name="Keywords" content="">
+
+
+change language from en-us to en
+
+Ensure title
+<60 characters
+search result
+
+META description 
+< 160 characters 
+search snippet
+
+SERPs = 60%+ all searches are from mobiles
+META
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="Keywords" content="jetset, token, BEP, 20, luxury, lifestyle, rental, utility, NFT, Miami, Los, Angeles, Las, Vegas"> 
+Accurate keywords and hooks and CTA,, chosen for page, all should occur within the page.
+
+Secondary META tags for each page:
+<meta name="Robots" content="index, follow">
+<meta charset=”utf-8″>
+
+Certik - operational resilience - Content Security Policy (CSP)
+<meta http-equiv="content-security-policy" content="default-src 'self'; frame-ancestors ‘self’; form-action ‘self’; upgrade-insecure-requests;">
+
+
+check if the HSTS is working on your WordPress site. You can launch Google Chrome Devtools, click into the “Network” tab and look at the headers tab
+
+
+Reduce css and javacript externally loaded files
+lux seo:
+	The page response time is slow (1:35 seconds).
+	This page loads 33 CSS files. This may affect the page load time negatively.
+	This page loads 32 JavaScript files. This may affect the load time negatively.
+Decrease the javascript files accessed, pages access from 19 to 32 javascript files, this is due to WordPress,
+
+Ideally one css and one js file per site with any page specific styles or code to be included within that pages head.
+
+<link rel="stylesheet" href="lux.css">
+	modify css to be more of a responsive design
+	font size 16
+	ensure css displays videos and images as
+	max-width:100%; height:auto;
+	
+
+Ensure jetset logo has been converted into full range of icons (ico file holds 3 sizes of file, also apple icons and then files of size
+These icons are used when a page within the site is bookmarked, links on desktops will use these files, and the site in the browser address bar will show the icon - it therefore helps present the sites professionalism 
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    
+;************************
+BODY
+;************************
+
+[Rod] site structure split into pages to allow more exact keywords per page to get higher rating, include a links page (high quality links for site)
+
+Horizontal navigation bar at top of each page
+Breadcrumbs at footer of each page.
+
+Review and improve headings structure.
+single H1 per page
+lux seo h1 too short - use title (<60 chars) as h1
+lux seo - too many h1 tags
+
+H2 - H6 used to correctly sub-categorise the page sections. 
+rest of page structure should subdivide using the headings in order
+ensure all headings are concise accuate descriptive and that the words are found within their content
+lux seo - missing h4 tag
+
+All alt tags should be completed in full, with a complete description of the resource.
+Search engine bots rely on this text and heavily weight it, hence good way to add keywords to a page to score and place higher.
+It is also used by the partially sighted.
+
+All visual resources (videos, images) should also have a caption tag.
+
+Resources are from https sources, lazy loaded where possible, images converted to webp format.
+
+Content around 800 words per page.
+lux seo:
+	jetsetlux.com main page 283 words
+	Page ontent to be increased from below 300 words to at least 800 words.
+
+Split index.php into pages, more content required.
+
+Thin Content Pages: Avoid indexing pages with minimal or low-quality content. Such pages can include placeholder pages, duplicate content, or pages with very little text. Thin content can harm your website's SEO.
+
+
+Have 2 AIs running locally using input from scrapers and article spinning, to create a daily inference blog for each site - SERP increased massively by active websites with new content daily.
+Using online ChatGPT3 to produce input as well via:
+"Repeat as many times as you believe that the content will be of interest to cryptocurrency investors, combine the best headline along with the best sub-headings, hooks, keywords, and call-to-action to create a webpage written using HTML and CSS?"
+
+Jetsettoken.com will have an AI writing a blog on the worldwide crypto news with weighting on token and currency news, low scoring on NFT news.
+Jetsetlux.com has a different content writer creating a blog on worldwide NFT news.
+To start with each article is vetted to ensure appropriate, before publishing. Later on as the AIs have improved, can just automate by running a search on the article if nothing flags then publish, if flagged then review and edit before publishing.
+Within a few months both sites will be appearing much higher in SERPs.  Ideally to aim for a top 10 result with gradually less and less specific search parameters.
+
+
+;************************
+Additional:
+;************************
+
+Google Business Account created and kept updated
+
+Register websites with Google, Bing, DMOZ
+
+Use Google Analytics and 
+
+Google Search console - review all the terms site currently shows for and what position  they are on in search.
+url inspector to test backlink quality
+
+Use ahrefs for site seo
+
+Use Certik security score for data on all aspects of a blockchain project - number of active users per social media form, demographic of most users, etc.
+
+
+;************************
+specific fixes - jetsetlux.com
+;************************
+
+1. Main home/ index page:
+
+1a. log out link in top nav bar links to a missing page:
+https://jetsetlux.com/index.php/my-account/customer-logout/?_wpnonce=29c3622a0f
+
+Logically this link should shown log in unless user logged in and then it could show log out.
+So this link should be moved to the jetset dApp entrance page, where use of the rental dApp requires Login else Register
+If login, the user and password must match the correct entry within the site database, username must be unique, pswd is MD5 encrypted.
+Once logged the wallet is loaded if it exists, if no wallet address existing in DB then user given option of connecting a preexisting wallet by entering 12 word mnemonic or creating a new wallet - once wallet added or created its address is stored within DB.
+If wallet then list assets linked to address, or curl bscscan data for wallet tokens and token transactional list of last config = numoftrans transactions to show.
+With user logged in, wallet loaded, wallet data loaded, offer to connect wallet if this device is owned by you and has an account profile only accessible by you, in which case if accepted, store info locally in static storage cookie (encrypted or hashed as required).
+This now offers access to the NFT booking system for luxury rentals by running the browser plugin (if not exist, offer to install first).
+So at this point wallet shown and rental dApp access offered by browser plugin.
+
+Log out is available in top nav bar and elsewhere on page after successful login and completion of setup.
+wallet address only added to db if successful addition or creation completed, if timepagelive=timeout (e.g. 10 mins) or current session ends then the page upon user return will refresh to login version
+cookie only created if data successfully collected and user accepts private device conditions before session ends
+
+
+1b. very 1st btn 'BOOK NOW' does nothing -  this should be moved to the login screen after sucessful login, wallet connection/creation and load and browser plugin installed = true
+
+1c LEARN MORE -> buttons on the page all go to top of the page, link to info pages
 
 2. Exclusive locations page
 https://jetsetlux.com/index.php/services/locations/
 2 a. Exclusive locations page has no navigation bar nor to most people any obvious way to main page
 it only has a tiny blue link at top of page that links to it self
-Add navigation banners to top/header and bottom/footer
+Add navigation banners to top/header and crumbs to bottom/footer
 2 b. Make images clickable anchors to more info and booking form for that location
 
 3. Exclusive packages
@@ -60,3 +302,317 @@ Add navigation banners to top/header and bottom/footer
 Make images clickable anchors to more info and booking form for that location
 Either make features section stand out way more with font sizes and colour etc.
 or move it to top of page with packages below
+
+
+EXCLUSIVE PACKAGES
+IT'S TIME TO START YOUR GETAWAY
+Exclusive packages curated by Jetset lux 
+
+
+CALIFORNIA ADVENTURE
+
+LA EXCLUSIVE
+
+THE LAS VEGAS RUN
+
+MIAMI NIGHTS
+
+FEATURES:
+Prestigious Accommodations
+Personalized Itineraries
+VIP Experiences
+Fine Dining Experiences
+Chauffeur Services
+Personalized Assistance
+
+What You Get
+By selecting one of our exclusive packages you’ll have a white glove one-of-a-kind experience
+
+EXCLUSIVE LOCATIONS
+LA
+From the iconic Hollywood sign to the stunning beaches of Santa Monica, Los Angeles offers a diverse range of experiences for every traveler.
+
+Las Vegas
+Las Vegas offers excitement around the clock. Book your stay in the city where dreams come true and create memories that will last a lifetime.
+
+Miami
+Miami is a city that never sleeps. Book your Miami getaway and dive into a world of sun-soaked fun and endless adventures!
+
+
+Beverly Hills Modern
+
+Fort Lauderdale Estate
+
+Jetset Estate (Los Angeles)
+
+Tuscan Villa (Los Angeles)
+
+
+Email: info@jetsettoken.com
+
+Copyright © 2023 JETSET LUX (Beta)
+
+
+
+WHO WE ARE?
+
+OUR MISSION
+Our goal at Jetset Lux is to use the disruptive power of blockchain technology to completely transform the luxury lodging and travel sectors. We are devoted to introducing blockchain’s advantages to our platform, assuring secure and transparent transactions, and improving the entire user experience for our esteemed customers.
+
+We will use blockchain to create a decentralized, unchangeable log that ensures the accuracy of transactions, doing away with the need for middlemen and raising confidence in the reservation process. We will automate agreements, simplify procedures, and offer fast confirmations by utilizing smart contracts, which will reduce waiting time and boost productivity.
+
+In addition, our adoption of blockchain technology will make it possible to develop a loyalty program that uses the Jetset Token as its fuel. This will grant our customers access to special incentives, savings, and improvements.
+
+
+Email: info@jetsettoken.com
+
+Copyright © 2023 JETSET LUX (Beta)
+
+
+LUX BNB MEETS BLOCKCHAIN
+Welcome to Jetset Lux, the ultimate destination for discerning travelers seeking a truly luxurious and innovative travel experience. Our revolutionary blockchain-based platform combines cutting-edge technology with impeccable service to redefine the world of luxury travel.
+
+
+HOW IT WORKS
+By joining our exclusive community, you gain access to a world of unparalleled privileges. Our Jetset Token loyalty program offers exclusive rewards, discounts, and upgrades, allowing you to elevate your travel experiences to new heights.
+
+We have carefully curated a collection of prestigious accommodations, awe-inspiring destinations, and unique experiences to cater to your every desire. Whether you’re seeking a luxurious beachfront villa, a private jet charter, or a personalized itinerary, we have you covered.
+
+With a team of dedicated travel experts, our commitment to excellence is unwavering. We strive to create unforgettable moments, exceed your expectations, and craft journeys that are tailor-made to your preferences.
+
+Embark on a journey like no other and let us redefine the way you travel.
+
+
+;************************
+specific fixes - jetsettoken.com
+;************************
+
+ensure backend is off limits as with cgi-bin to users, access to backend only through admin access to the web/SaaS cloud hosting account at domain, host, email, website level, as access to zone editor, nameservers, mail servers, DKIM, DMARC, etc. are all involved in the publishing, seo, success of a company's/tokens domainand website.
+
+
+;************************
+tools:
+;************************
+
+SEOtools
+SEO checker
+Internet Speed Test
+	Speed of page load on desktop
+	Speed of page load on mobile
+
+Word Counter
+What is My IP
+PDF To Word Converter
+
+
+Article rewriter
+Keyword Position
+Domain Authority Checker
+Backlink Checker
+Image Compressor
+Video Downloader
+Facebook Video Downloader
+Word To PDF
+RGB To HEX
+Image Resizer
+Video To Gif
+
+Plagiarism Checker
+Grammar Check
+Reverse Image Search
+
+
+Fluid Grids
+Flexible Images
+Media Queries
+Responsive Typography
+Navigation Patterns
+
+
+;************************
+Security audits:
+https://securityheaders.com/?q=https%3A%2F%2Fjetsetlux.com&followRedirects=on
+
+Security Report Summary: D
+Site:	https://jetsetlux.com/
+IP Address:	2606:4700:3034::6815:25a9
+Report Time:	13 Dec 2023 19:49:33 UTC
+Headers:	
+Y	Content-Security-Policy 
+N	Strict-Transport-Security 
+N	X-Frame-Options 
+N	X-Content-Type-Options 
+N	Referrer-Policy 
+N	Permissions-Policy
+
+Security Report Summary: D
+Site:	https://jetsettoken.com/
+IP Address:	2606:4700:3037::6815:4771
+Report Time:	14 Dec 2023 01:31:37 UTC
+Headers:	
+Y	Content-Security-Policy 
+N	Strict-Transport-Security 
+N	X-Frame-Options 
+N	X-Content-Type-Options 
+N	Referrer-Policy 
+N	Permissions-Policy
+
+
+Missing Headers
+
+Strict-Transport-Security
+https://scotthelme.co.uk/hsts-the-missing-link-in-tls/
+HTTP Strict Transport Security is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS. Recommended value "Strict-Transport-Security: max-age=31536000; includeSubDomains".
+
+X-Frame-Options
+https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options
+X-Frame-Options tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking. Recommended value "X-Frame-Options: SAMEORIGIN".
+
+X-Content-Type-Options
+https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options
+X-Content-Type-Options stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. The only valid value for this header is "X-Content-Type-Options: nosniff".
+
+Referrer-Policy
+https://scotthelme.co.uk/a-new-security-header-referrer-policy/
+Referrer Policy is a new header that allows a site to control how much information the browser includes with navigations away from a document and should be set by all sites.
+
+Permissions-Policy
+https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/
+Permissions Policy is a new header that allows a site to control which features and APIs can be used in the browser.
+
+;************************
+An SEO website audit is essential for the successful performance of a website; this is because it:
+
+Allows a website to discover the reasons behind poor performance in SERPs, be that a negative SEO attack, black hat SEO techniques, or attempting to rank for the wrong keywords
+
+Enables a website to gain insight into what their competitors are doing, and whether their strategies are successful or not
+
+Can help improve your domain authority 
+
+Can drastically improve conversions and sales
+
+Provides more information about the factors that affect ranking in SERPs
+
+
+An SEO website audit looks into a whole range of elements, these include:
+
+1. Technical Factors
+An SEO website audit should take a look into all the backend technical aspects of a website and identify any issues in the website’s coding.
+
+It should analyse the quality of the XML Sitemap, 
+Review the page speed 
+Assess the website’s crawlability
+Look into any duplicate content issues
+Check the website is mobile-friendly
+Check if the website is using the right redirects, canonical tags, and robots.txt.
+2. On-Page Factors
+The audit should also check all of the on-page factors. This includes…
+
+Looking at the effectiveness of keyword research and keywords
+Analysing the quality of the website’s content and relevance, and UX (User Experience)
+Reviewing its meta data, internal linking and backlinks and HTML sitemap
+Checking whether images and videos are correctly optimised
+3. Competitor Analysis
+The website SEO audit should also look into competitor performance. 
+
+It should look into the ranking of competitors 
+It should look at how they are using meta-data, keyword placement and backlinks
+It show analyse how competitors  engage with their audience, and their social media presence.
+Things To Consider For Your SEO Website Audit
+There are a few things to take into consideration when conducting your SEO website audit. 
+
+How is your website architecture? Is it easy to navigate and comprehend for both crawlers and users? 
+Are you using the right breadcrumbs? 
+Are you using JavaScript? Yes? Well, don’t. Even a slight mistake in the Javascript code can lead to you blocking Google bots from crawling your site. Google crawlers can also have trouble understanding Javascript, and you should be aiming to make their task as simple as possible.
+Are you using anchor text correctly?
+Are your images correctly optimised? Are they accompanied by concise and relevant captions and alt text with keywords.
+
+Is your content well researched, free of grammatical and punctuation errors and easy to read? 
+
+Have you conducted excellent keyword research, and incorporated target keywords in your content. Is it optimised for featured snippets?
+
+
+
+https://growhackscale.com/go/netpeak-spider
+
+1. Netpeak Spider
+
+2. SEO PowerSuite Website Auditor
+
+3. Serpstat Website Audit Tool
+
+4. SE Ranking
+
+5. MySiteAuditor
+
+6. SEMRush Site Audit Tool 
+
+Other tools include: Google Analytics, Ahrefs, Moz, DeepCrawl, Google's Structured Data Testing Tool, etc.
+
+
+Track backlinks,  check domain authority
+SE Ranking
+
+Brand24
+
+Ryte
+
+RankActive
+
+SEMRush
+
+Ahrefs, Cognitive SEO Tool, Monitor Backlinks, BuzzSumo 
+
+
+
+SEO audits:
+
+Domain Analysis For: 
+jetsettoken.com 
+Date: December 3 2023 
+Google PageRank: 2/10 
+cPR Score: 2.5/10 
+Domain Authority: 16 
+Page Authority: 30 
+Trust Flow: 0 
+Trust Metric: 0 
+Domain Validity: 
+Found Global Rank: N/A 
+Alexa USA Rank: N/A 
+Alexa Reach Rank: N/A 
+Spam Score: 1 / 18 
+External Backlinks: 216 
+Referring Domains: 85 
+EDU Backlinks: 0 
+EDU Domains: 0 
+GOV Backlinks: 0 
+GOV Domains: 0 
+PR Quality: Weak 
+Domain Age: NA 
+HTTP Response Codes: 200
+
+Domain Analysis For: jetsetlux.com 
+Date: December 3 2023 
+Google PageRank: 0/10 
+cPR Score: 0.4/10 
+Domain Authority: 
+Page Authority:  
+Trust Flow: 
+Trust Metric: 
+Domain Validity: 
+Global Rank: 0 
+Alexa USA Rank: 0 
+Alexa Reach Rank: 0 
+Spam Score: 0 / 18 
+External Backlinks: 
+Referring Domains:  
+EDU Backlinks: 
+EDU Domains:  
+GOV Backlinks: 
+GOV Domains:  
+PR Quality: 
+Domain Age: NA 
+HTTP Response Codes: N/A 
+Canonical URL: jetsetlux.com/
+
+
