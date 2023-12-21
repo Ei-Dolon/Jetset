@@ -1,0 +1,72 @@
+dApp Report 20231220.txt
+
+
+Submission of Jetset dApp every 2 weeks on Wednesday
+
+Once testing complete and project been audited (inc dApp and token), submit to mainnet as beta release
+From this point update schedule mirrors cURL:// update schedule
+Release Wed
+10 day cooldown
+14 day feature/updates/bug fix submissions - fork main, code, commit fork
+4 day integration of forks to main
+28 day testing, checking
+
+
+Progress this weekend:
+Setup  an additional development environment using Ubuntu LTS via WSL2.
+Installed nvm, and used to install the latest stable even numbered version of Node.js LTS and npm v10.23.0
+
+VS Code used as editor for IDE.
+	VS Code Extension: Remote-development extension pack for Node.js projects, it splits VS Code into a client-server architecture.
+	The client runs on windows and in this project is the front end of the dApp and Tip Jetset coded using HTML/CSS and Ether.js
+	Also runs unseen Metamask SDK/Extensions, which handles the users wallet and the use of its private key to sign transactions  before sending on to the BSC blockchain.
+	Using Jestset branded webpages to control the frontend data via the Metamask wallet gives us its excellent security and access to other metamask functionality in case we need/wwant it in the future.
+	The server runs on WSL2 Linux Ubuntu LTS - running Node.js and using Truffle and/or Hardhat Network to provide a local development version of the BSC EVM,
+	the solidity smart contracts that control the LUXury property rental part of the dApp that uses preminted NFT's
+
+Frontend UI using Ethers.js and EMCA 6 Javascript/NodeJS LTS.
+
+Git 2.43.0 installed to allow pulling merge commits.
+
+Have installed hardhat to locally test the frontend hook into the html/css version of the wordpress  lux site and its connect to users HD wallet via derivative path (m/44'/60'/0'/0) to request user to sign transaction so  sent to the BNB EVM which is run locally, and will respond.
+Response is handled via same stack but in reverse order until frondend handles it and displays a result to the Response;)
+
+Later will run on BNB testnet using Quicknode, will create test wallets with BNB from test faucet to use.
+Dev : anok4u2
+
+Smart Contract with address: 0x405be90996e7f995a08c2fbd8d8822ef5b03466c
+
+BSC testnet
+
+Metamask
+Wallet name: Dev
+Wallet adress: 0x743C50810c488830376cD8708d8158E93AF8674b
+SRP: mechanic glue slot item welcome dust catch wood enjoy result goddess snake
+
+Using Truffle to Deploy NFTs on BSC
+ERC721 is a standard for representing ownership of non-fungible tokens, that is, where each token is unique such as in real estate or collectibles.
+
+
+Currently the jetset dApp uses preminted NFTs, one uniquely defines a single luxury property, ownership is constant and immutable minted by admin (in this case CEO bitmave),
+the platform arranged rental period of sequential days, days must be over minimum days rental and less than max days rental is calculated from summation of day cost (different days (on/off peak) cost varies) via property metadata rate
+linked to off chain storage secure decentralised storage IPFS  probably via ipfs so that rates cam be updated (smart contract immutable once written to the blockchain).
+Once user connected wallet checked to determine if currency available that is equal to rental plus estimated gas fee's, the system will transfer user rights to renter.
+Ideally a security system can read the NFT from the wallet via mobile/tablet etc.
+Opening up house. End of rental period causes NFT user rights to return to the owner.
+
+WSL2
+Ubuntu 22.04 LTS
+
+VS Code (win)
+Truffle (win)
+Node.js v20.20.0 x64 LTS (win)
+
+Hardhat
+
+nvm
+	Node.js LTS
+	npm
+
+Metamask SDK
+Metamask plugins, extension. etc.
+

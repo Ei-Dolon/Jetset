@@ -1,0 +1,60 @@
+TipTap App - tip jar ready for use at the expo
+
+How does it work?
+Create a new metamask wallet for the tip jar
+then allow users with metamask connected wallet to see a tip page similar to wikipedia request
+
+Example of some of the elements of a modal popup tip jar
+
+Payment method:	Edit	BSC.BNB
+
+Taxes & Fees	£0.37
+Total					£1.36
+Coupon code:	Add
+
+By checking out, you agree with our Terms of Service [terms.html] and confirm that you have read our Privacy Policy [privacypolicy.html]. You can cancel recurring payments at any time
+
+Cancel				Complete Payment
+
+Metamask SDK and extension used to create Jetset branded versions of the wallet pages:
+Create user wallet
+Add user wallet
+Create user QR
+
+Connect wallet - mnemonic phrase - derivative path (m/44'/60'/0'/0)
+If none, create.
+Once wallet connected update BSC tokens and values and determine nonce.
+Display wallet info.
+Button links to LUX dApp and Tip Jertset
+
+Modal window = Tip Jetset
+Select a tip amount or enter your own tip value:
+Btn's=$1	$2	$5	$10	$15	$20	$25	$50	$100
+Enter value of tip: $____.00
+Btn=Tip!
+
+Clicking a tip value or entering an integer value and click Tip! button willl bring up metamask confirmation box, if user authorises then, usd amount of Jetset crypto transferred to QR coded wallet with gas fee's deducted from this wallets BNB
+
+response for a successful tip is a decent thank you screen or modal window or popup
+
+
+
+The tip jar is not a jetset project tip jar, instead it should be a generic tip jar for tipping various people, groups, companies, etc that are providing services at jetset events.
+
+So the Service Provider at a Jetset event, this project is open source and is free for anyone to use a long as the Jetset branding is not removed  as providing this App for use freely.
+App works via the BNB Smart Chain, so you should set that chain as active before opening this dApp within your wallets web3 browser.  Confirm connecting your wallet, this will allow your wallet to determine that you have the tip and enough BNB to pay the gas fee's (on the BNB Smart Chain gas price for a transaction ranges from $0.03 to $0.25)
+Your waiter/ress at luxury restaurants in Thailand , the band playing at the Jetset 2024 Expo (Feb 3rd), the artist cresting a digital artwork, etc., will all have a registered Tip receive wallet encoded into a unique QR code, which should be visible (eg. on their name tag, bands often display logos on the rear bass-drum skin, etc.).  If not immediately obvious you should ask if the server, performer, or artist can provide their Tipping QR.
+
+Using your camera or QR scanner for older phones, zoom in  unttil the QR code is read ad provides the BNB Smart Chain wallet address to transfer to.
+Select predefined tip anount or enter a custom tip value in the integer field (3 digits max) before clicking Tip! button.
+
+The dApp passes the transaction data to the wallet, which provides a popup window asking you to confirm this tip by signing the transaction, if you click yes the wallet accesses the relevant private key and signs the transaction, before it is transmitted to the Provider API RPC to eth_savetransaction to be mined into the next block of the  BNB Smart Chain.
+
+
+Each service provider requires a BNB Smart Chain wallet address and the QR code is generated for the correct part of the HD wallet.
+
+
+
+
+
+
