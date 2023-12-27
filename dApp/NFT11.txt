@@ -1,0 +1,87 @@
+\\wsl.localhost\Ubuntu-22.04\home\dev\.nvm\versions\node\v20.10.0
+
+nvm
+
+Open the MetaMask plugin, click the Network Selector at the top.
+Select “Custom RPC” at the bottom.
+Enter a name (any), copy/paste your Web3 endpoint (be sure to include the “/” at the end!), enter a ChainID (1 for MainNet, check here for others), click “Save”
+
+Hardhat, automated tests are primarily written in JavaScript and TypeScript, mainly using Ethers. js and Mocha. Hardhat also exposes custom Chai Matchers and Hardhat Network Helpers libraries through the Hardhat/toolbox plugins to help simplify test code.
+
+MetaMask has always used Infura as an endpoint provider due to their second-to-none reliability and availability.
+
+NFTs are digital assets containing unique identification codes that verify ownership, no two NFTs are alike
+To cut minting costs especially if the digital work is large or high resolution can store digital asset offchain on decentralised storage like ipfs
+the nft links to offchain digital data and metadata
+
+
+Just because you buy a non-fungible token doesn't mean you automatically own the copyright or even a license.
+The creator does. That's because when you buy NFTs, you're actually purchasing a digital token – proof of ownership of something.
+And in some cases, you may only be the part owner of that thing
+
+non-fungible tokens represent the ownership or rights to a particular underlying asset.
+And that means creators need to avoid infringing on the Intellectual Property rights of others.
+
+Artist can sell the physical artwork and sell the digital via NFT, can also have open editions and depending on the purchasers rights can get royalties based on any imcome made from using the digital artwork
+
+ artists sometimes release limited editions, such as 10 NFTs of the same artwork or what is known as open editions.
+
+NFT royalties are crypto payouts designed to proffer creators a cut of secondary sales of their digital collectibles.
+The percentage of sale designated for royalties is set by the creator at the time of minting — typically around 6%
+
+;************************
+Personal License
+While you may not hold the copyright yourself, if you’re granted a personal license, you can use your NFT for non-commercial, non-profit means. This could include displaying your artwork in your home or using it as your social media profile picture.
+
+Bear in mind, however, that you won’t be able to use your NFT for commercial gain in any way.
+;************************
+Commercial Rights
+Here you will have some commercial rights to your NFT as given to you by the creator. It’s important to remember that they will still have copyright and IP ownership of the original work.
+Depending on the specific rights transferred to you, you might be able to sell prints, create merchandise, or even create a TV show.
+
+Aside from personal and commercial licenses, there are other structures in which the buyer of an NFT has to pay royalties to the original creator. So every time the NFT is sold, it generates a passive income for its owner.
+;************************
+
+utility based NFTs
+
+ERCs are application level standards that establish a shared interface for contracts and dapps to reliably interact with each other.
+
+ERC-4907 standardizes the way NFT rentals happen by separating the concept of user and owner.
+This allows us to identify permissioned roles on the NFT.
+user has the ability to use the NFT, but does not have the permission to sell it.
+an expires function is introduced, so that the user only has temporary access to use the NFT.
+
+
+interface IERC4907 {
+
+    // Logged when the user of a NFT is changed or expires is changed
+    /// @notice Emitted when the `user` of an NFT or the `expires` of the `user` is changed
+    /// The zero address for user indicates that there is no user address
+    event UpdateUser(uint256 indexed tokenId, address indexed user, uint64 expires);
+
+    /// @notice set the user and expires of a NFT
+    /// @dev The zero address indicates there is no user
+    /// Throws if `tokenId` is not valid NFT
+    /// @param user  The new user of the NFT
+    /// @param expires  UNIX timestamp, The new user could use the NFT before expires
+    function setUser(uint256 tokenId, address user, uint64 expires) external;
+
+    /// @notice Get the user address of an NFT
+    /// @dev The zero address indicates that there is no user or the user is expired
+    /// @param tokenId The NFT to get the user address for
+    /// @return The user address for this NFT
+    function userOf(uint256 tokenId) external view returns(address);
+
+    /// @notice Get the user expires of an NFT
+    /// @dev The zero value indicates that there is no user
+    /// @param tokenId The NFT to get the user expires for
+    /// @return The user expires for this NFT
+    function userExpires(uint256 tokenId) external view returns(uint256);
+}
+
+- The userOf(uint256 tokenId) function MAY be implemented as pure or view.
+- The userExpires(uint256 tokenId) function MAY be implemented as pure or view.
+- The setUser(uint256 tokenId, address user, uint64 expires) function MAY be implemented as public or external.
+- The UpdateUser event MUST be emitted when a user address is changed or the user expires is changed.
+- The supportsInterface method MUST return true when called with 0xad092b5c.
+

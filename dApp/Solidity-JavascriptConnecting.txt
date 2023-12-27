@@ -1,0 +1,177 @@
+
+Binance Smart Chain Client				<-HTTPS->	Web browser
+
+Smart Contract	<->	API:									Wallet			<->	Frontend
+(Solidity 0.8.20)			eth_sendTransaction			(Metamask)			(Javascript)
+								eth_call															Ethers
+								...
+
+API is the interface to interact with the blockchain
+eth_sendTransaction - writes data
+eth-call - reads data
+
+Hardhat Network is a local Ethereum network designed for development.
+Deploy your contracts, run tests and debug Solidity code all within your local machine.
+
+Hardhat VS Code extension that adds language support for Solidity and provides editor integration for Hardhat projects.
+
+Node.js LTS Version: 20.10.0 (includes npm 10.2.3)
+
+https://marketplace.visualstudio.com/items/dbaeumer.vscode-eslint
+
+
+
+after you deploy a smart contract on binance smart chain if you want to interact with it you need to use the command line - not user friendly
+so we build a frontend interface - front end uses javascript, while the smart contract uses solidity so we need a way of connecting them
+
+the client exposes the smart contract functionality with an api
+in this api there are several endpoints for interacting with our smart contract
+we will use two endpoints
+eth_sendTransaction to modify data and
+eth_call to read data from the smart contract
+on the front end we will have a web page with html css and javascript
+this is the javascript code that will interact with the smart contract
+we could use javascript directly to interact with the api of binance matching but it would be too much work
+the two endpoints we are going to use eth_sendTransaction and eth-call requires a specific encoding for the parameters
+we are going to use a javascript library to do the heavy lifting
+there are two options web3 and ethers
+ethers is newer and has an easier API
+ethers is going to call Metamask/BEW/wallet which will send an http request across the internet until it reaches API of the BNB Smart Chain
+the request will then be sent to the EVM and executed and a response will be generated which will be sent back to the front end
+
+the wallet is not part of our dApp but we still need to interact with it
+it is usually a chrome extension like metamask but can also be a mobile wallet or hardware wallet
+//what are the different methods for interacting with the 3 types of wallet to get our request sent to the binance smart chain evm?
+
+The wallet is used to send a transaction to the smart contract
+the wallet has the private keys of the user and will sign the transaction before it is sent to the binance evm
+the users private key never leaves the wallet and our dApp will never have access to these keys
+the javascript code will just ask the wallet to send a transaction can it confirm with ther user that they agree to sign the transaction
+the wallet shows a pop-up to the user, only if the user agrees will the transaction will be signed and sent to the blockchain
+
+truffle project
+in contracts folder a simple contract with a integer variable and 2 functions - a func to update the var and a func to read the var
+in the frontend we will connect to this smart contract and call these 2 functions
+Ei-dolon/Jetset/contracts/
+	SimpleStorage.sol
+
+	pragma solidity ^0.8.20;
+
+	contract SimpleStorage {
+			unint public data;
+
+			function updateData(uint _data) external {
+				data = _data;
+		}
+
+		function readData() external view returns(uint) {
+			return data;
+		}
+	}
+
+deployment script - to deploy our contract:
+/migrations/deploy_contact.js
+
+const SimpleStorage = artifacts.require("SimpleStorage");
+
+module.exports = function (deployer) {
+	deployer.deploy(SimpleStorage));
+};
+
+/frontend/
+
+/test/
+
+package-lock.json
+package.json
+truffle-config.js
+
+
+Cryptocurrencies are digital or virtual forms of currency that use cryptography for security.
+They are decentralized and typically operate on a technology called blockchain, which is a distributed ledger enforced by a network of computers (or nodes).
+The cryptocurrency wallet stores your private and public keys, allowing you to send and receive digital currencies, and monitor your balance.
+The cryptocurrency is stored on the blockchain (not the wallet), the wallet is just a set of keys that gives you access to the currencies on the blockchains.
+
+Hierarchical Deterministic (HD) Wallet
+ a system of creating and managing multiple wallet addresses
+ leverages a unique method to generate an almost infinite number of public and private key pairs from a single, initial root key, known as the seed phrase.
+ given the same seed the branching is deterministic meaning it defines a consistent method for generating the same set of accounts and wallets for a given private key even if you switch to another device or wallet provider.
+This unique feature streamlines key management, enhances security, and maintains user privacy.
+
+A derivation path:
+ the derivation path determines the route the HD wallet takes to derive a particular key pair/a certain address and its private key from the seed/within the wallet
+ seed (root of the tree) produces a tree of keys - the deivation path specifies which key (address) to go to.
+ Derivation paths are used as a Bitcoin standard and were introduced with HD wallets as a part of BIP 32.
+
+Each number in the path corresponds to a level in the tree hierarchy.
+The apostrophe (‘) denotes a hardened key, which is a key derivation process with an added layer of security.
+The number 44′ is the , and the next numbers denote the coin type, account, change (0 for external/public, 1 for internal/change), and index of the address in the account.
+m/44'/0'/0'/0/0 is the standard for Bitcoin's first address in the first account
+while m/44'/60'/0'/0/0 is for Ethereum's first address in the first account
+
+e.g.
+1. Seed - Start at the master key (m).
+2. Wallet standard - eg. wallets that follow the BIP44 standard use (44′).
+3. Coin type - Derive the key for coin type (0′ for Bitcoin, 60′ for Ethereum)
+4. Account within the tree - Access the first account (0′).
+5. Choose the external chain, used for public addresses (0).
+6. And finally, generate the first address in this sequence (0).
+
+ a derivation path is a ‘route’ or ‘direction’ that your Hierarchical Deterministic (HD) wallet uses to generate new addresses
+
+Derivation Path
+
+If you use an HD wallet to store your crypto assets, you will encounter the phrase “derivation path.” Simply put, a derivation path defines a consistent method for generating the same set of accounts and wallets for a given private key even if you switch to another device or wallet provider.
+
+truffle-hdwallet-provider - HD Wallet-enabled Web3 provider. Use it to sign transactions for addresses derived from a 12-word mnemonic.
+Install:
+npm install truffle-hdwallet-provider
+
+Reqs:
+Node >- 7.6
+
+General use - can use this provider whereever a Web3 provider is needed not just for Truffle
+
+var HDWalletProvider = require("truffle-hdwallet-provider");
+var mnemonic = "mountains supernatural bird..."; // 12 word mnemonic
+var provider = new HDWalletProvider(mnemonic, "http://localhost:8545");
+
+// Or, alternatively pass in a zero-based address index.
+var provider = new HDWalletProvider(mnemonic, "http://localhost:8545", 5);
+
+// Or, use your own hierarchical derivation path
+var provider = new HDWalletProvider(mnemonic, "http://localhost:8545", 5, 1, "m/44'/137'/0'/0/");
+
+// ...
+// Write your code here.
+// ...
+
+// At termination, `provider.engine.stop()' should be called to finish the process elegantly.
+provider.engine.stop();
+
+
+By default, the HDWalletProvider will use the address of the first address that's generated from the mnemonic. If you pass in a specific index, it'll use that address instead.
+
+Parameters:
+Parameter 			Type 			Default 					Required 	Description
+mnemonic 			*string* 		null 						[x] 			12 word mnemonic which addresses are created from.
+provider 				string|object 	null 						[x] 			URI or Ethereum client to send all other non-transaction-related Web3 requests
+address_index 		number 		0 							[ ] 			If specified, will tell the provider to manage the address at the index specified
+num_addresses 	number 		1 							[ ] 			If specified, will create number addresses when instantiated
+shareNonce 			boolean 		true 						[ ] 			If false, a new WalletProvider will track its own nonce-state
+wallet_hdpath 		string 			"m/44'/60'/0'/0/" 	[ ] 			If specified, will tell the wallet engine what derivation path should use to derive addresses.
+
+Private Keys:
+Instead of a mnemonic, you can alternatively provide a private key or array of private keys as the first parameter. When providing an array, address_index and num_addresses are fully supported.
+
+var HDWalletProvider = require("truffle-hdwallet-provider");
+//load single private key as string
+var provider = new HDWalletProvider("3f841bf589fdf83a521e55d51afddc34fa65351161eead24f064855fc29c9580", "http://localhost:8545");
+
+// Or, pass an array of private keys, and optionally use a certain subset of addresses
+var privateKeys = [
+  "3f841bf589fdf83a521e55d51afddc34fa65351161eead24f064855fc29c9580",
+  "9549f39decea7b7504e15572b2c6a72766df0281cea22bd1a3bc87166b1ca290",
+];
+var provider = new HDWalletProvider(privateKeys, "http://localhost:8545", 0, 2); //start at address_index 0 and load both addresses
+

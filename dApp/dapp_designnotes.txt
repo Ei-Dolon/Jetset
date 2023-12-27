@@ -1,0 +1,237 @@
+DApp has its backend code running on a decentralized peer-to-peer network.
+
+BSCscan.com
+anok4dan
+anok4dan@gmail.com
+
+project:	Jetset Wallet
+API key token:
+U4BNA1SIJR23T9DNH56K8KI1BPSS1V3B9I
+
+Do not commit api key to version control.
+
+the smart contracts should contain all your backend logic.
+The frontend could be any JavaScript, along with the ethers.js web3 library that gives you the APIs to communicate with the smart contract backend.
+
+users can be tied to blockchain addresses by pouchdb
+ipfs used for storage
+
+Testnet
+Network Name: Smart Chain - Testnet
+New RPC URL: https://data-seed-prebsc-1-s1.binance.org:8545/
+ChainID: 97
+Symbol: BNB
+Block Explorer URL: https://testnet.bscscan.com
+
+// Current Version of solidity
+pragma solidity ^0.8.20;
+
+// Main coin information
+contract Token {
+    // Initialize addresses mapping
+    mapping(address => uint) public balances;
+    // Total supply (in this case 1000 tokens)
+   // uint public totalSupply = 1000 * 10 ** 18;
+    // Tokens Name
+    string public name = "JetSet:;
+    // Tokens Symbol
+    string public symbol = "JST";
+    // Total Decimals (max 18)
+    uint public decimals = 18;
+
+    // Transfers
+    event Transfer(address indexed from, address indexed to, uint value);
+
+    // Event executed only ones uppon deploying the contract
+    constructor() {
+        // Give all created tokens to adress that deployed the contract
+        balances[msg.sender] = totalSupply;
+    }
+
+    // Check balances
+    function balanceOf(address owner) public view returns(uint) {
+        return balances[owner];
+    }
+
+    // Transfering coins function
+    function transfer(address to, uint value) public returns(bool) {
+        require(balanceOf(msg.sender) >= value, 'Insufficient balance');
+        balances[to] += value;
+        balances[msg.sender] -= value;
+        emit Transfer(msg.sender, to, value);
+        return true;
+    }
+
+}
+
+
+verify source code on bscscan:
+Paste in the address of the deployed contract you copied from the previous step into the search bar and hit enter.
+
+You should see details of the token. Click on the Contract tab below the token details.
+
+Click Verify and Publish and fill in the form as shown below.
+
+Make sure the compiler version is exactly the same as in Remix and that the license field is set to the same as in the source code (in this case, GNU Public License 3.0). Then, click Continue.
+
+You should see an input box to paste in the contract smart code. Copy the source code from the Remix editor, paste it in the box, and click Verify and Publish.
+
+
+
+NFT ownership of each asset (luxury property, luxury vehicle, or luxury service) is minted on the blockchain, metadata holds all of the details that uniquely identify the asset).
+NFT rental protocols provide the infrastructure to transfer NFT user rights for a limited period without transferring the NFT ownership.
+
+For property rental, the intial assets to be released upon the platform, the blockchain NFTs:
+ - Aim to revolutionize real estate rental by enabling property tokenization, offering enhanced global liquidity, and facilitating fractional ownership.
+- Ensures secure, transparent, and expedited real estate rental transactions, minimizing traditional procedural hassles.
+
+A renter will deposit the necessary collateral to rent the NFT as well as paying any gas fee's for any changes to a booking after it has been made.
+This provides the renter with the rights to use that property (within limits) during their rental period.
+
+
+
+
+
+Users can lend and borrow NFTs for a set period on the platforms deploying rental protocols. The lender lists an NFT on the marketplace and sets the rental terms, such as the number of days for renting. The borrower pays the rent and additional fees and hands back the NFT to the original owner at the end of the rental period.
+
+Some protocols require collateralized renting, where the borrower must deposit the necessary collateral to rent the NFT. However, nowadays, non-collateralized renting is becoming the norm, as it lowers the barrier to accessing NFTs and is thus more appealing to borrowers.
+
+After renters pay the required expenses, they receive a wrapped NFT, which represents the NFT the lender provided in the first place. A wrapped NFT (wNFT) is created by exchanging one token for another in an equal amount with a smart contract. The wNFT can include fungible or nonfungible collaterals and functions across different blockchains. When the rental period ends, it’s destroyed, and the original NFT returns to its owner.
+
+
+As protocols provide the underlying framework, developers can build new NFT marketplaces with renting functionalities on top of them. For instance, by integrating with the NFT rental protocol, reNFT, decentralized apps can create whitelabel solutions that preserve the project’s front-end interface. It’s also possible to develop tailor-made NFT renting platforms
+
+two methods:
+1: unique nft minting
+booking and paying for a property, vehicle, service, bill (eg restaurant bill) mints a unique nft at that point in time, that allows the use of the nft to take control of the real world asset or remove a debit at the time of the booking (included within the nft metadata, along with amount paid, currency used, value of currency at that time in USD/USDT, value paid in USD/USDT),
+
+changing a booking (read in nft1) to another booking requires using the platform to ensure the new booking is feasible (nft2 data), in which case the gas charges of cancelling the 1st nft and gas charges to mint the new nft, also need to include provision for changes in nft value - compare value paid of 1st nft with value of 2nd nft
+cmp nft1.val, nft2.val -> result, deltavalue
+result=0 equal
+result=-1 means nft1.val > nft2.val
+	offer refund difference stored in deltavalue as  jetset or bnb to users registered wallet which is hardcoded into metadata
+result=1 means nft1.val < nft2.val
+	requires an additional payment for the new nft
+	request payment of deltavalue from user wallet in bnb or jetset (20% reduction in cost)
+
+
+2: nft for each asset minted 1st
+nft with all relevant metadata eg unique id, property address, satnav location, etc.
+nft ownership remains with owner of property, however transfer of ownership for a period can be minted upon payment via the platform
+
+again changing a booking will involve platform opening and reading nft1 then determining nft2 data from available days to rent property, once feasible data chosen, dif in value calculated, resolved and then gas fees releasing nft1 and minting nft2 to be paid out of wallet
+
+rules:
+rental period has to be sequential days within a range of days that has a min and max days value.
+gas fee calulator to be included to estimate fees in minting and releasing/destroying an nft
+so mint not started unless booking payment and gas fees are available in wallet.
+each account is tied to a wallet on the bnb smart chain
+each day for each property can have a dif value, a booking is caluated by summation of all days included within booking eg. days in june,July, aug higher value than off peak season days
+
+Installation:
+For Hardhat, Truffle (npm)
+$ npm install @openzeppelin/contracts
+
+Foundry (git)
+Warning:
+When installing via git, it is a common error to use the master branch.
+This is a development branch that should be avoided in favor of tagged releases.
+The release process involves security measures that the master branch does not guarantee.
+
+Warning: Foundry installs the latest version initially, but subsequent forge update commands will use the master branch.
+
+$ forge install OpenZeppelin/openzeppelin-contracts
+
+Add @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ in remappings.txt.
+
+//Usage: Once installed, you can use the contracts in the library by importing them:
+
+pragma solidity ^0.8.20;
+
+import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+contract MyCollectible is ERC721 {
+    constructor() ERC721("MyCollectible", "MCO") {
+    }
+}
+;************************
+//Secure Deploy - Test, execute, and verify deployments and upgrades across chains securely, with adding just 5 lines of code to your existing Hardhat (and soon Foundry) configuration.
+
+// hardhat-config.js
+require('@openzeppelin/hardhat-upgrades');
+require('dotenv').config();
+
+module.exports = {
+    defender: {
+        apiKey: process.env.API_KEY,
+        apiSecret: process.env.API_SECRET,
+    }
+}
+
+//deploy.js
+import { ethers, defender } from "hardhat";
+
+ async function main() {
+    const Box = await ethers.getContractFactory("Box");
+    const deployment = await defender.deployProxy(Box);
+    await deployment.waitForDeployment();
+    console.log(`Contract deployed at ${deployment.getAddress()}`);
+ }
+
+;************************
+ERC20
+Name: Jetset
+Symbol: JST
+Premint: 0
+Features:
+	Mintable
+	Burnable
+	Pausable
+	Permit
+	Votes
+	Flash Minting
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
+
+/// @custom:security-contact security@jetsettoken.com
+contract Jetset is ERC20, ERC20Permit {
+    constructor() ERC20("Jetset", "JST") ERC20Permit("Jetset") {}
+}
+
+
+
+
+IERC2981
+import "@openzeppelin/contracts/interfaces/IERC2981.sol";
+Interface for the NFT Royalty Standard.
+
+A standardized way to retrieve royalty payment information for non-fungible tokens (NFTs) to enable universal support for royalty payments across all NFT marketplaces and ecosystem participants.
+
+FUNCTIONS
+royaltyInfo(tokenId, salePrice)
+
+IERC165
+supportsInterface(interfaceId)
+
+royaltyInfo(uint256 tokenId, uint256 salePrice) → address receiver, uint256 royaltyAmount
+external
+Returns how much royalty is owed and to whom, based on a sale price that may be denominated in any unit of exchange. The royalty amount is denominated and should be paid in that same unit of exchange.
+
+;************************
+//SafeCast
+import "@openzeppelin/contracts/utils/math/SafeCast.sol";
+//Wrappers over Solidity’s uintXX/intXX casting operators with added overflow checks.
+SafeMath.sol
+
+
+Downcasting from uint256/int256 in Solidity does not revert on overflow.
+This can easily result in undesired exploitation or bugs, since developers usually assume that overflows raise errors.
+SafeCast restores this intuition by reverting the transaction when such an operation overflows.
+
+Using this library instead of the unchecked operations eliminates an entire class of bugs, so it’s recommended to use it always.
+
+

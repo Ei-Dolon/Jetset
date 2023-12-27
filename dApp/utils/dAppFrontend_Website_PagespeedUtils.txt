@@ -1,0 +1,58 @@
+PageSpeed-For websites and dApp frontends
+
+Google hosted libraries
+
+	Structured Page Fragments (SPF) is a lightweight JS framework for fast navigation and page updates from YouTube, using progressive enhancement and HTML5.
+	link to SPF via Google Hosted Libraries for speed (no need to install on server and access)
+		<script src="https://ajax.googleapis.com/ajax/libs/spf/2.4.0/spf.js"></script>
+	but install version to use and test locally
+		npm install spf
+	SPF client is a single ~10KB Universal Module Definition JS file with no dependencies - can be async delay-loaded, all func exposed via global spf object
+	add SPF to site by including the JS file and run:
+		<script>
+			spf.init();
+		</script>
+
+	Send requests:
+	SPF does not change your site's navigation automatically and instead uses progressive enhancement to enable dynamic navigation for certain links.
+	Just add a spf-link class to an <a> tag to activate SPF.
+
+	Go from static navigation:
+		<a href="/destination">Go!</a>
+	to dynamic navigation:
+		<!-- Link enabled: a SPF request will be sent -->
+		<a class="spf-link" href="/destination">Go!</a>
+
+	Return responses:
+	In static navigation, an entire HTML page is sent. In dynamic navigation, only fragments are sent, using JSON as transport.
+	When SPF sends a request to the server, it appends a configurable identifier to the URL so that your server can properly handle the request. (By default, this will be ?spf=navigate.)
+	Common layout - upper masthead, middle content, lower footer.
+	In dynamic navigation, only the fragment for the middle content is sent, since the masthead and footer don't change.
+
+	Go from static navigation:		GET /destination
+
+	<html>
+		<head>
+			<!-- Styles -->
+		</head>
+		<body>
+			<div id="masthead">...</div>
+			<div id="content">
+			<!-- Content -->
+			</div>
+			<div id="footer">...</div>
+			<!-- Scripts -->
+		</body>
+	</html>
+
+	to dynamic navigation:		GET /destination?spf=navigate
+
+	{
+		"head": "<!-- Styles -->",
+		"body": {
+			"content":
+				"<!-- Content -->",
+		},
+		"foot": "<!-- Scripts -->"
+	}
+

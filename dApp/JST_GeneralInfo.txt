@@ -1,0 +1,423 @@
+Luxury rental
+
+
+NFT project that has recently launched on the Binance Smart Chain
+
+Artistic side of the lifestyle project utility is enabling meme-crazed investors the opportunity to unlock their favorite meme-based NFT’s
+
+
+Setup  an additional development environment using Ubuntu via WSL2, installed nvm and then Node.js LTS and npm
+This allows using VS code with Remote-development extension pack for Node.js projects, it splits VS Code into a “client-server” architecture,
+with the client (the VS Code user interface in JavaScript connected to html/css jetsetlux.com/index.html) running on Windows operating system and
+the server (Eth Provider API, NFT smart contracts using solidity 0.8.20, metamask SDK, Git, plugins, etc) running "remotely" on WSL2 Linux distro Ubuntu.
+
+
+;************************
+Jetset dApp roadmap:
+;************************
+- Each stage must be completed before the next can begin.
+- All stages must be successfully passed before the first beta version can be released on BSC Mainnet
+(Bear in mind that solidity itself is only at v0.8.20 and therefore is still in beta itself)
+These stages must be completed successfully.
+Debugging communication between frontend to backend and then processing response by frontend using Hathat Network to run a local Ethereum network node designed for development.
+
+Provider API allows JSON-RPC or http RPC of the end points needed to access the blockchain to add transactions and interact with our smart contracts
+
+Remote Procedure Calls - JSON, or HTTP RPC of the end points
+Pre-release versions of the dApp will be tested on a local Ethereum network node designed for development - Hardhat Network,
+ALPHA version of the dApp will be deployed for testing on BNB Smart Chain Testnet
+
+will be where the ALPHA version of the dApp is deployed for extensive testing by Jetset Core Dev, and Jetset Core testers - both subsets of the JETSET TOKEN {OFFICIAL} groupsubset of the setset jetset testing
+1. Code a test frontend GUI/UX that links to the Book Now link on jetsetlux.com.
+Fields accept null values thus allowing negotiation through the frontend.
+From dev/core group feedback can add extra fields, change layout until we have model prototype that will work with at least luxury property rental bu ideally will be designed that it can be used for a whole range of luxury rental and wellness lifestyle sectors.
+
+1a. During this development i will be working on a range of frameworks and libraries including node.js/express.js and bsc studio/docker via VS Code as well as Remix and Truffle to create the code hooks.
+
+2. Once prototype ready, we can hook in the code to correctly process and validate data entry to the fields, initially testing on a locally run node, but then moving to use web3 or json RPC provider to link to the BSC Testnet node.
+Already created testnet node with QuickNode (User: Anokdan Project: Jetset).
+Using BNB from a testnet faucet, can create the backend solidity coded reNFT system, then we can use test wallets loaded with BNB to purchase JST and then book rental property's via the NFT method implemented.
+This will test frontend, frontend to backend linking and node use. as well as the backend smart contracts that control the NFT generation and use.
+
+3. Testing and debugging - Once it is working we can release a limited alpha version to a few testers (recommended by @Mickhaloi from the telegram group).
+
+4. Once working and secure, we can  release our first beta version on the mainnet.
+
+5. Additional luxury rental and wellness lifestyle products added to dApp.
+
+Submission of Jetset dApp every 2 weeks on Wednesday
+
+Once testing complete and project been audited (inc dApp and token), submit to mainnet as beta release
+From this point update schedule mirrors cURL:// update schedule
+Release Wed
+10 day cooldown
+14 day feature/updates/bug fix submissions - fork main, code, commit fork
+4 day integration of forks to main
+28 day testing, checking
+
+Jetset
+JST
+Smart Contract with address: 0x405be90996e7f995a08c2fbd8d8822ef5b03466c
+
+
+BSC Mainnet (ChainID 0x38, 56 in decimal)
+https://bsc-dataseed.bnbchain.org
+https://bsc-dataseed.nariox.org
+https://bsc-dataseed.defibit.io
+https://bsc-dataseed.ninicoin.io
+https://bsc.nodereal.io
+https://bsc-dataseed-public.bnbchain.org
+You could find more endpoints from here.
+
+BSC Testnet (ChainID 0x61, 97 in decimal)
+https://bsc-testnet-dataseed.bnbchain.org
+https://bsc-testnet.bnbchain.org
+https://bsc-prebsc-dataseed.bnbchain.org
+
+BSC Testnet faucet: https://www.bnbchain.org/en/testnet-faucet
+Explorers for Testnet
+BscScan - https://testnet.bscscan.com/
+Bitquery - https://explorer.bitquery.io/bsc_testnet
+
+RPC Endpoints
+BSC RPC Endpoints(ChainID 0x61):
+
+https://docs.bnbchain.org/docs/BSCtestnet
+	https://data-seed-prebsc-1-s1.bnbchain.org:8545
+	https://data-seed-prebsc-2-s1.bnbchain.org:8545
+	https://data-seed-prebsc-1-s2.bnbchain.org:8545
+	https://data-seed-prebsc-2-s2.bnbchain.org:8545
+	https://data-seed-prebsc-1-s3.bnbchain.org:8545
+	https://data-seed-prebsc-2-s3.bnbchain.org:8545
+
+
+Third-Party RPC Providers
+QuickNode: https://quicknode.com
+
+Starting HTTP JSON-RPC
+You can start the HTTP JSON-RPC with the --http flag
+
+## mainnet
+geth attach https://bsc-dataseed.bnbchain.org
+
+## testnet
+geth attach https://bsc-testnet-dataseed.bnbchain.org
+
+Truffle
+In linux add use nvp to add Node.js LTS and npm
+add Git
+Now can add Truffle:
+npm install -g truffle
+
+Create a scaffold project for getting started, Truffle Boxes - BSC Starter Box which is a boilerplate to jump start development on the BNB Smart Chain.
+
+Project structure:
+contracts/: Directory for Solidity contracts
+migrations/: Directory for scriptable deployment files
+test/: Directory for test files for testing your application and contracts
+truffle-config.js: Truffle configuration file
+secrets.json - contains seed phrase mnemonic add this file to .gitignored within github so it doesn't accidentally become public.
+	Sample secrets.json:
+	{
+		"mnemonic": "mechanic glue slot item welcome dust catch wood enjoy result goddess snake"
+	}
+
+Compile Contract
+To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:
+truffle compile
+
+
+Configuring Truffle for BSC:
+- Go to truffle-config.js
+- Update the truffle-config with bsc-network-crendentials.
+
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const fs = require('fs');
+const mnemonic = fs.readFileSync(".secret").toString().trim();
+
+module.exports = {
+  networks: {
+    development: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard BSC port (default: none)
+      network_id: "*",       // Any network (default: none)
+    },
+    testnet: {
+      provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.bnbchain.org:8545`),
+      network_id: 97,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    bsc: {
+      provider: () => new HDWalletProvider(mnemonic, `https://bsc-dataseed1.bnbchain.org`),
+      network_id: 56,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+  },
+
+  // Set default mocha options here, use special reporters etc.
+  mocha: {
+    // timeout: 100000
+  },
+
+  // Configure your compilers
+  compilers: {
+    solc: {
+      version: "^0.8.20", // A version or constraint - Ex. "^0.5.0"
+    }
+  }
+}
+
+BscScan plugin for Truffle:
+Truffle has a BscScan plugin: truffle-plugin-verify
+You need to deploy with Truffle to verify with the Truffle verify plugin.
+Get API key: https://bscscan.com/myapikey
+//*** API key never commited to version control or uploaded to github
+Install the plugin:
+npm install -D truffle-plugin-verify
+
+
+	Sample env.json:
+	{
+		"mnemonic": "mechanic glue slot item welcome dust catch wood enjoy result goddess snake",
+		"BSCSCANAPIKEY": "XZ2M1F1DXABBQV8B7AHIH3GRX9SR2JQTHB"
+	}
+
+Configure the plugin in truffle-config.js using the following command:
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+
+// const infuraKey = "fj4jll3k.....";
+//
+const { mnemonic, BSCSCANAPIKEY} = require('./env.json');
+
+module.exports = {
+
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    bscscan: BSCSCANAPIKEY
+  },
+  networks: {
+
+    testnet: {
+        provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.bnbchain.org:8545`),
+        network_id: 97,
+        timeoutBlocks: 200,
+        confirmations: 5,
+        production: true    // Treats this network as if it was a public net. (default: false)
+    }
+  },
+
+  // Set default mocha options here, use special reporters etc.
+  mocha: {
+    timeout: 100000
+  },
+
+  // Configure your compilers
+  compilers: {
+    solc: {
+       version: "0.5.16",    // Fetch exact version from solc-bin (default: truffle's version)
+      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
+       optimizer: {
+         enabled: false,
+         runs: 200
+       },
+       evmVersion: "byzantium"
+      }
+    },
+  },
+};
+
+
+Hardhat:
+
+Ensure Node.js and npm installed via nvm
+install git
+Create an empty project:
+npm init --yes
+Install hardhat:
+npm install --save-dev hardhat
+Install hardhat toolbox:
+npm install @nomicfoundation/hardhat-toolbox
+Run local install of harrdhat:
+npx hardhat
+
+Configure Hardhat for BSC:
+- Go to hardhat.config.js
+- Update the config with bsc-network-crendentials.
+
+require("@nomicfoundation/hardhat-toolbox");
+
+const { mnemonic } = require('./secrets.json');
+
+// This is a sample Hardhat task. To learn how to create your own go to
+// https://hardhat.org/guides/create-task.html
+task("accounts", "Prints the list of accounts", async () => {
+  const accounts = await ethers.getSigners();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+});
+
+// You need to export an object to set up your config
+// Go to https://hardhat.org/config/ to learn more
+
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+  defaultNetwork: "mainnet",
+  networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545"
+    },
+    hardhat: {
+    },
+    testnet: {
+      url: "https://data-seed-prebsc-1-s1.bnbchain.org:8545",
+      chainId: 97,
+      gasPrice: 20000000000,
+      accounts: {mnemonic: mnemonic}
+    },
+    mainnet: {
+      url: "https://bsc-dataseed.bnbchain.org/",
+      chainId: 56,
+      gasPrice: 20000000000,
+      accounts: {mnemonic: mnemonic}
+    }
+  },
+  solidity: {
+  version: "0.8.20",
+  settings: {
+    optimizer: {
+      enabled: true
+    }
+   }
+  },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts"
+  },
+  mocha: {
+    timeout: 20000
+  }
+};
+
+
+
+Compile Smart Contract:
+npx hardhat compile
+
+Deploy Smart Contract on BSC Network:
+ - Copy and paste the following content into the scripts/deploy.js file
+scripts/deploy.js
+async function main() {
+  const [deployer] = await ethers.getSigners();
+
+  console.log("Deploying contracts with the account:", deployer.address);
+
+  console.log("Account balance:", (await deployer.getBalance()).toString());
+
+  const Token = await ethers.getContractFactory("BEP20Token"); //Replace with name of your smart contract
+  const token = await Token.deploy();
+
+  console.log("Token address:", token.address);
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+
+Run this command in root of the project directory:
+$  npx hardhat run --network testnet scripts/deploy.js
+Sample Output:
+$ npx hardhat run --network testnet scripts/deploy.js
+Deploying contracts with the account: 0x743C50810c488830376cD8708d8158E93AF8674b
+Account balance: 100721709119999208161
+Token address: 0x405be90996e7f995a08c2fbd8d8822ef5b03466c
+
+Verify with Hardhat:
+Hardhat has an Etherscan plugin: Hardhat Etherscan plugin
+Install the plugin:
+npm install --save-dev @nomiclabs/hardhat-etherscan
+Configure the EthereScan plugin in hardhat.config.js
+Step1: Add require("@nomiclabs/hardhat-etherscan");
+Step2: Add your Bscscan API key. Register and obtain your API key from https://bscscan.com/myapikey .
+	"mnemonic": "
+	"bscscanApiKey": "XZ2M1F1DXABBQV8B7AHIH3GRX9SR2JQTHB"
+Step3: Always remember to set the solidity compiler version to match what was used for deploying the smart contract.
+
+//*** API key never commited to version control or uploaded to github
+
+// hardhat.config.js
+const { mnemonic, bscscanApiKey } = require('./secrets.json');
+
+require('@nomiclabs/hardhat-ethers');
+require("@nomiclabs/hardhat-etherscan");
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+
+  networks: {
+    testnet: {
+      url: `https://data-seed-prebsc-1-s1.bnbchain.org:8545`,
+      accounts: {mnemonic: mnemonic}
+    },
+    mainnet: {
+      url: `https://bsc-dataseed.bnbchain.org/`,
+      accounts: {mnemonic: mnemonic}
+    }
+  },
+
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://bscscan.com/
+    apiKey: bscscanApiKey
+  },
+  solidity: "0.8.20"
+};
+
+Verify Command:
+//*** Remove any unnecessary contracts and clear the artifacts otherwise these will also be part of the verified contract.
+Run the following command:
+npx buidler verify --network mainnet DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+$ npx hardhat  verify --network testnet 0x743C50810c488830376cD8708d8158E93AF8674b
+Nothing to compile
+Compiling 1 file with 0.5.16
+Successfully submitted source code for contract
+contracts/BEP20Token.sol:BEP20Token at 0x743C50810c488830376cD8708d8158E93AF8674b
+for verification on Etherscan. Waiting for verification result...
+
+Successfully verified contract BEP20Token on Etherscan:
+https://testnet.bscscan.com/address/0x743C50810c488830376cD8708d8158E93AF8674b#code
+
+06
+Untitled-Presentation-169-Instagram-Post-Square-Presentation-169-1080-×-1080-px-Instagram-Post-Square-Presentation-169.png
+Untitled-Presentation-169-Instagram-Post-Square-Presentation-169.png
+Untitled-Presentation-169-Instagram-Post-Square-Flyer-Instagram-Post-Square-1.png
+Untitled-Presentation-169-Instagram-Post-Square-Flyer-Instagram-Post-Square-3.png
+Untitled-Presentation-169-Instagram-Post-Square-Flyer-Instagram-Post-Square-1-1024x1024.png
+Untitled-Presentation-169-Instagram-Post-Square-5.png
+Untitled-Presentation-169-Instagram-Post-Square-Flyer-Instagram-Post-Square-3-1024x1024.png
+TIP-TAP.png
+
+07
+D-5.jpg
+DJI_0815.jpg
+image6.png
+image2.png
+image.png
+8e739b09_original.jpg
+

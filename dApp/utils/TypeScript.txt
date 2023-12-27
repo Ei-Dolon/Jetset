@@ -1,0 +1,11 @@
+TypeScript is a new language that compiles to pretty human read-able and efficient JavaScript while adding some desirable features:
+
+optional static typing – catch errors while making them
+lots of EcmaScript 6 features – arrow functions, classes with inheritance, modules
+much better editor support – autocompletion and error highlighting in Visual Studio
+
+Developing a large C++ and JavaScript project, need documentation for both programming languages.
+The main requirements for the documentation are:
+
+Application Programming Interface (API) references and general documentation such as quick start and detailed guides
+cross references between the API references and the guides

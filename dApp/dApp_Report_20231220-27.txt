@@ -1,0 +1,69 @@
+dApp Report 20231220.txt
+
+
+Submission of Jetset dApp every 2 weeks on Wednesday
+
+Once testing complete and project been audited (inc dApp and token), submit to mainnet as beta release
+
+From this point update schedule mirrors cURL:// update schedule
+Release Wed
+10 day cooldown
+14 day feature/updates/bug fix submissions - fork main, code, commit fork
+4 day integration of forks to main
+28 day testing, checking
+
+
+Progress this weekend:
+Windows - Frontend htm/css + Ethers.js
+Node.js
+EMCA 6 Javascript/NodeJS LTS
+
+Extension:
+live remote dev = client server
+
+WSL2 Linux Ubuntu 22.04.3 LTS
+Backend  - solidity 0.8.20 smart contracts + API
+
+Metamask wallet: Dev
+0x743C50810c488830376cD8708d8158E93AF8674b
+BSC Testnet
+0.3 BNB (from binance testnet faucet - use to deploy solidity smart contracts, and for testing transactions via Metamask modal windows (jetset branding) to sign msg that sent as http to Local backend in Linux that is using Hardhat to provide a local ethereum blockchain to test with.
+Each transaction becomes a block
+
+fronttend 1 providing
+create tip wallet and QR code
+or import wallet address for tipping, and create QR code
+
+frontend 2 provuding jetset branded modal window of mm wallet:
+connect existing wallet - supply 12 word mnenonic phrase, use to install wallet within cookie of dApp - connect to read tokens and anounts and load transactions number  to use as nonce
+create new wallet with mnemonic phrase shown and stored offline, set to bsc chain, require purchase of bnb for gas and jst for tipping
+With loaded wallet, allow rental nft platform area or tip area
+Scan QR code of service provider to tip.
+Ttanlate QR to wallet receive addtess
+Show tip anount or enter tip and click tip btn, calls wallet with tip.amount to chk enough jst to tip and enough bnb for current guess gas, if success show modal win asking user to confirm tip, if yes then MM called to sign transaction with privatre key and transaction sent to API RPC. to add transaction to next block in blockchain.
+Wallet values locally updated, When async ret sucess,  the wallet values now permanet and nonce =+1, display mesage Thank you
+
+
+
+Setup  an additional development environment using Ubuntu via WSL2, installed nvm and then Node.js LTS and npm
+This allows using VS code with Remote-development extension pack for Node.js projects, it splits VS Code into a “client-server” architecture, with the client (the VS Code user interface in JavaScript connected to html/css jetsetlux.com/index.html) running on Windows operating system and the server (Eth Provider API, NFT smart contracts using solidity 0.8.20, metamask SDK, Git, plugins, etc) running "remotely" on WSL2 Linux distro Ubuntu.
+
+This has allowed me to finish 50% of the completed dApp.
+Have the solidity smart contracts for the NFT  creation, transfer and burn for luxury rental backend.
+Have created the interface between frontend and backend using Ethereum Provider API as part of BNB EVM client which processes signed transactions from the HD wallet.
+Have dropped Trust wallet for MetaMask SDK as it allowed me to make Jetset customised modal screens. So it has the security of metamask and the ability to add all of metamsk functionality to our dApp as and when wanted.
+
+75% of test frontend UI using EMCA 6 Javascript/NodeJS 20.10.0 LTS
+Have installed hardhat to locally test the frontend hook into the html/css version of the wordpress lux site
+
+connect to users HD wallet via derivative path (m/44'/60'/0'/0) to request user to sign transaction so sent to the BNB EVM which is run locally, and will respond.
+Response is handled via same stack but in reverse order until frontend handles it and displays a result to the Response;)
+
+Later will run on BNB testnet using Quicknode, will create test wallets with BNB from test faucet to use.
+
+Audit required to move dApps to Mainnet.
+
+
+Currently the jetset dApp uses preminted NFTs, one uniquely defines a single luxury property, ownership is constant and immutable minted by admin (in this case CEO bitmave), the platform arranged rental period of sequential days, days must be over minimum days rental and less than max days rental is calculated from summation of day cost (different days (on/off peak) cost varies) via property  metadata rate link off chain storage  probably via ipfs so that rates cam be updated (smart contract immutable once written to the blockchain). Once user connected wallet checked to determine if currency available that is equal to rental plus estimated gas fee's, the system will transfer user rights to renter.
+Ideally a security system can read the NFT from the wallet via mobile/tablet etc. Opening up house. End of rental period causes NFT user rights to return to the owner.
+

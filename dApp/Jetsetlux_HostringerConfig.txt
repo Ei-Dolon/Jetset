@@ -1,0 +1,107 @@
+Jetsetlux_HostringerConfig.txt
+
+jetsetlux.com 
+db: u184617492_Ybh9v
+https://hpanel.hostinger.com/hosting/jetsetlux.com/redirect?l=phpMyAdmin&db_name=u184617492_Ybh9v
+
+php 8.1
+wordpress (wp) 6.4.2
+
+AIOSEO
+Improve your website search rankings
+
+MonsterInsights
+Best Google Analytics plugin for website tracking
+
+
+SSH Access:
+
+SSH details:
+IP	82.180.174.57
+Port	65002
+Username	u184617492
+Password	
+SSH status
+INACTIVE
+SSH allows secure file transfer and remote logins over the internet
+
+Log in to SSH
+Use a built-in terminal on your device
+Open the terminal and paste this text into the command line. You will be requested to enter your SSH password.
+
+ssh -p 65002 u184617492@82.180.174.57
+
+Use SSH client
+Use your preferred SSH Client and enter SSH details to log in. Follow the following articles to download the SSH client.
+
+PuTTy	https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+PenguiNet	http://www.siliconcircus.com/
+
+https://support.hostinger.com/en/articles/1583245-how-can-i-connect-to-my-account-via-ssh
+
+
+https://www.hostinger.com/tutorials/ssh/basic-ssh-commands
+
+Basic SSH commands
+Learn about basic SSH commands and how to use them
+https://www.hostinger.com/tutorials/ssh/basic-ssh-commands
+
+Common SSH errors
+Check out the most common errors while using SSH and how to fix them
+https://support.hostinger.com/en/articles/5634587-how-to-solve-the-most-common-errors-in-ssh
+
+
+GIT
+
+Private Git Repository:
+Add this SSH key to your Github, Bitbucket or any other service to deploy private repositories
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCuH5L3OYJYvhddWGwte4GZ3ET0lDvTgjhrA06LuMbyRI6lxzzHbEqnvPv8FQjHac1MV+Quhy99j6z70AZl1AcJlSVaoZlRcgLRX2OSrsdoouR0BPweVD7yklBTu8k3rpjg9QWHBTsy59x3/T/p97edO8NXvEzw/l2qXozr9hjVjWTp4+zF2SbjqJG9OI1CKhEqW9ZSIrxCf3eOuY1au72+M/B63DPPt+CJlmpuRehOmNzbah0Ue7yfVX0kMn8JMoleX8UZUQizCcrwTJ9hhShX0zDprzbxDwnBJyao4yXEwMM+NLnRGxYaxg++MV82J9HK9uWfceGeqUAKRwM14OKRFSwQxWt5Je3L9o338vnJz6gFHJSflUd4TfMUbL6YJv1xG+SGDUPAkBVOIxzXvcxukVPd5vUMtD77HkHewQoV7UEfQ6OjGP3otkNPR9kjgzF6jQyW0L6a+pntT0oS8D35UOq1DFD28mbPtuYJ8bz8lgWws7I+WK6IsLz3wO0KVhs= u184617492@us-phx-web748.main-hosting.eu
+
+
+Create a New Repository
+Deploy application directly from public Git repository. 
+
+Enter your public repository http URL, branch name and install path.
+
+Install path can be left empty, application will be deployed directly to public_html directory.
+
+Install path directory must not contain any files or folders, otherwise deployment will fail.
+
+Repository*:	https://github.com/Ei-Dolon/Jetset.git
+Examples:
+For public repositories: https://github.com/WordPress/WordPress.git
+For private repositories: git@github.com:WordPress/WordPress.git
+
+Branch*:	master
+Usually this is the master branch
+
+Directory
+Leave blank to deploy directly to public_html. 
+Folder must be empty (there can be other sub folders).
+
+
+includePath
+.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php
+The list of directories where scripts look for files (similar to system's PATH variable). To separate directories, use a colon (:) For example: .:/dir/inc:/usr/lib/php
+
+
+session.savePath
+/opt/alt/php81/var/lib/php/session
+The directory where PHP writes session data (files). For example: /dir/tmp
+
+
+
+Folder Index Manager:
+Setup Indexing Type:
+Directory	/home/u184617492	/
+Apply for the whole website
+
+Choose a new indexing type*
+	Default system settings
+	Fancy indexing (filename and description)
+	No index
+	Standard indexing (filename only)
+	
+	Add
+

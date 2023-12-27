@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tip Jetset - dApp for the BNB Smart Chain</title>
+
+	<link rel="stylesheet" href="tipjst.css" />
+</head>
+<body>
+<h1>Tip Jetset</h1>
+	<form>
+		<fieldset>
+			<legend>Select how to use, as a providing a service (receive tips), paying a gratuity to a service (pay tip):</legend>
+			<p>
+				<label for="tipjst">How to use Tip Jetset:</label><br>
+				<br>
+				<select id="tipjst" name="tipjst">
+					<option value="tx-tip" selected>Pay Tip!</option>
+					<option value="rx-tip">Setup Service</option>
+				</select>
+			</p>
+		</fieldset>
+		<p>
+			<button type="submit">Start Tip Jetset</button>
+		</p>
+	</form>
+<script src="tipjst.js" defer></script>
+</body>
+</html>
+

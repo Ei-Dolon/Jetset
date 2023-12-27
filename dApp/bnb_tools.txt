@@ -1,0 +1,454 @@
+bnb_tools
+
+* tools in use/to use.
+
+O/S:
+Windows 10 Pro 22H2 (x64)
+Ubuntu 22.04.3 LTS (WSL2)
+
+Languages:
+HTML 5
+CSS 3
+Python 3.12
+Javascript ES6
+
+Smart Contract Languages:
+* Solidity
+Vyper
+
+Dev Frameworks:
+* Truffle
+Embark
+Waffle
+Dapp
+* OpenZeppelin SDK
+* Hardhat
+Starton
+
+IDEs:
+* BSC Studio
+Remix
+Intellij Solidity Plugin
+ChainIDE
+
+Lint Tools:
+* ESlint
+* Solhint
+Ethlint
+Manticore
+Slither
+Echidna
+
+Testing Tools:
+Solidity code coverage
+Solidity function profiler
+eth-tester
+
+Test Blockchain Networks:
+bscnode
+Ganache
+
+Blockchain Access - Block Explorers:
+*BscScan
+
+Node and Archive Services:
+* Quicknode
+
+Security Tools:
+MythX
+Mythril
+Oyente
+Securify
+Solgraph
+* solc-verify
+
+ABI (Application Binary Interface) Tools:
+* ABI decoder
+ABI-gen
+Ethereum ABI UI
+
+Frontend BSC APIs:
+Web3.js
+Eth.js
+* Ethers.js
+light.js
+
+Backend BSC APIs:
+* Node.js v20.10.0 LTS
+Web3.py
+Web3.php
+Java Web3
+Net Web3
+Ruby Web3
+
+Wallet SDK:
+* Metamask SDK
+* Metamask extensions
+* BSC Connector
+
+Decentralized Storage:
+* IPFS
+Arweave
+pinata.cloud
+
+Comparison & Merge Software:
+Examdif Pro Master edition 14  (x64)
+
+VCS:
+* Git 2.43
+
+Code editors:
+* VS Code
+* Textpad 9.2.3 (x64)
+* UEStudio
+
+https://docs.bnbchain.org/docs/overview
+
+https://www.bnbchain.org/en/developers
+
+https://www.bnbchain.org/en/developers/developer-programs/kickstart
+
+https://www.bnbchain.org/en/blog/building-on-opbnb-and-bnb-greenfield-theres-tons-of-support-for-your-project
+
+https://nodereal.io/tutorials/how-to-verify-a-smart-contract-on-fncyscan-bsctrace/
+
+
+node-real
+BNB CHAIN Developer Tooling Landscape
+https://nodereal.io/bnb-dev-tools?ref=bnbchain.ghost.io
+
+Development:
+
+Solidity Code Quality:
+Solhint
+
+Ethlint
+
+Manticore
+
+Slither
+
+Echidna
+
+
+Front-End Programming:
+Web3.js
+https://github.com/web3/web3.js
+Ethers.js
+https://docs.ethers.org/ethers.js/v3.0/html/
+
+Back-End Programming:
+Web3.py
+https://github.com/ethereum/web3.py
+Web3.php
+
+Java Web3
+
+Net Web3
+
+Ruby Web3
+
+
+IDE:
+BSC Studio
+https://github.com/ObsidianLabs/BNB-Studio/blob/master/README.md
+Remix
+https://remix.ethereum.org
+Intellij Solidity Plugin
+
+ChainIDE
+https://chainide.com
+
+Development Framework:
+Truffle
+https://trufflesuite.com/boxes/BSC-Truffle-Starter-Box/
+Embark
+
+Waffle
+
+OpenZeppelin
+https://www.openzeppelin.com/defender
+HardHat
+
+Starton
+
+
+Wallet SDK:
+Venly
+https://www.venly.io/product/wallet-solutions
+Sequence.app
+
+Web3Auth
+
+BSC Connector
+
+
+MPC Wallets/Multisig:
+Qredo
+
+Gnosis
+
+Particle Network
+
+
+Decentralized Storage:
+IPFS
+
+Arweave
+
+pinata.cloud
+
+
+Data Oracles:
+Binance Oracle
+
+Band Protocol
+
+Chainlink
+
+Pyth
+
+
+Blockchain Access:
+Block Explorers:
+BscScan
+
+BSCTrace
+
+MINTSCAN
+
+
+Node and Archive Services:
+NodeReal
+
+Ankr
+
+Chainstack
+
+NowNodes
+
+QuickNode
+
+BlockVision
+
+Covalent
+
+InfStones
+
+Moralis
+
+Gomu
+
+Bounce Finance
+
+
+NFT Tools:
+NFTScan
+
+BlockVision
+
+Venly
+
+NFTrade
+
+
+Data Indexing:
+PARSIQ
+
+Nakji
+
+
+Browser:
+Opera
+
+
+Gasless Solutions:
+Biconomy
+
+
+Security Audit:
+CertiK
+
+PeckShield
+
+SlowMist
+
+Staging Labs
+
+Go+ / Go Plus
+
+Verichains
+
+HashDit
+
+Halborn
+
+Trail of Bits
+
+Consensys Diligence
+
+Zokyo
+
+
+Analytics & Dashboards:
+Dune
+
+YieldWatch
+
+Defistation
+
+Bitquery
+
+DeBank
+
+Bloxy
+
+Footprint Analytics
+
+Web3Go
+
+
+Payment Gateway:
+Binance Connect
+
+MoonPay
+
+Transak
+
+Okse
+
+Kado
+
+SuperFluid
+
+Pip
+
+
+DAO Tools:
+Tally
+
+Collab.Land
+
+Coinshift
+
+Snapshot
+
+HQ.xyz
+
+
+Gaming Tools:
+GameSpace
+
+
+Decentralized Identity/Social Graph:
+SPACE ID
+
+Galaxy
+
+CyberConnect
+
+NFT Marketplace
+
+Rareboard
+
+Venly
+
+NFTrade
+
+Element
+
+
+Cross-chain Bridges:
+Celer cBridge
+
+LayerZero
+
+ChainHop
+
+Ren Project
+
+HashFlow
+
+
+Wallets:
+Binance Wallet
+
+Trust Wallet
+
+Math Wallet
+
+SafePal
+
+TokenPocket
+
+MetaMask
+
+Ledger
+
+Trezor
+
+MEW
+
+ezDeFi
+
+1inch Wallet
+
+Infinity Wallet (Desktop)
+
+BitKeep (App&Chrome)
+
+Coin98 Wallet (App Web Extension)
+
+Guarda Wallet
+
+Rabby Wallet
+
+Onto
+
+Slope
+
+
+dApp Store:
+dApp Bay
+
+Magic Square
+
+
+Token Approval Tools:
+BscScan
+
+RevokeCash
+
+
+;************************
+c++ dev:
+malinka
+rtags
+auto-complete
+flycheck
+projectile
+
+optional:
+magit
+helm
+
+;************************
+malinka:
+https://github.com/LefterisJP/malinka
+
+Malinka is a project management Emacs package for C/C++
+
+It acts as a glue between different C/C++ packages to provide them with the right data for a project. All the data are organized and can be configured on a per project basis. The packages that malinka can work with are:
+
+Rtags:
+Rtags help the user jump around the code easily and provide integration with many clang utilities like Clang fixits. The main functionality that malinka provides is to properly populate and communicate the compiler commands to the rtags daemons depending on the project you are working on.
+
+If you have not installed rtags yet, visit their github page and read more information about how you can acquire and use rtags. Alternatively if you used el-get to get malinka rtags should have been downloaded and built as a dependency
+
+Flycheck:
+Optionally and if you also have flycheck with the clang syntax-checker activated, malinka will communicate to flycheck’s clang syntax checker the appropriate cpp-defines and include-paths so that flycheck can do its syntax checking.
+
+Projectile:
+If you are using projectile then malinka can provide projectile with the compile and test commands to build and test your project respectively. Projectile also helps with the detection of root directory for projects.
+
+

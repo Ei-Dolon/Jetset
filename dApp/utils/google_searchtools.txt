@@ -1,0 +1,115 @@
+Google search site:
+{google:baseURL}search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchboxStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
+
+"<input id=\"input\" part=\"input\" autocomplete=\"off\" aria-label=\"URL with %s in place of query\" disabled=\"\" aria-invalid=\"false\" tabindex=\"0\">"
+
+
+Programmable Search Engine
+Programmable Search Engine lets you programmatically build and manage search engines for your site.
+https://developers.google.com/custom-search?hl=en
+
+Search Central
+Improve your site's visibility on Google Search
+https://developers.google.com/search?hl=en
+
+Make the Web Faster
+Tools and information to help you build high performance web sites.
+https://developers.google.com/speed?hl=en
+
+
+Optimize
+Optimize enables you to test variants of web pages to see how they perform against specific objectives.
+https://developers.google.com/optimize?hl=en
+
+PageSpeed Module
+The PageSpeed modules are open-source server modules that optimize your site automatically.
+https://developers.google.com/speed/pagespeed/module?hl=en
+
+	\\WWW\data\Dev\Jetset\utils\dAppFrontend_Website_PagespeedUtils.txt
+	file:///D:/dev/Jetset/utils/dAppFrontend_Website_PagespeedUtils.txt
+	Google Hosted Libraries
+
+		SPF
+
+
+WebP is a method of lossy and lossless compression that can be used on a large variety of photographic, translucent and graphical images found on the web.
+The degree of lossy compression is adjustable so a user can choose the trade-off between file size and image quality.
+WebP typically achieves an average of 30% more compression than JPEG and JPEG 2000, without loss of image quality.
+
+WebP is a modern image format that provides superior lossless and lossy compression for images on the web.
+Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.
+
+WebP lossless images are 26% smaller in size compared to PNGs.
+WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index.
+
+Lossless WebP supports transparency (also known as alpha channel) at a cost of just 22% additional bytes.
+For cases when lossy RGB compression is acceptable, lossy WebP also supports transparency, typically providing 3× smaller file sizes compared to PNG.
+
+
+
+If you have many images to convert you can use your platform's shell to simplify the operation. For example, to convert all jpeg files in a folder try the following:
+
+Windows:
+> for /R . %I in (*.jpg) do ( cwebp.exe %I -o %~fnI.webp )
+
+Linux / macOS:
+$ for F in *.jpg; do cwebp $F -o `basename ${F%.jpg}`.webp; done
+
+How can I judge WebP image quality for myself?
+Currently, you can view WebP files by converting them into a common format that uses lossless compression, such as PNG, and then view the PNG files in any browser or image viewer. To get a quick idea of WebP quality, see the Gallery on this site for side-by-side photo comparisons.
+
+Source code:
+https://developers.google.com/speed/webp/download
+
+WebM site:
+https://www.webmproject.org/
+
+https://developers.google.com/speed/webp/docs/riff_container
+RIFF Container page for the container specification.
+
+
+
+How can I detect browser support for WebP?
+You'll want to serve WebP images only to clients that can display them properly, and fall back to legacy formats for clients that can't. Fortunately there are several techniques for detecting WebP support, both on the client-side and server-side. Some CDN providers offer WebP support detection as part of their service.
+
+Server-side content negotiation via Accept headers
+It is common for web clients to send an "Accept" request header, indicating which content formats they are willing to accept in response. If a browser indicates in advance that it will "accept" the image/webp format, the web server knows it can safely send WebP images, greatly simplifying content negotiation. See the following links for more information.
+
+Deploying New Image Formats on the Web
+https://www.igvita.com/2012/12/18/deploying-new-image-formats-on-the-web/
+
+Serving WebP Images to Visitors Using HTML Elements
+https://www.digitalocean.com/community/tutorials/how-to-create-and-serve-webp-images-to-speed-up-your-website#step-5-%E2%80%94-serving-webp-images-to-visitors-using-html-elements
+
+HTML5 <picture> element
+HTML5 supports a <picture> element, which allows you to list multiple, alternative image targets in priority order, such that a client will request the first candidate image that it can display properly.
+
+In your own JavaScript
+Another detection method is to attempt to decode a very small WebP image that uses a particular feature, and check for success.
+Example:
+
+// check_webp_feature:
+//   'feature' can be one of 'lossy', 'lossless', 'alpha' or 'animation'.
+//   'callback(feature, result)' will be passed back the detection result (in an asynchronous way!)
+function check_webp_feature(feature, callback) {
+    var kTestImages = {
+        lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+        alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+        animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+    };
+    var img = new Image();
+    img.onload = function () {
+        var result = (img.width > 0) && (img.height > 0);
+        callback(feature, result);
+    };
+    img.onerror = function () {
+        callback(feature, false);
+    };
+    img.src = "data:image/webp;base64," + kTestImages[feature];
+}
+
+
+Note that image-loading is non-blocking and asynchronous.
+This means that any code that depends on WebP support should preferably be put in the callback function.
+

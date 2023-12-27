@@ -1,0 +1,173 @@
+
+RPC (Remote Procedure Call) URL is an endpoint that enables an application to communicate with a blockchain network.
+It is used to send requests (initiate transactions) and receive responses (read data) from the blockchain, enabling developers to build applications that interact with the blockchain.
+
+JSON-RPC endpoints refers to the network location where a program could transfer its RPC requests to access server data. 
+
+The rate limit of BSC endpoint on Testnet and Mainnet is 10K/5min.
+
+Thrid-Party RPC Providers:
+Quicknode 
+
+
+RPC endpoints may be used to interact with a node directly over HTTP or websockets. Using RPC, you may perform low-level operations like executing ABCI queries, viewing network/consensus state or broadcasting a transaction. RPC endpoints are also used with web wallets to connect to the BSC mainnet.
+
+Endpoint Authentication - Token Authentication
+By default, all endpoints created on QuickNode are protected by a token in the URL:
+
+https://little-magical-shape.bsc-testnet.quiknode.pro/d7305ac5ca8f090382ab55dfbe13121eeb05bddf/
+
+Token: d7305ac5ca8f090382ab55dfbe13121eeb05bddf
+
+
+
+
+npm (Node Package Manager)
+Node.js	v18.16.0
+
+backend server: Express.js	v4.18.2
+
+react	v18.2.0
+
+jsonwebtoken	v9.0.0
+
+
+JWT - JSON Web Tokens
+standard and secure way for two parties to communicate
+they allow for stateless session management (no session cookies) where a backend server does not need to communicate with an authorization server
+sent via URL, POST parameter, or inside an HTTP header.
+Format:
+header.payload.signature
+each part separated by . is a JSON object encoded into a text string using BASE64
+
+app will be created using Express.js for the backend, which will create a REST API that will serve JWT tokens through a specific endpoint. Front-end will fetch this JWT and then use it to make a request to our blockchain node.
+
+
+; initialise React app
+npx create-react-app jwt-app && cd jwt-app
+; install dependencies 
+npm i express jsonwebtoken
+; create files for backend server and key pair generation 
+touch index.js && touch generateKeys.js
+; configure the package.json file to include a proxy field
+"proxy": "http://localhost:3001"
+; proxy field will allow for a gateway between our React app and our backend server running on Express.js
+
+; edit generateKeys.js 
+// Imported dependencies
+const fs = require('fs')
+const { generateKeyPairSync } = require('crypto');
+var jwt = require('jsonwebtoken');
+
+// Generate ES256 keys
+const { publicKey, privateKey } = generateKeyPairSync('ec', {
+    namedCurve: 'P-256',
+    publicKeyEncoding: {
+        type: 'spki',
+        format: 'pem'
+    },
+    privateKeyEncoding: {
+        type: 'pkcs8',
+        format: 'pem',
+    }
+});
+
+// Write key pairs to file
+fs.writeFileSync('private_key.pem', privateKey);
+console.log('Saved private_key.pem');
+
+fs.writeFileSync('public_key.pem', publicKey);
+console.log('Saved public_key.pem');
+
+
+; run file once to create key pair in same directory 
+node generateKeys.js
+
+; server code added to index.js
+// Import libraries
+const express = require("express");
+const fs = require("fs")
+const jwt = require("jsonwebtoken")
+
+// Server code
+const PORT = process.env.PORT || 3001;
+const app = express();
+
+
+app.get('/get_token', (req, res) => { // endpoint to retrieve JWT
+
+  // read private key
+  const privateKey = fs.readFileSync(__dirname + "/private_key.pem")
+
+  // Create payload and JWT
+  var token = jwt.sign({}, privateKey, {
+
+    algorithm: 'ES256', // algo used to create JWT
+    expiresIn: "2d" // set a 2 day expiration
+
+  });
+
+  return res.json({ token: token }); // return an object containing the signed JWT
+
+})
+
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`); // listen to connections on the specified host and port
+});
+
+; initialize frontend code in App.js in src directory
+import React from "react";
+import "./App.css";
+
+function App() {
+  const [data, setData] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("/get_token")
+      .then((res) => res.json())
+      .then((token) => {
+
+        fetch("https://little-magical-shape.bsc-testnet.quiknode.pro/d7305ac5ca8f090382ab55dfbe13121eeb05bddf/", {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token.token}`
+          },
+          body: JSON.stringify({ method: "eth_blockNumber", params: [], id: 1, jsonrpc: "2.0" })
+        }).then(res => res.json()).then(content => {
+          console.log(content)
+          setData(parseInt(content.result))
+        });
+
+      });
+  })
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>{!data ? "Loading..." : data}</p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+; add public key pair to blockchain node
+enter endpoint security settings and Add JSON Web Token
+Name: wallet
+Public Key: paste public key
+
+Once added, the name, ID, and fingerprint of the public key will be displayed in the JWT section within the Security tab.
+Start React app to create the JWT and make requests to the blockchain. 
+Open two terminal windows to run the backend server and React app simultaneously. 
+
+; start the backend server in one terminal
+node index.js
+; should see "Server listening on 3001"
+
+; start the React app
+npm start
+
+

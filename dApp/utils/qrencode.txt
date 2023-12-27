@@ -1,0 +1,45 @@
+qrencode.txt
+Qrencode  is  a  utility software using libqrencode to encode string data in a QR Code and save as a PNG or EPS image.
+https://launchpad.net/ubuntu/jammy/+package/qrencode
+https://manpages.ubuntu.com/manpages/jammy/man1/qrencode.1.html
+
+https://fukuchi.org/works/qrencode/
+https://github.com/fukuchi/libqrencode/
+
+
+Any linux distro can use package manager to install qrencode
+npm install qrencode
+
+Wallet -name -address
+-name - user name of that wallet e.g. expenses
+-address 0x 40 hex string address of wallet
+
+qrencode -o qrwallet{name}.png '{address}'
+
+qrencode -v if version >= 3.3.0 then can output as EPS (vector format - lossless and scalable)
+qrencode -t EPS -o -o qrwallet{name}.eps '{address}'
+
+Switches:
+All versions:
+-l 		error correction 4 levels - H 30% Q 25% M 15% L 7% (default or if omitted)
+
+PNG format:
+
+-s		defines black QR pixel size default is 3 ie each black dot is 3x3 pixels
+
+-d		define dpi for mobiles
+
+-m	white border surrounding QR to aid reabability by mobile or webcam
+		default -m 1 which is a border width of 1 dot i.e. 3 pixels if default used -s 3
+
+//smart phone
+qrencode -l H -m 5 -s 3 -d 300 EPS -o qrwallet{name}.eps '{address}'
+
+//high end desktop, low end smart phone
+qrencode -l H -m 5 -s 3 -d 120 EPS -o qrwallet{name}.eps '{address}'
+
+//desktop
+qrencode -l H -m 5 -s 3 -d 95 -t EPS -o qrwallet{name}.eps '{address}'
+
+
+

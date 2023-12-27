@@ -1,0 +1,184 @@
+Doxygen - creates a documentation manual from the library header files.
+www.doxygen.org
+
+Documenting JavaScript with Doxygen rather than C++
+Install Linux Ubuntu version in /home/dev/util/doxygen.js
+
+;************************
+#Doxyfile
+#line 562
+	FILTER_PATTERNS =*.js=doxygen.js
+
+ensure file has execute and read permission.
+Add file to path or use full path in the conf file
+e.g. conf file: FILTER_PATTERNS =*.js=/full/path/to/doxygen.js
+
+;************************
+#doxygen.js
+#!/usr/bin/env node
+var fs = require('fs')
+
+var functionName = /^\s+\/\/\/\s+@function\s+(.*)$/;
+var type = /^(\s+)\/\/\/\s+@param\s+{(\w*)}\s+(.+?)(\s+.*)$/;
+var param = /^(\s+)\/\/\/\s+@param\s+(.+?)\s/;
+var resultType = /^(\s+)\/\/\/\s+@return\s+{(\w+)}(\s+.*)$/;
+
+function Section()
+{
+	this.name = '';
+	this.result = 'undefined';
+	this.args = [];
+	this.comments = [];
+	this.namespaces = [];
+}
+
+Section.prototype.handle_function = function (line) {
+	this.namespaces = line.match(functionName)[1].split('.') || [];
+	this.name = this.namespaces.pop();
+};
+
+Section.prototype.handle_param = function (line) {
+	var paramType = 'Object';
+	var name = '';
+	var m = line.match(type);
+	var r = line;
+	if (m) {
+		paramType = m[2];
+		name = m[3];
+		r = m[1] + '/// @param ' + name + m[4];
+	}
+	else {
+		m = line.match(param);
+		name = m[2];
+	}
+	this.args.push({name: name, type: paramType});
+	this.comments.push(r);
+};
+
+Section.prototype.handle_return = function (line) {
+	this.result = 'undefined';
+	var m = line.match(resultType);
+	var r = line;
+	if (m) {
+		this.result = m[2];
+		r = m[1] + '/// @return ' + m[3];
+	}
+	this.comments.push(r);
+};
+
+Section.prototype.Generate = function () {
+	var doc = [];
+
+	this.namespaces.forEach(function (namespace) {
+		doc.push('namespace ' + namespace + ' {\n');
+	});
+
+	this.comments.forEach(function (c) {
+		doc.push(c);
+	});
+
+	var args = [];
+
+	this.args.forEach(function (argument) {
+		args.push(argument.type + ' ' + argument.name);
+	});
+
+	if (this.name) {
+		doc.push(this.result + ' ' + this.name + '(' + args.join(', ') + ');');
+	}
+
+	this.namespaces.forEach(function (namespace) {
+			doc.push('}\n');
+	});
+	return doc.join('\n');
+};
+
+Section.prototype.handle_line = function (line) {
+	this.comments.push(line);
+};
+
+function writeLine(line) {
+	process.stdout.write(line + '\n');
+}
+
+fs.readFile(process.argv[2], 'utf8', function (err, data) {
+	var lines = data.split('\n');
+	var comment = /^\s*\/\/\//;
+	var directive = /@(\w+)\s+(.*)$/;
+	var inside = false;
+	var section = new Section();
+	lines.forEach(function(line) {
+		if (line.match(comment)) {
+			var d = line.match(directive);
+			if (d) {
+				var handle = Section.prototype['handle_' + d[1]] || Section.prototype.handle_line;
+				handle.call(section, line);
+			} else {
+				section.handle_line(line);
+			}
+			inside = true;
+		} else if (inside) {
+			writeLine(section.Generate());
+			inside = false;
+			section = new Section();
+		}
+	});
+});
+
+;************************
+To document the following module:
+
+/// @file Sync.js
+/// @namespace Sync
+/// Module for loading and storing data
+
+var Sync = {
+	/// @function Sync.load
+	/// Loads an resource
+	/// @param {String} id the GUID of the resource
+	/// @param {Function} success callback to be executed with the data on suceess
+	/// @param {Function} error callback to be executed with error description in case of failure
+	/// Loads an resource
+	load : function (id, success, error) {
+	},
+
+	/// @function Sync.store
+	/// Store an resource
+	/// @param {String} id the GUID of the resource
+	/// @param {Object} data the resource
+	/// @param {Function} success callback to be executed when the store operation has completed successfully
+	/// @param {Function} error callback to be executed with error description in case of failure
+	/// Store an resource
+	store : function (id, data, success, error) {
+	},
+};
+
+;************************
+The filtered output Sync.js.cpp looks like:
+/// @file Sync.js
+/// @namespace Sync
+/// Module for loading and storing data
+
+namespace Sync {
+/// Loads an resource
+/// @param id the GUID of the resource
+/// @param success callback to be executed with the data on suceess
+/// @param error callback to be executed with error description in case of failure
+/// Loads an resource
+undefined load(String id, Function success, Function error);
+}
+
+namespace Sync {
+/// Store an resource
+/// @param id the GUID of the resource
+/// @param data the resource
+/// @param success callback to be executed when the store operation has completed successfully
+/// @param error callback to be executed with error description in case of failure
+/// Store an resource
+undefined store(String id, Object data, Function success, Function error);
+}
+
+;************************
+A nice surprise is that when you want to link to Sync.load you can use Sync.load, same for Sync.store.
+
+The only annoying C++ artifacts in the JavaScript documentation are the “Sync namespace” and using “::” as resolution operator, but they can be fixed by a simple find / replace script.

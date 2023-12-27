@@ -1,0 +1,22 @@
+_util_linux.txt
+
+qrencode
+
+libqrencode
+	Encoding
+	There are two methods to encode data: encoding a string/data or encoding a structured data.
+
+	Encoding a string/data
+	You can encode a string by calling QRcode_encodeString()
+	The given string is parsed automatically and encoded.
+	If you want to encode data that can be represented as a C string style (NUL terminated), you can simply use this way.
+
+
+YUIDoc is a Node.js application used at build time to generate API documentation for JavaScript code.
+YUIDoc is comment-driven and supports a wide range of JavaScript coding styles.
+The output of YUIDoc is API documentation formatted as a set of HTML pages including information about methods, properties, custom events and inheritance for JavaScript objects.
+https://github.com/yui/yuidoc
+
+npm install -g yuidocjs
+
+
