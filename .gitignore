@@ -5,35 +5,47 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+nft/wp-admin/
+nft/wp-content/index.php
+nft/wp-content/languages
+nft/wp-content/plugins/index.php
+nft/wp-content/themes/index.php
+nft/wp-includes/
+nft/index.php
+nft/license.txt
+nft/readme.html
+nft/wp-*.php
+nft/xmlrpc.php
+
+token/wp-admin/
+token/wp-content/index.php
+token/wp-content/languages
+token/wp-content/plugins/index.php
+token/wp-content/themes/index.php
+token/wp-includes/
+token/index.php
+token/license.txt
+token/readme.html
+token/wp-*.php
+token/xmlrpc.php
 
 # Configuration
-wp-config.php
-
+nft/wp-config.php
+token/wp-config.php
 # Example themes
-/wp-content/themes/twenty*/
-
+nft/wp-content/themes/twenty*/
+token/wp-content/themes/twenty*/
 # Example plugin
-/wp-content/plugins/hello.php
-
+nft/wp-content/plugins/hello.php
+token/wp-content/plugins/hello.php
 # Uploads
-/wp-content/uploads/
-
+nft/wp-content/uploads/
+token/wp-content/uploads/
 # Log files
-*.log
-
+nft/*.log
+token/*.log
 # htaccess
-/.htaccess
+#nft/.htaccess
 
 # All plugins
 #
@@ -46,3 +58,6 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+#dApp
+dApp/dapp_designnotes.txt
