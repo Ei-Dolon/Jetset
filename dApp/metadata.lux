@@ -1,42 +1,42 @@
 {
     "name":"NFT LUX",
     "description":"NFT LUXury Property - Rental",
-    "image":"https://jetsetlux.com/assets/images/xxxx.jpg",
-    "external_url":"https://originalsite.io/2",
+    "image":"https://jetsetlux.com/assets/images/jetset_mansion.jpg",
+    "external_url":"https://jetsetlux.com",
     "attributes":[...]
 }
 {
     "attributes":[
         {
-            "trait_type":"Rarity Class",
-            "value":"Normal"
+            "attrib":"key_num",
+            "value":"property001"
         },
         {
-            "trait_type":"Type",
-            "value":"Male"
+            "attrib":"Name",
+            "value":"Jetset Mansion"
         },
         {
-            "trait_type":"Face",
-            "value":"Mole"
+            "attrib":"Location",
+            "value":"Los Angeles"
         },
         {
-            "trait_type":"Beard",
-            "value":"Chinstrap"
+            "display_type":"address",
+            "attrib":"Street",
+            "value":"?"
         },
         {
-            "display_type":"boost_number",
-            "trait_type":"Power",
-            "value":"Power"
+            "display_type":"address",
+            "attrib":"Area Code",
+            "value":"?"
         },
         {
-            "display_type":"boost_percentage",
-            "trait_type":"Health Increase",
-            "value":"20"
+            "attrib":"Size",
+            "value":"?"
         },
         {
-            "display_type":"number",
-            "trait_type":"Generation",
-            "value":"3"
+            "display_type":"GPS coords",
+            "attrib":"Latitude, Longtitude, Height (above sea level)",
+            "value":"?.????, ?.?????, ??? m"
         }
     ]
 }
