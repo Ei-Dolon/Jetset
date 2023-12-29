@@ -1,10 +1,11 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
+# Wordpress - ignore core, configuration, examples, uploads and logs
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
 # Core
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
+<<<<<<< HEAD
 nft/wp-admin/
 nft/wp-content/index.php
 nft/wp-content/languages
@@ -46,6 +47,49 @@ nft/*.log
 token/*.log
 # htaccess
 #nft/.htaccess
+=======
+nft/public_html/wp-admin/
+nft/public_html/wp-content/index.php
+nft/public_html/wp-content/languages
+nft/public_html/wp-content/plugins/index.php
+nft/public_html/wp-content/themes/index.php
+nft/public_html/wp-includes/
+nft/public_html/index.php
+nft/public_html/license.txt
+nft/public_html/readme.html
+nft/public_html/wp-*.php
+nft/public_html/xmlrpc.php
+
+token/public_html/wp-admin/
+token/public_html/wp-content/index.php
+token/public_html/wp-content/languages
+token/public_html/wp-content/plugins/index.php
+token/public_html/wp-content/themes/index.php
+token/public_html/wp-includes/
+token/public_html/index.php
+token/public_html/license.txt
+token/public_html/readme.html
+token/public_html/wp-*.php
+token/public_html/xmlrpc.php
+
+# Configuration
+nft/public_html/wp-config.php
+token/public_html/wp-config.php
+# Example themes
+nft/public_html/wp-content/themes/twenty*/
+token/public_html/wp-content/themes/twenty*/
+# Example plugin
+nft/public_html/wp-content/plugins/hello.php
+token/wp-content/plugins/hello.php
+# Uploads
+nft/public_html/wp-content/uploads/
+token/public_html/wp-content/uploads/
+# Log files
+nft/public_html/*.log
+token/public_html/*.log
+# htaccess
+#.htaccess
+>>>>>>> 9af002ca4cb225305983c64a424abb2931d91c4e
 
 # All plugins
 #
