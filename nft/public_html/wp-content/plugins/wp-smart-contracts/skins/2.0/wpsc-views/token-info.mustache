@@ -1,0 +1,55 @@
+<span class="wps-tag">
+  <span class="wps-tag-value">
+    <span class="wps-bg-{{color}} color">⬤</span>
+    <span class="wpsc-capitalize">{{type}}</span>
+  </span>
+</span>
+<span class="wps-tag">
+    <span class="wps-tag-label">{{{symbol_label}}}</span>
+    <span class="wps-tag-value">{{symbol}}</span>    
+</span>
+<span class="wps-tag">
+  <span class="wps-tag-label">{{{name_label}}}</span>
+  <span class="wps-tag-value">{{name}}</span>    
+</span>
+<span class="wps-tag">
+    <span class="wps-tag-label">{{{decimals_label}}}</span>
+    <span class="wps-tag-value">{{decimals}}</span>    
+</span>
+<span class="wps-tag">
+    <span class="wps-tag-label">{{{initial_label}}}</span>
+    <span class="wps-tag-value">{{supply}}</span>    
+</span>
+{{#wpsc_reflection_fee}}
+<span class="wps-tag">
+  <span class="wps-tag-label">{{{reflection_label}}}</span>
+  <span class="wps-tag-value">{{wpsc_reflection_fee}}</span>
+</span>
+{{/wpsc_reflection_fee}}
+{{#burnable}}
+  <span class="wps-tag">
+    <span class="wps-tag-value">
+        {{{burnable_label}}}
+    </span>
+  </span>
+{{/burnable}}
+{{#mintable}}
+  <span class="wps-tag">
+    <span class="wps-tag-value">
+        {{{mintable_label}}}
+    </span>
+  </span>
+  {{#cap}}
+  <span class="wps-tag">
+    <span class="wps-tag-label">{{{max_label}}}</span>
+    <span class="wps-tag-value">{{cap}}</span>
+  </span>
+  {{/cap}}
+{{/mintable}}
+{{#pausable}}
+  <span class="wps-tag">
+    <span class="wps-tag-value">
+        {{{pausable_label}}}
+    </span>
+  </span>
+{{/pausable}}

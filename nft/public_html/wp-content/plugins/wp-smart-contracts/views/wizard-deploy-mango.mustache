@@ -1,0 +1,43 @@
+<div class="wps-form-col">
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{mincon}}</label>
+        <p class="wps-form-text-tooltip">{{mincon-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{mincon-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-min" type="number" placeholder="" {{#is_edit}}value="{{wpsc_minimum}}" disabled{{/is_edit}}>
+            <img src="{{path-to-launcher}}img/small.png">
+        </div>
+    </div>
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{namecamp}}</label>
+        <p class="wps-form-text-tooltip">{{namecamp-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-name" type="text" placeholder="" {{#is_edit}}value="{{title}}"{{/is_edit}}>
+            <img src="{{path-to-launcher}}img/symbol-icon.svg">
+        </div>
+    </div>
+</div>
+<div class="wps-form-col">
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{perc}}</label>
+        <p class="wps-form-text-tooltip">{{perc-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{perc-tip}}</span>
+            </span>
+        </p>
+        <select id="wps-factor" placeholder-text="1%" class="select-dropdown__button" {{#is_edit}}disabled{{/is_edit}}>
+            <option value="10" class="select-dropdown__list-item" {{#is_edit}}{{#is_10%}}selected{{/is_10%}}{{/is_edit}}{{^is_edit}}selected{{/is_edit}}>10%</option>
+            <option value="5"  class="select-dropdown__list-item" {{#is_edit}}{{#is_20%}}selected{{/is_20%}}{{/is_edit}}>20%</option>
+            <option value="4"  class="select-dropdown__list-item" {{#is_edit}}{{#is_25%}}selected{{/is_25%}}{{/is_edit}}>25%</option>
+            <option value="3"  class="select-dropdown__list-item" {{#is_edit}}{{#is_33%}}selected{{/is_33%}}{{/is_edit}}>33%</option>
+            <option value="2"  class="select-dropdown__list-item" {{#is_edit}}{{#is_50%}}selected{{/is_50%}}{{/is_edit}}>50%</option>
+        </select>                
+    </div>
+
+</div>

@@ -1,0 +1,71 @@
+<div class="ui floating message">
+        
+    {{#filter}}
+    <a class="ui left corner mini label">
+        <i class="filter icon"></i>
+    </a>
+    {{/filter}}
+    {{#closable}}
+    <i class="close icon" id="wpscRemoveFilter" ></i>
+    {{/closable}}
+
+    <div class="wps-centered">
+        <span class="wps-tag">
+            <span class="wps-tag-label">
+                Account
+            </span>
+            <span class="wps-tag-value">
+                <a href="javascript:void(0);" onclick="copyToClipboard('{{account}}', 'wpscCopyA')"><i class="icon copy"></i></a>                  
+                <a href="{{domain}}address/{{account}}" target="_blank">{{shortAccount}}</a>
+                <span id="wpscCopyA"></span>
+            </span>
+        </span>
+        <span class="wps-tag">
+            <span class="wps-tag-label">
+                {{balancetext}}
+            </span>
+            <span class="wps-tag-value">
+                {{balance}}
+            </span>
+        </span>
+    </div>
+
+    {{#filter}}
+        <div id="wpscAccountRolesFilter" class="wps-centered"></div>
+    {{/filter}}
+    {{^filter}}
+        <div id="wpscAccountRoles" class="wps-centered"></div>
+    {{/filter}}
+
+
+
+    {{#filter}}
+    <div id="wpscAllowanceText"></div>
+    <div id="wpscAllowance" class="ui tiny header"></div>
+    {{/filter}}
+    {{#is_chocolate}}
+        <div class="ui hidden divider"></div>
+        <a id="wpsc-add-pauser-role" class="wps-cta wps-secondary wps-center wps-mini-text wps-left-floated" style="display: none" data-account="{{account}}">
+            {{add_pauser}}
+            <i class="pause circle outline icon wps-semantic-icon2"></i>
+        </a>
+        <a id="wpsc-add-minter-role" class="wps-cta wps-secondary wps-center wps-mini-text wps-left-floated" style="display: none" data-account="{{account}}">
+            {{add_minter}}
+            <i class="tint icon wps-semantic-icon2"></i>
+        </a>
+        <div style="clear:both"></div>
+    {{/is_chocolate}}
+    {{#is_macadamia}}
+        <div class="ui hidden divider"></div>
+        <a id="wpsc-exclude-account" class="wps-cta wps-secondary wps-center wps-mini-text wps-left-floated" style="display: none" data-account="{{account}}">
+            {{exclude}}
+            <i class="hand point right outline icon wps-semantic-icon2"></i>
+        </a>
+        <a id="wpsc-include-account" class="wps-cta wps-secondary wps-center wps-mini-text wps-left-floated" style="display: none" data-account="{{account}}">
+            {{include}}
+            <i class="hand point left outline icon wps-semantic-icon2"></i>
+        </a>
+        <div style="clear:both"></div>
+    {{/is_macadamia}}
+
+</div>

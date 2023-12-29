@@ -1,0 +1,49 @@
+<div class="wps-card">
+    <div class="wps-colBox-title-lg {{title-class}}"><img src="{{logo}}" class="wps-card-icon">{{{title}}}</div>
+    <div class="wps-smartContracts-table card wps-table" style="padding-bottom: 70px">
+        {{#id}}
+            <div class="wps-tag">
+                <span class="wps-tag-label small">ID</span>
+                <span class="wps-tag-value small">
+                    <a href="{{nft_account_link}}" target="_blank">
+                        {{id}}
+                    </a>
+                </span>
+            </div>
+        {{/id}}
+        {{#category}}
+            <a href="{{category_link}}" class="wps-tag">{{{category}}}</a>
+        {{/category}}
+        {{#media}}
+        <div class="wpsc-nft-media-grid">
+            <a href="{{url}}">
+                {{{media}}}
+            </a>
+        </div>
+        {{/media}}
+        {{#tags}}
+            <a href="{{link}}" class="wps-tag">{{{tag}}}</a>
+        {{/tags}}
+        {{#author}}
+            <span class="wps-tag">
+                <span class="wps-tag-label small">
+                    <a href="{{author_external_url}}" style="color: white">{{author}}</a>
+                </span>
+                <a href="{{author_account_link}}" target="_blank" class="wps-tag-value small">{{author_account_short}}</a>
+            </span>
+        {{/author}}
+        <p class="wps-small-text">{{{description}}}</p>
+        {{#price_label}}
+            <span class="wps-tag">
+                <span class="wps-tag-label small">{{price_label}}</span>
+                <span class="wps-tag-value small">{{price}}</span>
+            </span>
+        {{/price_label}}
+        <p>
+            <a href="{{url}}" class="wps-cta{{#button-data-class}} {{button-data-class}}{{/button-data-class}}" style="margin: auto" {{#button-data-url}}data-url="{{button-data-url}}{{/button-data-url}}" {{#button-data-id}}data-network-id="{{button-data-id}}{{/button-data-id}}">
+                {{view}}
+                <img src="{{path-to-launcher}}img/right-arrow-white.png" class="wps-arrow">
+            </a>
+        </p>
+    </div>
+</div>

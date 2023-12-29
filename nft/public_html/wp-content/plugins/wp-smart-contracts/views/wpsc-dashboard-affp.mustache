@@ -1,0 +1,376 @@
+<p>&nbsp;</p>
+
+<style>
+  .wpsc-wizard-card .extra.content.wpsc-small {
+    color: green;
+    font-weight: 500;
+  }
+  .wps-shadow {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    border: 1px solid #d1d1d1!important;
+    border-radius: 10px;
+  }
+</style>
+
+<div class="ui container">
+    <div class="ui inverted segment" style="min-height: 140px;">
+        <img src="{{logo}}" class="ui large left floated image ">
+        <h1 class="ui header" style="text-align: center;">Dashboard</h1>
+    </div>
+
+    <div class="ui teal segment">
+
+      <form id="wpsc-save-wallets" action="{{settings-page}}" method="POST">
+
+      <div class="ui raised info message segment">
+
+        <div class="ui stackable grid">
+          <div class="twelve wide column">
+            <h1 class="ui header" style="margin-bottom: 20px">Affiliate program</h1>
+            <h3 class="ui header" style="margin-bottom: 20px">Promotional material</h3>
+            <p>Looking for the Affiliate Program Dashboard? <a href="{{dashboard_link}}">Click here to go to the dashboard</a></p>
+          </div>
+        </div>
+  
+        <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="first">Banners</a>
+            <a class="item" data-tab="second">Tweets</a>
+            <a class="item" data-tab="third">Emails</a>
+          </div>
+          <div class="ui bottom attached tab segment active" data-tab="first">
+
+            <p>&nbsp;</p>
+
+            <div class="ui link cards">
+              <div class="card">
+                <div class="image">
+                  <img src="{{set1}}" class="">
+                </div>
+                <div class="content">
+                  <div class="header"><a href="#set1">Go to Set #1</a></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image">
+                  <img src="{{set2}}" class="">
+                </div>
+                <div class="content">
+                  <div class="header"><a href="#set2">Go to Set #2</a></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image">
+                  <img src="{{set3}}" class="">
+                </div>
+                <div class="content">
+                  <div class="header"><a href="#set3">Go to Set #3</a></div>
+                </div>
+              </div>
+            </div>
+
+            <p>&nbsp;</p>
+
+            <a name="set1"></a>
+
+            <h2 class="ui icon header">
+              <div class="content">
+                Set #1
+              </div>
+            </h2>
+
+            <p>Copy the HTML code and paste it in your site or promotional material</p>
+
+            <h4 class="ui header" style="margin: 30px 0">Large Leaderboard</h4>
+            {{{html1-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" readonly onfocus="this.select();" onmouseup="return false;" >{{{html1}}}</textarea>
+
+            <h4 class="ui header" style="margin: 30px 0">Leaderboard</h4>
+            {{{html2-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" readonly onfocus="this.select();" onmouseup="return false;" >{{{html2}}}</textarea>
+
+            <h4 class="ui header" style="margin: 30px 0">Medium</h4>
+            {{{html5-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" rows="5" readonly onfocus="this.select();" onmouseup="return false;" >{{{html5}}}</textarea>
+
+            <div class="ui stackable two column grid">
+              <div class="column">
+                <h4 class="ui header" style="margin: 30px 0">Half page</h4>
+                {{{html3-show}}}
+                <p>HTML code:</p>
+                <textarea class="wps-textarea" rows="5" readonly onfocus="this.select();" onmouseup="return false;" >{{{html3}}}</textarea>
+              </div>
+              <div class="column">
+                <h4 class="ui header" style="margin: 30px 0">Wide sky scraper</h4>
+                {{{html4-show}}}
+                <p>HTML code:</p>
+                <textarea class="wps-textarea" rows="5" readonly onfocus="this.select();" onmouseup="return false;" >{{{html4}}}</textarea>
+              </div>
+            </div>
+
+
+            <hr>
+
+            <p>&nbsp;</p>
+
+            <a name="set2"></a>
+
+            <h2 class="ui icon header">
+              <div class="content">
+                Set #2
+              </div>
+            </h2>
+
+            <p>Copy the HTML code and paste it in your site or promotional material</p>
+
+            <h4 class="ui header" style="margin: 30px 0">Large Leaderboard</h4>
+            {{{html1b-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" readonly onfocus="this.select();" onmouseup="return false;" >{{{html1b}}}</textarea>
+
+            <h4 class="ui header" style="margin: 30px 0">Leaderboard</h4>
+            {{{html2b-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" readonly onfocus="this.select();" onmouseup="return false;" >{{{html2b}}}</textarea>
+
+            <h4 class="ui header" style="margin: 30px 0">Medium</h4>
+            {{{html5b-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea"  rows="5" readonly onfocus="this.select();" onmouseup="return false;" >{{{html5b}}}</textarea>
+
+            <div class="ui stackable two column grid">
+              <div class="column">
+                <h4 class="ui header" style="margin: 30px 0">Half page</h4>
+                {{{html3b-show}}}
+                <p>HTML code:</p>
+                <textarea class="wps-textarea"  rows="5" readonly onfocus="this.select();" onmouseup="return false;" >{{{html3b}}}</textarea>
+              </div>
+              <div class="column">
+                <h4 class="ui header" style="margin: 30px 0">Wide sky scraper</h4>
+                {{{html4b-show}}}
+                <p>HTML code:</p>
+                <textarea class="wps-textarea"  rows="5" readonly onfocus="this.select();" onmouseup="return false;" >{{{html4b}}}</textarea>
+              </div>
+            </div>
+
+            <hr>
+
+            <p>&nbsp;</p>
+
+            <a name="set3"></a>
+
+            <h2 class="ui icon header">
+              <div class="content">
+                Set #3
+              </div>
+            </h2>
+
+            <p>Copy the HTML code and paste it in your site or promotional material</p>
+
+            <h4 class="ui header" style="margin: 30px 0">Large Leaderboard</h4>
+            {{{html1c-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" readonly onfocus="this.select();" onmouseup="return false;" >{{{html1c}}}</textarea>
+
+            <h4 class="ui header" style="margin: 30px 0">Leaderboard</h4>
+            {{{html2c-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" readonly onfocus="this.select();" onmouseup="return false;" >{{{html2c}}}</textarea>
+
+            <h4 class="ui header" style="margin: 30px 0">Medium</h4>
+            {{{html5c-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea"  rows="5" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" >{{{html5c}}}</textarea>
+
+            <div class="ui stackable two column grid">
+              <div class="column">
+                <h4 class="ui header" style="margin: 30px 0">Half page</h4>
+                {{{html3c-show}}}
+                <p>HTML code:</p>
+                <textarea class="wps-textarea"  rows="5" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" >{{{html3c}}}</textarea>
+              </div>
+              <div class="column">
+                <h4 class="ui header" style="margin: 30px 0">Wide sky scraper</h4>
+                {{{html4c-show}}}
+                <p>HTML code:</p>
+                <textarea class="wps-textarea"  rows="5" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" >{{{html4c}}}</textarea>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="second">
+            
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #1</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Looking to explore the exciting world of NFTs? Our platform offers an intuitive solution to create, manage, and trade NFTs seamlessly. Dive into the digital art revolution with ease! {{link-launcher}} #NFTs #DigitalArt #Blockchain </textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #2</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Looking to reward your community members? Implement a staking program with ease on our platform. Empower your community to stake their tokens and earn passive income. Start building loyalty and engagement today. #Staking #PassiveIncome #CommunityRewards #Cryptocurrencies{{link-launcher}}</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #3</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Ready to launch your own ERC20 token? Our platform provides a seamless solution to create, manage, and transact with your custom digital currency. Empower your project or business with the limitless possibilities of cryptocurrencies. Get started today! #ERC20 #Cryptocurrencies #Blockchain #DigitalAssets{{link-launcher}}</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #4</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Ready to revolutionize your business? Unlock the power of blockchain integration with our services. Explore the future of online business today! {{link-launcher}} #DeFi #Blockchain #DigitalTransformation</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #5</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Say goodbye to manual processes and embrace automation with our services. Streamline your operations, boost efficiency, and focus on growth. #Automation {{link-launcher}} #Productivity #DeFi</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #6</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Monetize your website like never before with our services. Create your own cryptocurrencies, launch crowdfunding campaigns, and dive into the world of NFTs. Open up new revenue streams today! {{link-launcher}} #Monetization #Cryptocurrency #NFTs</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #7</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Stay one step ahead of the competition with our services. Embrace blockchain technology and position your business as an industry leader. Stand out from the crowd and gain the trust of your customers. {{link-launcher}} #Blockchain #Innovation #DigitalStrategy</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #8</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Want to transform your Business into a decentralized powerhouse? We are your key to harnessing the power of blockchain. Be a part of the digital revolution! {{link-launcher}} #Decentralization #WebDevelopment #BlockchainIntegration</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #9</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Boost security and transparency on your business. Say goodbye to trust issues and embrace a new era of trustless transactions. Protect your business and build customer confidence. {{link-launcher}} #Security #Transparency #Trustless</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Tweet #10</h4>
+            <textarea class="wps-textarea"  rows="4" readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Looking for a game-changing tool for your company? We are here to revolutionize the way you do business. Explore its features and unleash the full potential of your products. {{link-launcher}} #DeFi #Blockchain #DigitalTransformation</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">What's next?</h4>
+
+            <p>Copy the tweet you want, and <a class="twitter-share-button" href="https://twitter.com/intent/tweet" target="_blank" data-size="large">share it in Twitter</a></p>
+            
+
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="third">
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Email #1</h4>
+
+            <p>&nbsp;</p>
+            <p>Subject</p>
+            <textarea class="wps-textarea"  rows="1" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Discover the Exciting World of NFTs!</textarea>
+            <p>Content</p>
+            <textarea class="wps-textarea"  rows="14" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Hi [Name],
+
+Are you ready to step into the fascinating world of Non-Fungible Tokens (NFTs)? Our platform offers an exceptional solution to explore, create, and trade NFTs effortlessly.
+
+With our intuitive interface, you can easily mint your own unique digital collectibles, whether it's artwork, music, or virtual assets. Connect with a vibrant community of artists, collectors, and enthusiasts, and dive into the thriving NFT ecosystem.
+
+Don't miss out on this incredible opportunity to be part of the NFT revolution. Join us today and unlock the limitless potential of NFTs!
+
+Best regards,
+[Your Name]
+{{link-launcher}}</textarea>
+            
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Email #2</h4>
+            <p>&nbsp;</p>
+
+            <p>Subject</p>
+            <textarea class="wps-textarea"  rows="1" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Allow your Community to Earn Passive Income with Staking!</textarea>
+            <p>Content</p>
+            <textarea class="wps-textarea"  rows="14" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Hi [Name],
+
+Looking for a way to improve the tokenomics of your cryptocurrency project ? Our platform offers a secure and user-friendly staking solution for your users, allowing them to earn passive income with your digital assets.
+
+By staking, your users contribute to the community trust and receive rewards in return. It's a win-win situation! Our platform supports a wide range of staking options, ensuring flexibility and opportunities to maximize the earnings of your loyal holders.
+
+Create a staking smart contract today and watch your community grow steadily. Join us now!
+
+Warm regards,
+[Your Name]
+{{link-launcher}}</textarea>
+            
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Email #3</h4>
+            <p>&nbsp;</p>
+
+            <p>Subject</p>
+            <textarea class="wps-textarea"  rows="1" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Your Complete Solution for Cryptocurrencies</textarea>
+            <p>Content</p>
+            <textarea class="wps-textarea"  rows="14" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Hi [Name],
+
+Are you looking for a comprehensive solution to create, manage and transact with your own cryptocurrency? Look no further! Our platform provides a seamless experience for securely storing, managing, and exchanging a your own digital assets.
+
+Whether you're a seasoned entrepreneur or just starting in the crypto world, our user-friendly platform caters to all levels of expertise. Enjoy hassle-free smart contracts creations, easy transactions, and robust security features to protect your valuable business.
+
+Take control of your crypto journey and experience the convenience and power of our platform. Sign up today and unleash the full potential of your project!
+
+Best regards,
+[Your Name]
+{{link-launcher}}</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Email #4</h4>
+            <p>&nbsp;</p>
+
+            <p>Subject</p>
+            <textarea class="wps-textarea"  rows="1" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Revolutionize Your Business</textarea>
+            <p>Content</p>
+            <textarea class="wps-textarea"  rows="10" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Hi [Name],
+
+Are you ready to revolutionize your business? We have an ultimate technology that integrates blockchain seamlessly into your business, empowering you with secure transactions and decentralized applications. Take your business to new heights with our help today!
+
+Best regards,
+[Your Name]
+{{link-launcher}}</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Email #5</h4>
+            <p>&nbsp;</p>
+
+            <p>Subject</p>
+            <textarea class="wps-textarea"  rows="1" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Unlock the Potential of Blockchain for your company</textarea>
+            <p>Content</p>
+            <textarea class="wps-textarea"  rows="10" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Hi [Name],
+
+Blockchain technology is transforming industries worldwide, and now you can harness its power with our services. From creating smart contracts to automating processes, we can bring the benefits of blockchain directly to your business. Don't miss out on this opportunity to stay ahead of the competition.
+
+Best regards,
+[Your Name]
+{{link-launcher}}</textarea>
+
+            <p>&nbsp;</p>
+            <h4 class="ui dividing header">Email #6</h4>
+            <p>&nbsp;</p>
+
+            <p>Subject</p>
+            <textarea class="wps-textarea"  rows="1" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Discover Smart Contracts - The Future of Business</textarea>
+<p>Content</p>
+<textarea class="wps-textarea"  rows="10" style="width:100%"  readonly onfocus="this.select();" onmouseup="return false;" style="border: 0; background: white;">Hi [Name],
+
+Looking for a game-changer for your business? Look no further. Our revolutionary software helps you to integrate blockchain effortlessly, opening up a world of possibilities for your company. Don't settle for mediocrity; embrace the future with DeFi apps.
+
+Best regards,
+[Your Name]
+{{link-launcher}}</textarea>
+
+          </div>
+      </div>
+
+      </form>
+       
+    </div>
+
+</div>
+
+<script>
+jQuery('.ui.sticky')
+  .sticky({
+    context: '#wpsc-networks'
+  })
+;
+jQuery('.menu .item')
+    .tab()
+;
+</script>
+

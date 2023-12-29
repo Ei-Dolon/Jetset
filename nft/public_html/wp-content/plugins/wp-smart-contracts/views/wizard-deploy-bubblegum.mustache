@@ -1,0 +1,65 @@
+<div class="wps-form-col">                       
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{token}}</label>
+        <p class="wps-form-text-tooltip">{{token-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{token-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-token" type="text" placeholder="0x..." value="{{wpsc_token}}" {{#is_edit}}disabled{{/is_edit}}>
+            <img src="{{path-to-launcher}}img/ethereum.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{wallet}}</label>
+        <p class="wps-form-text-tooltip">{{wallet-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-wallet-old" type="hidden" value="{{wpsc_wallet}}">
+            <input id="wps-wallet" type="text" value="{{wpsc_wallet}}" {{#is_edit}}disabled{{/is_edit}}>
+            <img src="{{path-to-launcher}}img/ethereum.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{namestake}}</label>
+        <p class="wps-form-text-tooltip">{{namestake-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-name-old" type="hidden" value="{{title}}">
+            <input id="wps-name" type="text" placeholder="" value="{{title}}">
+            <img src="{{path-to-launcher}}img/symbol-icon.svg">
+        </div>
+    </div>
+
+</div>
+<div class="wps-form-col">
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{rate}}</label>
+        <p class="wps-form-text-tooltip">
+            {{rate-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{rate-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-rate-old" type="hidden" value="{{wpsc_rate}}">
+            <input id="wps-rate" type="number" value="{{wpsc_rate}}" {{#is_edit}}disabled{{/is_edit}}>
+            <img src="{{path-to-launcher}}img/percent-solid.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{wallet-dist}}</label>
+        <p class="wps-form-text-tooltip">{{wallet-dist-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-wallet-dist-old" type="hidden" value="{{wpsc_wallet_dist}}">
+            <input id="wps-wallet-dist" type="text" value="{{wpsc_distribution_wallet}}" {{#is_edit}}disabled{{/is_edit}}>
+            <img src="{{path-to-launcher}}img/ethereum.svg">
+        </div>
+    </div>
+
+</div>

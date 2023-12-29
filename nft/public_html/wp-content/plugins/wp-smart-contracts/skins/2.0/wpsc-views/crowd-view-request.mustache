@@ -1,0 +1,56 @@
+{{^is_refresh}}
+<div id="request-card-{{index}}" class="wps-card">
+{{/is_refresh}}
+    <div class="wps-panel-aaa">
+        <div class="wps-panel wps-panel-content">
+            <div class="wps-column-box wps-column-box-inner" style="margin-top: 0">
+                <div class="wps-smartContracts-table card wps-table" 
+                
+                
+                {{#is_approver}}
+                    {{^already_approve}}
+                        style="padding-bottom: 120px;"
+                    {{/already_approve}}
+                {{/is_approver}}
+                {{^is_approver}}
+                    {{#is_manager}}
+                        style="padding-bottom: 120px;"
+                    {{/is_manager}}
+                {{/is_approver}}
+
+
+                >
+                    {{#approvalCount}}
+                        <span class="wps-floating-tag">
+                            {{approvalCount}}
+                        </span>
+                    {{/approvalCount}}
+                    <p class="wps-title-link">{{{desc}}}</p>
+                    <div class="wps-centered">
+                        <p>{{to}} <span>{{recipient_short}}</span></p>
+                        <span class="wps-tag">
+                            <span class="wps-tag-label">{{requested}}</span>
+                            <span class="wps-tag-value">
+                                {{{value}}} {{native_coin}}
+                            </span>
+                        </span>
+                    </div>            
+                    {{#is_approver}}{{^already_approve}}
+                        <div class="wps-cta wps-secondary wps-center wps-mini-text wpsc-req-approve" data-index="{{index}}" style="margin-bottom: 20px; margin-top: 20px">
+                            {{{approve}}}
+                            <i class="thumbs up outline icon wps-semantic-icon"></i>
+                        </div>
+                    {{/already_approve}}{{/is_approver}}
+                    {{#is_manager}}
+                        <div class="wps-cta wps-secondary wps-center wps-mini-text wpsc-req-finalize" data-index="{{index}}" style="margin-bottom: 20px">
+                            {{{finalize}}}
+                            <i class="paper plane outline icon wps-semantic-icon"></i>
+                        </div>
+                    {{/is_manager}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{^is_refresh}}
+</div>
+{{/is_refresh}}

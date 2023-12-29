@@ -1,0 +1,270 @@
+<style>
+.ui.compact.selection.dropdown {
+  width: 50%!important;
+}
+embed, iframe, object, video {
+    max-width: 100%!important;
+}
+</style>
+
+<input type="hidden" id="wpsc-nft-network" name="wpsc-nft-network" value="{{wpsc-nft-network}}">
+
+<div id="wpsc-stake-container" class="wps-full-wrapper wps-halpage  wpsc-nft-view">
+    <div class="wps-content-page">
+        <div style="padding: 0 10px">
+            {{{main-nav}}}
+        </div>
+        <div class="wps-dashboard-grid small">
+            {{{view-metamask}}}
+            {{{nft-view-menu}}}
+        </div>
+    </div>
+</div>
+<div id="wpsc-stake-container" class="wps-full-wrapper wps-halpage  wps-notop">
+    <div class="wps-content-page">
+        <div class="wps-dashboard-grid">
+
+            <div class="ui medium breadcrumb">
+                <i class="home icon divider"></i>
+                <a href="{{collection-link}}" class="section">{{{collection-name}}}</a>
+                <i class="right chevron icon divider"></i>
+                <div class="active section">{{item-editor}}</div>
+            </div>
+
+            <h1 class="ui dividing header">
+                {{item-editor-title}}
+            </h1>        
+
+            <div class="wps-dashboard-grid">
+
+                <div class="ui stackable grid" id="wpsc-nft-view" >
+                    <div class="ten wide column">
+                        <form class="ui form">
+
+                            <input type="hidden" id="wpsc-contract-flavor" name="wpsc-contract-flavor" value="{{wpsc-contract-flavor}}">
+                            <input type="hidden" id="wpsc-nft-marketplace-contract" name="wpsc-nft-marketplace-contract" value="{{wpsc-nft-marketplace-contract}}">
+                            <input type="hidden" id="wpsc-block-explorer-network" name="wpsc-block-explorer-network" value="{{wpsc-block-explorer-network}}">
+                            <input type="hidden" id="wpsc-nft-token-uri" name="wpsc-nft-token-uri" value="{{wpsc_nft_token_uri}}">
+                            
+                            <input type="hidden" id="wpsc-suika-token" value="">
+                            <input type="hidden" id="wpsc-suika-token-decimals" value="">
+                            <input type="hidden" id="wpsc-suika-token-symbol" value="">
+                        
+                            <input type="hidden" id="wpsc-nft-id" name="wpsc-nft-id" value="{{nft-id}}">
+                            <input type="hidden" id="wpsc-nft-media-json" name="wpsc-nft-media-json" value="{{wpsc_nft_media_json}}">
+                            <input type="hidden" id="wpsc-collection-id" name="wpsc-collection-id" value="{{collection-id}}">
+                            <div class="field">
+                                <label>{{title}}</label>
+                                <input id="wpsc-title" type="text" name="title" value="{{{post_title}}}">
+                            </div>
+                            <div class="field">
+                                <label>{{description}}</label>
+                                <textarea id="wpsc-description" name="description">{{{post_content}}}</textarea>
+                            </div>
+                            <div class="field">
+                                <label>{{categories}}</label>
+                                <select id="wpsc-categories" class="ui fluid search dropdown" multiple="">
+                                {{#taxs}}
+                                <option value="{{term_id}}" {{#selected}}selected{{/selected}}>{{{name}}}</option>
+                                {{/taxs}}
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>{{attributes}}</label>
+                                <select id="wpsc-tags" class="ui fluid search dropdown" multiple="">
+                                {{#tags}}
+                                <option value="{{term_id}}" {{#selected}}selected{{/selected}}>{{{name}}}</option>
+                                {{/tags}}
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>
+                                    {{custom-attributes}} ({{comma-separated}})
+                                    <span class="ui icon showfluid"><i class="small help icon circular"></i></span>
+                                    <div class="ui flowing popup top left transition hidden">
+                                        <p>{{not-seeing-attributes}}</p>
+                                        <p>{{add-them-comma-separated-list}} ({{up-to-10-attributes}}).</p>
+                                    </div>
+                                </label>
+                                <input id="wpsc-custom-atts" type="text" name="custom-atts">
+                            </div>
+                            <div class="field">
+                                <label>
+                                    {{media}}
+                                    <span class="ui icon showfluid"><i class="small help icon circular"></i></span>
+                                    <div class="ui flowing popup top left transition hidden">
+                                        <p>{{add-your-media-file-here}}</p>
+                                        <div class="ui tiny list">
+                                            <span class="item">
+                                                <i class="angle double right icon"></i>
+                                                <div class="content">
+                                                    <div class="header">{{image}}</div>
+                                                    <div class="description">{{image-description}}</div>
+                                                </div>
+                                            </span>
+                                            <span class="item">
+                                                <i class="angle double right icon"></i>
+                                                <div class="content">
+                                                    <div class="header">{{video}}</div>
+                                                    <div class="description">{{video-description}}</div>
+                                                </div>
+                                            </span>
+                                            <span class="item">
+                                                <i class="angle double right icon"></i>
+                                                <div class="content">
+                                                    <div class="header">{{audio}}</div>
+                                                    <div class="description">{{audio-description}}</div>
+                                                </div>
+                                            </span>
+                                            <span class="item">
+                                                <i class="angle double right icon"></i>
+                                                <div class="content">
+                                                    <div class="header">{{documents}}</div>
+                                                    <div class="description">{{documents-description}}</div>
+                                                </div>
+                                            </span>
+                                            <span class="item">
+                                                <i class="angle double right icon"></i>
+                                                <div class="content">
+                                                    <div class="header">{{3d-model}}</div>
+                                                    <div class="description">{{3d-model-description}}</div>
+                                                </div>
+                                            </span>
+                                        </div>    
+                                    </div>    
+                                </label>
+                                <select id="wpsc-media-type" name="wpsc-media-type" class="ui compact selection dropdown">
+                                    <option value="none" {{#wpsc_media_type_image}}selected{{/wpsc_media_type_image}}>{{choose-your-media-type}}</option>
+                                    <option value="image" {{#wpsc_media_type_image}}selected{{/wpsc_media_type_image}}>{{image}}</option>
+                                    <option value="video" {{#wpsc_media_type_video}}selected{{/wpsc_media_type_video}}>{{video}}</option>
+                                    <option value="audio" {{#wpsc_media_type_audio}}selected{{/wpsc_media_type_audio}}>{{audio}}</option>
+                                    <option value="document" {{#wpsc_media_type_document}}selected{{/wpsc_media_type_document}}>{{documents}}</option>
+                                    <option value="3dmodel" {{#wpsc_media_type_3dmodel}}selected{{/wpsc_media_type_3dmodel}}>{{3d-model}}</option>
+                                </select>    
+                                <a href="#" class="wps-cta wps-secondary" id="nft-add-media">{{add-media}}</a>
+
+                                <div class="ui divider"></div>
+
+                            </div>
+
+                            <div class="field">
+                                <label>
+                                    {{recipient}}
+                                    <span class="ui icon showfluid"><i class="small help icon circular"></i></span>
+                                    <div class="ui flowing popup transition hidden">
+                                        {{owner-of-the-item-created}}
+                                    </div>        
+                                </label>
+                                <div class="ui action input">
+                                    <input id="wpsc-nft-owner" name="wpsc-nft-owner" type="text" placeholder="0x..." value="{{wpsc_nft_owner}}">    
+                                    <button class="ui button wpsc-open-qr-scanner" data-input-name="wpsc-nft-owner">{{scan}}</button>
+                                </div>
+                            </div>
+
+                            <div id="wpsc-nft-supply-field" class="field" 
+                                {{^is-erc-1155}}
+                                    style="display: none;"
+                                {{/is-erc-1155}}
+                                {{#is-erc-1155}}
+                                    {{#is-erc-1155-deployed}}
+                                        style="display: none;"
+                                    {{/is-erc-1155-deployed}}
+                                {{/is-erc-1155}}
+                            >
+                                <label>
+                                    {{supply}}
+                                    <span class="ui icon showfluid"><i class="small help icon circular"></i></span>
+                                    <div class="ui flowing popup transition hidden">
+                                        {{amount-quantity-to-be-minted}}
+                                    </div>        
+                                </label>
+                                <div class="ui input">
+                                    <input id="wpsc-nft-qty" name="wpsc-nft-qty" type="number" placeholder="100" value="{{wpsc_nft_supply}}">    
+                                </div>
+                                {{#is-erc-1155}}
+                                    <input type="hidden" id="wpsc-is-erc-1155" value="1">
+                                    {{#is-erc-1155-deployed}}
+                                        <input type="hidden" id="wpsc-is-erc-1155-deployed" value="1">
+                                    {{/is-erc-1155-deployed}}
+                                {{/is-erc-1155}}
+                            </div>
+
+                            <div>
+                                <a id="save-nft-item" class="wps-cta" data-modal="wpsc-mint-modal">{{save-and-mint}}</a>
+                            </div>
+
+                            <div class="ui divider"></div>
+
+                            <div class="ui container">
+                                <div id="wpsc-result-message-container" class="ui warning message">
+                                    <i class="close icon"></i>
+                                    <p>
+                                        <div id="wpsc-result-message"></div>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="six wide column">
+                        <div  id="wpsc-nft-media-preview" class="ui sticky">
+                            <div id="wpsc-nft-media-preview-media-real"></div>
+                        </div>
+                    </div>
+                </div>
+                            
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+jQuery('.ui.dropdown').dropdown();
+jQuery('.message .close')
+  .on('click', function() {
+    jQuery("#wpsc-result-message-container").fadeOut(500);
+  })
+;
+</script>
+
+<div id="wpsc-mint-modal" class="ui basic modal">
+
+    <div class="ui center aligned inverted segment">
+
+        <h3 class="ui header">
+            <img src="{{mint-icon}}" class="ui image">
+            {{{mint}}}
+        </h3>
+
+        <p>{{{mint-tooltip}}}</p>
+
+        <div id="wpsc-wallet-mint-account-message"></div>
+
+        <div class="ui hidden divider"></div>
+
+        <div class="actions">
+            <button id="wpsc-mint" class="ui green basic inverted button">
+                <i class="tint icon"></i>{{{mint}}}
+            </button>
+            <div id="wpsc-wallet-mint-cancel-button" class="ui red basic cancel inverted button">
+                <i class="remove icon"></i>
+                {{{cancel}}}
+            </div>
+        </div>
+
+        <div id="wpsc-progress-mint" class="ui icon black message hidden">
+            <div class="content">
+                <div class="header">
+                    {{{tx-in-progress}}}
+                </div>
+                <p class="wpsc-small">
+                    <img class="ui mini left floated image" src="{{deploy-icon}}">
+                    {{{click-confirm}}} {{{please-patience}}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

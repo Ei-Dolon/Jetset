@@ -1,0 +1,56 @@
+  #wpsc-table-out tr:nth-child(even) td,
+  #wpsc-table-in tr:nth-child(even) td {
+    background: #FFF;
+  }
+  
+  .wpsc-term-out {
+    cursor: pointer; 
+  }
+  
+  .wpsc-term-in::before {
+    margin-left: 2px;
+    border-radius: 50%;
+    color: #2271b1;
+    line-height: 1.28;
+    background: 0 0;
+    content: "\f153";
+    display: block;
+    font: normal 16px/20px dashicons;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .wpsc-term-in:hover::before {
+    color: #f00;
+  }
+  
+  .wpsc-term-out::before {
+    margin-left: 2px;
+    border-radius: 50%;
+    color: #6ebd4e;
+    line-height: 1.28;
+    background: 0 0;
+    content: "\f502";
+    display: block;
+    font: normal 16px/20px dashicons;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .wpsc-term-out:hover::before {
+    color: #0f0;
+  }
+  
+  .wpsc-id {
+    color: #bbb;
+    display: none;
+  }
+  

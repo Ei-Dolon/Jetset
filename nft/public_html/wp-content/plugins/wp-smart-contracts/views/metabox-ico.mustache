@@ -1,0 +1,182 @@
+          <input id="tmpTx" type="hidden">
+          <input id="tmpNewIco" type="hidden">
+          <input id="tmpDefAcc" type="hidden">
+          <input id="tmpNetVer" type="hidden">
+
+          <input id="wpsc-name" name="wpsc-name" type="hidden" value="{{wpsc_name}}">
+          <input id="wpsc-symbol" name="wpsc-symbol" type="hidden" value="{{wpsc_symbol}}">
+          <input id="wpsc-decimals" name="wpsc-decimals" type="hidden" value="{{wpsc_decimals}}">
+
+          <div class="wpsc">
+            <input type="hidden" id="wpsc-change">
+            {{#readonly}}
+              <input type="hidden" name="wpsc-readonly" value="true">
+              {{{ico-info}}}
+            {{/readonly}}
+            {{^readonly}}
+            <div class="ui inverted segment">
+              <div class="ui inverted segment">
+                <h1 class="ui header">
+                  <i class="settings icon"></i>
+                  {{{ico-spec}}}
+                </h1>
+                <a class="ui grey button right floated" href="https://wpsmartcontracts.com/docs/" target="_blank">
+                  {{{learn-more}}}
+                </a>
+                <p>{{{ico-spec-desc}}}</p>
+              </div>
+            </div>
+            <div class="ui secondary segment">
+              <div class="grouped fields">
+                <h3 class="ui dividing header">{{{flavor}}}</h3>
+                <div class="ui stackable two column grid">
+                  <div class="column">
+                    <div class="ui raised segment">
+                      <img class="ui medium rounded image" src="{{{img-bubblegum}}}">
+                      <h3 class="ui dividing header">{{{crowdsale-advanced}}}</h3>
+                      <p>{{{crowdsale-advanced-desc}}}</p>
+                      <h5 class="ui dividing header">{{{features}}}</h5>
+                      <p>
+                        <i class="check icon"></i>
+                        {{{contributions-ether}}}
+                        <span class="ui icon" data-tooltip="{{{contributions-ether-tooltip}}}"></i>
+                          <i class="small help icon circular"></i>
+                        </span>
+                      </p>
+                      <p>
+                        <i class="check icon"></i>
+                        {{{contributions-sent}}}
+                        <span class="ui icon" data-tooltip="{{{contributions-sent-tooltip}}}"></i>
+                          <i class="small help icon circular"></i>
+                        </span>
+                      </p>
+                      <p>
+                        <i class="check icon"></i>
+                        {{{rate}}}
+                        <span class="ui icon" data-tooltip="{{{rate-tooltip}}}"></i>
+                          <i class="small help icon circular"></i>
+                        </span>
+                      </p>
+                      <p>
+                        <i class="check icon"></i>
+                        {{{wallet}}}
+                        <span class="ui icon" data-tooltip="{{{wallet-tooltip}}}"></i>
+                          <i class="small help icon circular"></i>
+                        </span>
+                      </p>
+                      <p>
+                        <i class="check icon"></i>
+                        {{{custom-token}}}
+                        <span class="ui icon" data-tooltip="{{{custom-token-tooltip}}}"></i>
+                          <i class="small help icon circular"></i>
+                        </span>
+                      </p>
+                      <p>
+                        <i class="check icon"></i>
+                        {{{custom-token-approve}}}
+                        <span class="ui icon" data-tooltip="{{{custom-token-approve-tooltip}}}"></i>
+                          <i class="small help icon circular"></i>
+                        </span>
+                      </p>
+
+                      <p>
+                        <i class="check icon"></i>
+                        {{{adv-pause}}}
+                        <span class="ui icon" data-tooltip="{{{adv-pause-tooltip}}}"></i>
+                            <i class="small help icon circular"></i>
+                        </span>
+                      </p>
+              
+                      <div class="ui fitted toggle checkbox">
+                        <input tabindex="0" type="radio" name="wpsc-flavor" id="wpsc-bluemoon" class="wpsc-radio-ico" value="bubblegum"
+                          {{{wpsc-flavor}}}
+                          checked="checked"
+                          {{#readonly}}readonly disabled="disabled"{{/readonly}}
+                        >
+                        <label></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column" id="wpsc-flavor-last-column">
+                    <div class="ui raised segment">
+                      <h3 class="ui dividing header">{{{erc-20-custom}}}</h3>
+                      <p>{{{custom-message}}}</p>
+                      <p><a href="https://wpsmartcontracts.com/contact-us" target="_blank" class="ui blue button">{{{contact-us}}}</a></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="ui secondary segment">
+              <h3 class="ui dividing header">{{{ico-settings}}}</h3>
+              <div class="ui stackable two column grid" id="wpsc-wallet-div">
+                  <div class="column">
+                      <h4 class="ui header">
+                          {{{token-address}}}
+                          <div class="sub header">
+                            {{{token-address-desc}}}
+                            {{{token-address-desc-tooltip}}}
+                          </div>
+                      </h4>
+                      <div id="wpsc-token-div" class="ui fluid icon input">
+                          <input name="wpsc-token" type="text" value="{{{wpsc_token}}}" {{#readonly}}readonly disabled="disabled"{{/readonly}}>
+                          <i class="ethereum icon"></i>
+                      </div>
+                  </div>
+                  <div class="column">
+                      <h4 class="ui header">
+                          {{{token-rate}}}
+                          <div class="sub header">
+                          {{{token-rate-desc}}}
+                          {{{token-rate-desc-tooltip}}}
+                          </div>
+                      </h4>
+                      <div id="wpsc-rate-div" class="ui fluid icon input" id="wpsc-rate">
+                          <input name="wpsc-rate" type="text" placeholder="{{{token-rate}}}" value="{{{wpsc_rate}}}">
+                          <i class="database icon"></i>
+                      </div>
+                  </div>
+                  <div class="column">
+                      <h4 class="ui header">
+                          {{{wallet}}}
+                          <div class="sub header">
+                          {{{wallet-desc}}}
+                          <span class="ui icon" data-tooltip="{{{wallet-desc-tooltip}}}"></i>
+                            <i class="small help icon circular"></i>
+                          </span>
+                          </div>
+                      </h4>
+                      <div id="wpsc-wallet-div" class="ui fluid icon input">
+                          <input name="wpsc-wallet" type="text" value="{{{wpsc_wallet}}}" {{#readonly}}readonly disabled="disabled"{{/readonly}}>
+                          <i class="ethereum icon"></i>
+                      </div>
+                  </div>
+                  <div class="column">
+                      <h4 class="ui header">
+                          {{{distribution-wallet}}}
+                          <div class="sub header">
+                            {{{distribution-wallet-desc}}}
+                            <span class="ui icon" data-tooltip="{{{distribution-wallet-desc-tooltip}}}"></i>
+                              <i class="small help icon circular"></i>
+                            </span>
+                          </div>
+                      </h4>
+                      <div id="wpsc-distribution-wallet-div" class="ui fluid icon input">
+                          <input name="wpsc-distribution-wallet" type="text" value="{{{wpsc_distribution_wallet}}}" {{#readonly}}readonly disabled="disabled"{{/readonly}}>
+                          <i class="ethereum icon"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          {{/readonly}}
+
+          </div>
+
+<script>
+  if (jQuery.isFunction(jQuery('#example1').calendar)) {
+    jQuery('#example1').calendar();
+  }
+</script>

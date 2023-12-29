@@ -1,0 +1,32 @@
+{{^is_refresh}}
+<div id="request-card-{{index}}" class="wps-card">
+{{/is_refresh}}
+    <div class="wps-panel-aaa">
+        <div class="wps-panel wps-panel-content">
+            <div class="wps-column-box wps-column-box-inner" style="margin-top: 0">
+                <div class="wps-smartContracts-table card wps-table finalized">
+                    {{#approvalCount}}
+                        <span class="wps-floating-tag">
+                            {{approvalCount}}
+                        </span>
+                    {{/approvalCount}}
+                    <p class="wps-title-link">{{{desc}}}</p>
+                    <div class="wps-centered">
+                        <p>{{to}} <span>{{recipient_short}}</span></p>
+                        <span class="wps-tag">
+                            <span class="wps-tag-label">{{requested}}</span>
+                            <span class="wps-tag-value">
+                                {{{value}}} {{native_coin}}
+                            </span>
+                        </span>
+                    </div>
+                    <div class="finalized bottom">
+                        {{{transferred}}}
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+{{^is_refresh}}
+</div>
+{{/is_refresh}}

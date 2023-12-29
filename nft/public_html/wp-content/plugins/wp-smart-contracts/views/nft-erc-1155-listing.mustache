@@ -1,0 +1,19 @@
+<tr>
+    <td class="wpsc-table-row">
+        {{qty}}
+    </td>
+    <td class="wpsc-table-row">
+        {{price}}
+    </td>
+    <td class="wpsc-table-row">
+        {{total}}
+    </td>
+    <td class="wpsc-table-row">
+        {{owner}}
+    </td>
+    <td {{#style}}style="{{style}}"{{/style}}>
+        {{#btn-text}}
+        <div class="ui basic {{color}} listings button {{button_class}}" data-modal="{{modal}}" data-action="{{action}}" data-price="{{price}}" data-qty="{{qty}}" data-index="{{index}}">{{btn-text}}</div>
+        {{/btn-text}}
+    </td>
+</tr>

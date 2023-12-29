@@ -1,0 +1,260 @@
+{
+	"1": {
+		"code": 1,
+		"color": "green",
+		"name": "mainnet",
+		"title": "Main Network",
+		"network": "main",
+		"url": "//api.etherscan.io/api",
+        "url2": "https://etherscan.io/",
+		"color-html": "#21ba45",
+		"icon": "ethereum",
+		"coin-symbol": "Ether",
+		"class": "ethereum"
+	},
+	"11155111": {
+		"code": 11155111,
+		"color": "blue",
+		"name": "sepolia",
+		"title": "Sepolia Ethereum Testnet",
+		"network": "sepolia",
+		"url": "//api-sepolia.etherscan.io/api",
+        "url2": "https://sepolia.etherscan.io/",
+		"color-html": "#67b1d4",
+		"icon": "ethereum",
+		"coin-symbol": "SEP",
+		"class": "ethereum-test",
+		"web3Provider": "https://rpc.sepolia.online",
+        "metamask_parameters": [{
+          "chainId": "0xAA36A7",
+          "chainName": "Sepolia Ethereum Testnet",
+          "nativeCurrency": {
+            "name": "SEP",
+            "symbol": "SEP",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://sepolia.etherscan.io/"]
+        }]
+	},
+	"5": {
+		"code": 5,
+		"color": "blue",
+		"name": "goerli",
+		"title": "Goerli",
+		"network": "goerli",
+		"class": "ethereum-test",
+		"url": "//api-goerli.etherscan.io/api",
+        "url2": "https://goerli.etherscan.io/",
+		"color-html": "#69b2f1",
+		"icon": "ethereum",
+		"coin-symbol": "Ξ"
+	},
+	"97": {
+		"code": 97,
+		"color": "yellow",
+		"name": "bsctest",
+		"title": "Binance Smart Chain Testnet",
+		"network": "bsctest",
+		"url": "//api-testnet.bscscan.com/api",
+        "url2": "https://testnet.bscscan.com/",
+		"color-html": "#f0b915",
+		"icon": "certificate",
+		"coin-symbol": "BNB",
+		"web3Provider": "https://data-seed-prebsc-1-s1.binance.org:8545",
+		"class": "binance-test",
+        "metamask_parameters": [{
+          "chainId": "0x61",
+          "chainName": "Binance Smart Chain Testnet",
+          "nativeCurrency": {
+            "name": "BNB",
+            "symbol": "BNB",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://testnet.bscscan.com/"]
+        }]
+	},
+	"56": {
+		"code": 56,
+		"color": "yellow",
+		"name": "bsc",
+		"title": "Binance Smart Chain",
+		"network": "bsc",
+		"class": "binance",
+		"url": "//api.bscscan.com/api",
+        "url2": "https://bscscan.com/",
+		"color-html": "#f0b915",
+		"icon": "certificate",
+		"coin-symbol": "BNB",
+		"web3Provider": "https://bsc-dataseed.binance.org",
+        "metamask_parameters": [{
+          "chainId": "0x38",
+          "chainName": "Binance Smart Chain Mainnet",
+          "nativeCurrency": {
+            "name": "BNB",
+            "symbol": "BNB",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://bscscan.com"]
+        }]
+	},
+	"80001": {
+		"code": 80001,
+		"color": "blue",
+		"name": "matictest",
+		"class": "polygon-test",
+		"title": "Mumbai Matic Tesnet",
+		"network": "matictest",
+		"url": "//api-mumbai.polygonscan.com/api",
+        "url2": "https://mumbai.polygonscan.com/",
+		"color-html": "#69b2f1",
+		"icon": "square",
+		"coin-symbol": "Matic",
+        "metamask_parameters": [{
+          "chainId": "0x13881",
+          "chainName": "Mumbai Matic Testnet",
+          "nativeCurrency": {
+            "name": "Matic",
+            "symbol": "Matic",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://mumbai.polygonscan.com/"]
+        }]
+	},
+	"137": {
+		"code": 137,
+		"color": "blue",
+		"name": "matic",
+		"title": "Polygon (Matic)",
+		"class": "polygon",
+		"network": "matic",
+		"url": "//api.polygonscan.com/api",
+        "url2": "https://polygonscan.com/",
+		"color-html": "#69b2f1",
+		"icon": "square",
+		"coin-symbol": "Matic",
+        "metamask_parameters": [{
+          "chainId": "0x89",
+          "chainName": "Polygon (Matic) Mainnet",
+          "nativeCurrency": {
+            "name": "Matic",
+            "symbol": "Matic",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://polygonscan.com"]
+        }]
+	},
+	"4002": {
+		"code": 4002,
+		"color": "blue",
+		"name": "fantomtest",
+		"title": "Fantom testnet",
+		"network": "fantomtest",
+		"class": "fanton-test",
+		"url": "//testnet.ftmscan.com/api",
+        "url2": "https://testnet.ftmscan.com/",
+		"color-html": "#1a68fe",
+		"icon": "cube",
+		"coin-symbol": "FTM",
+        "metamask_parameters": [{
+          "chainId": "0xfa2",
+          "chainName": "Fantom Testnet",
+          "nativeCurrency": {
+            "name": "Fantom",
+            "symbol": "FTM",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://testnet.ftmscan.com/"]
+        }]
+	},
+	"250": {
+		"code": 250,
+		"color": "blue",
+		"name": "fantom",
+		"title": "Fantom Opera (Mainnet)",
+		"network": "fantom",
+		"class": "fanton",
+		"url": "//api.ftmscan.com/api",
+        "url2": "https://ftmscan.com/",
+		"color-html": "#1a68fe",
+		"icon": "cube",
+		"coin-symbol": "FTM",
+        "metamask_parameters": [{
+          "chainId": "0xfa",
+          "chainName": "Fantom Opera (Mainnet)",
+          "nativeCurrency": {
+            "name": "Fantom",
+            "symbol": "FTM",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://ftmscan.com/"]
+        }]
+	},
+	"43113": {
+		"code": 43113,
+		"color": "red",
+		"name": "avalanchetest",
+		"class": "avalanche-test",
+		"title": "Avalanche FUJI Testnet",
+		"network": "avalanchetest",
+		"url": "//api-testnet.snowtrace.io/api",
+        "url2": "https://testnet.snowtrace.io/",
+		"color-html": "#ff0000",
+		"icon": "angle up",
+		"coin-symbol": "AVAX",
+        "metamask_parameters": [{
+          "chainId": "0xA869",
+          "chainName": "Avalanche FUJI Testnet",
+          "nativeCurrency": {
+            "name": "AVAX",
+            "symbol": "AVAX",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://testnet.snowtrace.io/"]
+        }]
+	},
+	"43114": {
+		"code": 43114,
+		"color": "red",
+		"name": "avalanche",
+		"class": "avalanche",
+		"title": "Avalanche Mainnet C-Chain",
+		"network": "avalanche",
+		"url": "//api.snowtrace.io/api",
+        "url2": "https://snowtrace.io/",
+		"color-html": "#ff0000",
+		"icon": "angle up",
+		"coin-symbol": "AVAX",
+        "metamask_parameters": [{
+          "chainId": "0xA86A",
+          "chainName": "Avalanche Mainnet C-Chain",
+          "nativeCurrency": {
+            "name": "AVAX",
+            "symbol": "AVAX",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://snowtrace.io/"]
+        }]
+	},
+	"42161": {
+		"code": 42161,
+		"color": "blue",
+		"name": "arbitrum",
+		"title": "Arbitrum One",
+		"network": "arbitrum",
+		"url": "//arbiscan.io/",
+        "url2": "https://arbiscan.io/",
+		"color-html": "#50a0ea",
+		"icon": "angle double up",
+		"coin-symbol": "Ether",
+        "metamask_parameters": [{
+          "chainId": "0xA4B1",
+          "chainName": "Arbitrum One",
+          "nativeCurrency": {
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "decimals": 18
+          },
+          "blockExplorerUrls": ["https://arbiscan.io/"]
+        }]
+	}
+}

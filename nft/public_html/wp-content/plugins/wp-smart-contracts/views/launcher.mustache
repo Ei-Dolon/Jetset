@@ -1,0 +1,165 @@
+<div id="wps-launcher-home" class="wps-full-wrapper light-theme">
+    <!-- MAIN WRAPPER -->
+    <div class="wps-main-wrapper">
+        {{{sidebar}}}
+        <!-- WPS CONTENT -->
+        <div class="wps-content-page">
+            {{{main-nav}}}
+            {{{message}}}
+            <!-- GRID -->
+            <div class="wps-dashboard-grid">
+                {{{call-to-action}}}
+                <div class="wps-cards">
+                    <div class="wps-card">
+                        <!-- NFT column -->
+                        <div class="wps-panel-aaa">
+                            <div class="wps-panel wps-panel-content">
+                                <div class="wps-column-box wps-column-box-inner" style="margin-top: 0">
+                                    <div class="wps-colBox-title-lg"><img src="{{path-to-launcher}}img/nfts-logo.svg">{{text-nfts}}</div>
+                                    <div class="wps-smartContracts-table card wps-table"  style="padding-bottom: 120px; padding-top: 30px">
+                                        <div id="wps-launcher-home-nfts">
+                                            <img src="{{path-to-launcher}}img/not-found.png" class="wps-center-icon">
+                                            <p class="wps-small-text-center">{{no-smart-contract-found}}</p>
+                                        </div>
+                                    </div>
+                                    <div style="float: left;width: auto;max-width: auto;">
+                                        <a href="{{nft_manage_link}}" class="wps-colBox-seeAll" style="width: auto;">
+                                            {{create-nft}}
+                                        </a>
+                                    </div>
+                                    <div id="wps-see-all-nft" class="wps-colBox-cta" style="display: none;"><a href="{{dashboard-nft}}" class="wps-colBox-seeAll">{{text-see-all}}&raquo;</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wps-card">
+                        <!-- STAKINGS column -->
+                        <div class="wps-panel-aaa">
+                            <div class="wps-panel wps-panel-content">
+                                <div class="wps-column-box wps-column-box-inner" style="margin-top: 0">
+                                    <div class="wps-colBox-title-lg"><img src="{{path-to-launcher}}img/stakings-logo.svg">{{text-stakings}}</div>
+                                    <div class="wps-smartContracts-table card wps-table" style="padding-bottom: 120px; padding-top: 30px">
+                                        <div id="wps-launcher-home-stakes" >
+                                            <img src="{{path-to-launcher}}img/not-found.png" class="wps-center-icon">
+                                            <p class="wps-small-text-center">{{no-smart-contract-found}}</p>    
+                                        </div>
+                                    </div>
+                                    <div style="float: left;width: auto;max-width: auto;">
+                                        <a href="{{staking_manage_link}}" class="wps-colBox-seeAll" style="width: auto;">
+                                            {{create-stake}}
+                                           
+                                        </a>
+                                    </div>
+                                    <div id="wps-see-all-stakings" class="wps-colBox-cta" style="display: none;"><a href="{{dashboard-stakes}}" class="wps-colBox-seeAll">{{text-see-all}}&raquo;</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wps-card">
+                        <!-- FUNDS column -->
+                        <div class="wps-panel-aaa">
+                            <div class="wps-panel wps-panel-content">
+                                <div class="wps-column-box wps-column-box-inner" style="margin-top: 0">
+                                    <div class="wps-colBox-title-lg"><img src="{{path-to-launcher}}img/services.png">{{text-funds}}</div>
+                                    <div class="wps-smartContracts-table card wps-table" style="padding-bottom: 120px; padding-top: 30px">
+                                        <div id="wps-launcher-home-funds" >
+                                            <img src="{{path-to-launcher}}img/not-found.png" class="wps-center-icon">
+                                            <p class="wps-small-text-center">{{no-smart-contract-found}}</p>    
+                                        </div>
+                                    </div>
+                                    <div style="float: left;width: auto;max-width: auto;">
+                                        <a href="{{services_manage_link}}" class="wps-colBox-seeAll" style="width: auto;">
+                                            {{create-funds}}                                           
+                                        </a>
+                                    </div>
+                                    <div id="wps-see-all-funds" class="wps-colBox-cta" style="display: none;"><a href="{{dashboard-funds}}" class="wps-colBox-seeAll">{{text-see-all}}&raquo;</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wps-card">
+                        <!-- TOKENS column -->
+                        <div class="wps-panel-aaa">
+                            <div class="wps-panel wps-panel-content">
+                                <div class="wps-column-box wps-column-box-inner" style="margin-top: 0">
+                                    <div class="wps-colBox-title-lg"><img src="{{path-to-launcher}}img/tokens-logo.svg">{{text-tokens}}</div>
+                                    <div class="wps-smartContracts-table card wps-table" style="padding-bottom: 120px; padding-top: 30px">
+                                        <div id="wps-launcher-home-coin" >
+                                            <img src="{{path-to-launcher}}img/not-found.png" class="wps-center-icon">
+                                            <p class="wps-small-text-center">{{no-smart-contract-found}}</p>    
+                                        </div>
+                                    </div>
+                                    <div style="float: left;width: auto;max-width: auto;">
+                                        <a href="{{token_manage_link}}" class="wps-colBox-seeAll" style="width: auto;">
+                                            {{create-coin}}                                           
+                                        </a>
+                                    </div>
+                                    <div id="wps-see-all-coin" class="wps-colBox-cta" style="display: none;"><a href="{{dashboard-coin}}" class="wps-colBox-seeAll">{{text-see-all}}&raquo;</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<span id="path-to-launcher" style="display: none;">{{path-to-launcher}}</span>
+{{=<% %>=}}
+<div id="wps-row-template" style="display: none;">
+    <p>
+        <a id="wps-name-link" href="{{link}}" class="wps-title-link">{{title}}</a>
+        <button class="wps-edit-button wps-table-qr">
+            <a href="{{link-edit}}">
+                {{edit-label}}
+            </a>
+        </button>    
+    </p>
+    <p class="wps-centered">
+        <span class="wps-tag">
+            <span class="wps-tag-label">{{network-label}}</span>
+            <span class="wps-tag-value">  
+                <span style="color: {{color-network}}; margin-right: 10px">⬤</span> 
+                {{network}}
+            </span>
+        </span>
+    </p>
+    <p class="wps-centered">
+        <span class="wps-tag">
+            <span class="wps-tag-label">{{flavor-label}}</span>
+            <span class="wps-tag-value">  
+                <span class="wps-bg-{{color-flavor}} color">⬤</span> 
+                {{flavor}}
+            </span>
+        </span>
+    </p>
+    <p class="wps-centered">
+        {{smart-contract}}
+    </p>
+    <p class="wps-centered">
+        <button class="wps-table-qr">
+            <img id="wpsc-qr-2-{{id}}" src="{{path-to-launcher}}img/copy-solid-icon.svg" onclick="copyToClipboard('{{contract}}', 'wpsc-qr-2-{{id}}')">
+        </button>
+        <a href="{{etherscan}}address/{{contract}}" target="_blank" class="wps-a-contract">{{contract-short}}</a>
+        <button class="wps-table-qr">
+            <img src="{{path-to-launcher}}img/qrcode-solid.svg">
+            <div class="wps-tooltip">
+            <img src="{{qr}}">
+            <div class="wps-tooltip-bottom-content">{{contract}}</div>
+            </div>
+        </button>
+    </p>
+    <a href="{{link}}" class="wps-cta wps-center wps-mini-text" style="margin: 30px auto">
+        {{view}}
+        <img src="{{path-to-launcher}}img/right-arrow-white.png" class="wps-arrow">
+    </a>
+
+</div>
+<%={{ }}=%>
+
+{{=<% %>=}}
+<div id="wps-row-template-not-found" style="display: none;">
+    <p class="wps-small-text-center">{{no-smart-contract-found}}</p>
+</div>
+<%={{ }}=%>

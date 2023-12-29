@@ -1,0 +1,38 @@
+{{#contract-exists}}
+    <div class="wps-main-wrapper" id="wpsc-crowd-panel" style="display: block">
+        <h3 class="wps-colBox-title-lg wps-notop-margin">
+        <i class="file outline icon"></i>{{{addresses}}}</h3>
+        <div class="wps-centered">
+            <span class="wps-tag">
+                <span class="wps-tag-label">
+                    {{{contract-address-text}}}
+                </span>
+                <span class="wps-tag-value">
+                    <a href="javascript:void(0);" onclick="copyToClipboard('{{contract-address}}', 'wpscCopy1')"><i class="icon copy"></i></a>                  
+                    <a href="{{etherscan}}address/{{contract-address}}" target="_blank">{{contract-address-short}}</a>
+                    <span id="wpscCopy1"></span>
+                </span>
+            </span>
+            <span class="wps-tag">
+                <span class="wps-tag-label">
+                    {{{owner-text}}}
+                </span>
+                <span class="wps-tag-value">
+                    <a href="javascript:void(0);" onclick="copyToClipboard('{{owner}}', 'wpscCopy2')"><i class="icon copy"></i></a>                  
+                    <a href="{{etherscan}}address/{{owner}}" target="_blank">{{owner-short}}</a>
+                    <span id="wpscCopy2"></span>
+                </span>
+            </span>
+            <span class="wps-tag">
+                <span class="wps-tag-label">
+                    {{{genesis}}}
+                </span>
+                <span class="wps-tag-value">
+                    <a href="javascript:void(0);" onclick="copyToClipboard('{{txid}}', 'wpscCopy3')"><i class="icon copy"></i></a>                  
+                    <a href="{{etherscan}}tx/{{txid}}" target="_blank">{{txid-short}}</a>
+                    <span id="wpscCopy1"></span>
+                </span>
+            </span>
+        </div>                            
+    </div>
+{{/contract-exists}}

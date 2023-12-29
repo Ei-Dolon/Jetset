@@ -1,0 +1,33 @@
+nft.txt
+
+Contract Name:	PancakeBunnies
+Token ID:	931043
+Name:	Sleepy 
+
+https://pancakeswap.finance/nfts/collections/0xdf7952b35f24acf7fc0487d01c8d5690a60dba07/5
+
+
+https://cloudflare-ipfs.com/ipfs/QmYsTqbmGA3H5cgouCkh8tswJAQE1AsEko9uBZX9jZ3oTC/sleepy.json/
+
+{
+	"name": "Sleepy",
+	"description": "Aww, looks like eating pancakes all day is tough work. Sweet dreams!",
+	"image": "ipfs://QmYD9AtzyQPjSa9jfZcZq88gSaRssdhGmKqQifUDjGFfXm/sleepy.png",
+	"attributes": {
+		"bunnyId": "5"
+	}
+}
+
+
+
+Properties:
+BUNNY ID	5	(23.49%)
+
+Details:
+CONTRACT ADDRESS	0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07
+IPFS JSON	https://cloudflare-ipfs.com/ipfs/QmYsTqbmGA3H5cgouCkh8tswJAQE1AsEko9uBZX9jZ3oTC/sleepy.json/
+SUPPLY COUNT	229,266
+RARITY	23.49%
+
+
+

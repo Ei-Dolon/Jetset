@@ -1,0 +1,38 @@
+		<div class="sixteen wide computer five wide large screen column five wide widescreen column {{#grey}}wpsc-grey-row{{/grey}}">
+            <span id="wpscFromDiv{{i}}" class="wps-tag">
+                <span class="wps-tag-value" style="max-width: unset">
+                    <span class="wps-tag-label wpscBlockExplorerAccounts" data-jumpto="0" data-jumpn="{{jumpN}}" data-account="{{from}}" data-domain="{{domain}}">
+                        <img src="{{fromBlockie}}" class="wps-mini-icon">
+                    </span>
+                    <a href="javascript:void(0);" onclick="copyToClipboard('{{from}}', 'wpscCopy{{i}}')"><i class="icon copy"></i></a>                  
+                    <a href="{{domain}}address/{{from}}" target="_blank">{{from_short}}</a>
+                    <span id="wpscCopy{{i}}"></span>
+                </span>
+            </span>
+		</div>
+		<div class="sixteen wide computer five wide large screen column five wide widescreen column {{#grey}}wpsc-grey-row{{/grey}}">
+			{{#to}}
+            <span id="wpscToDiv{{i}}" class="wps-tag">
+                <span class="wps-tag-value" style="max-width: unset">
+                    <span class="wps-tag-label wpscBlockExplorerAccounts" data-jumpto="0" data-jumpn="{{jumpN}}" data-account="{{to}}" data-domain="{{domain}}">
+                        <img src="{{toBlockie}}" class="wps-mini-icon">
+                    </span>
+                    <a href="javascript:void(0);" onclick="copyToClipboard('{{to}}', 'wpscCopyB-{{i}}')"><i class="icon copy"></i></a>                  
+                    <a href="{{domain}}address/{{to}}" target="_blank">{{to_short}}</a>
+                    <span id="wpscCopyB-{{i}}"></span>
+                </span>
+            </span>
+			{{/to}}
+		</div>
+		<div class="sixteen wide computer six wide large screen column six wide widescreen right aligned column {{#grey}}wpsc-grey-row{{/grey}}">
+            <span class="wps-tag">
+		    	{{timeStamp}}
+            </span>
+            <a class="wps-tag wpscBlockExplorerAccounts" data-jumpto="0" data-jumpn="{{jumpN}}" data-account="{{txid}}" data-domain="{{domain}}" title="{{{clickToFilter}}}" data-is-error="{{isError}}">
+		    	{{txid_short}}
+			</a>
+			<span class="wps-tag" title="{{status}}">
+				{{value}}
+				<i class="{{icon}} icon"></i>
+			</span>
+		</div>

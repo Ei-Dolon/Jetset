@@ -1,0 +1,507 @@
+<style>
+    .wpsc-art-thumb {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+    }
+    .wpsc-small {
+        font-size: 12px;
+    }
+    .wpsc.ui.selection.dropdown {
+        font-size: 12px;
+    }
+    .wpsc-spacer-mini {
+        height: 5px;
+    }
+    .wpsc-space {
+        margin: 0 0 10px 0!important;
+    }
+    .wpsc-right {
+        text-align: right;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .wpsc-3dmodel {
+            min-height: 350px;
+            min-width: 500px;
+            margin: auto;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .wpsc-3dmodel {
+            min-height: 200px;
+            min-width: 250px;
+            margin: auto;
+        }
+    }
+
+</style>
+
+<input type="hidden" id="wpsc-nft-network" value="{{wpsc_nft_network}}">
+<input type="hidden" id="wpsc-contract-flavor" value="{{wpsc_contract_flavor}}">
+<input type="hidden" id="wpsc-nft-marketplace-contract" value="{{wpsc_nft_marketplace_contract}}">
+<input type="hidden" id="wpsc-nft-token-id" value="{{nft_token_id}}">
+<input type="hidden" id="wpsc-nft-etherscan" value="{{etherscan}}">
+<input type="hidden" id="wpsc-nft-time-countdown">
+
+<input type="hidden" id="wpsc-suika-token" value="">
+<input type="hidden" id="wpsc-suika-token-decimals" value="">
+<input type="hidden" id="wpsc-suika-token-symbol" value="">
+<input type="hidden" id="wpsc-suika-token-network-val" value="{{network_val}}">
+{{#wpsc-erc-721}}<input type="hidden" id="wpsc-erc-721" value="true">{{/wpsc-erc-721}}
+{{#wpsc-erc-1155}}<input type="hidden" id="wpsc-erc-1155" value="true">{{/wpsc-erc-1155}}
+{{#wpsc-erc-1155}}<input type="hidden" id="wpsc-max-qty" value="true">{{/wpsc-erc-1155}}
+
+<input type="hidden" id="wpsc_nft_voucher_price_human" name="wpsc_nft_voucher_price_human" value="{{wpsc_nft_voucher_price_human}}">
+<input type="hidden" id="wpsc_nft_voucher_qty" name="wpsc_nft_voucher_qty" value="{{wpsc_nft_voucher_qty}}">
+<input type="hidden" id="wpsc_nft_voucher_minted" name="wpsc_nft_voucher_minted" value="{{wpsc_nft_voucher_minted}}">
+<input type="hidden" id="wpsc_nft_voucher_remaining" name="wpsc_nft_voucher_remaining" value="{{wpsc_nft_voucher_remaining}}">
+<input type="hidden" id="wpsc_nft_voucher_price" name="wpsc_nft_voucher_price" value="{{wpsc_nft_voucher_price}}">
+<input type="hidden" id="wpsc_nft_voucher_author" name="wpsc_nft_voucher_author" value="{{wpsc_nft_voucher_author}}">
+<input type="hidden" id="wpsc_nft_voucher_salt" name="wpsc_nft_voucher_salt" value="{{wpsc_nft_voucher_salt}}">
+<input type="hidden" id="wpsc_nft_voucher_id" name="wpsc_nft_voucher_id" value="{{wpsc_nft_voucher_id}}">
+<input type="hidden" id="wpsc_nft_token_uri" name="wpsc_nft_token_uri" value="{{wpsc_nft_token_uri}}">
+<input type="hidden" id="wpsc_nft_voucher_sign" name="wpsc_nft_voucher_sign" value="{{wpsc_nft_voucher_sign}}">
+<input type="hidden" id="wpsc_nft_voucher_post_id" name="wpsc_nft_voucher_post_id" value="{{wpsc_nft_voucher_post_id}}">
+<input type="hidden" id="wpsc_nft_voucher_collection_id" name="wpsc_nft_voucher_collection_id" value="{{wpsc_nft_voucher_collection_id}}">
+
+<span id="wpsc_log_history" style="display: none;">{{wpsc_log_history}}</span>
+
+<div id="wpsc-nft-navigation" class="wps-full-wrapper wps-halpage  wpsc-nft-view">
+    <div class="wps-content-page">
+        <div style="padding: 0 10px">
+            {{{main-nav}}}
+        </div>
+        <div class="wps-dashboard-grid small">
+            {{{view-metamask}}}
+            {{{nft-view-menu}}}
+        </div>
+    </div>
+</div>
+
+<div id="wpsc-nft-container" class="wps-full-wrapper wps-halpage  wps-notop">
+    <div class="wps-content-page">
+
+        {{#show-sub-collections}}
+            {{{galleries-menu}}}	
+            <div class="ui hidden divider"></div>	
+        {{/show-sub-collections}}
+
+        <div class="wps-dashboard-grid">
+            <div class="wps-description-box-out-border wps-description-box-out-border-bottom">
+                <div class="wps-description-box medium">
+                    {{#page-thumbnail}}<img src="{{page-thumbnail}}" class="wps-big-icon medium">{{/page-thumbnail}}
+                    {{#blockie}}<img src="{{blockie}}" class="wps-big-icon medium">{{/blockie}}
+                    <h2 class="wps-box-heading">{{{nft-title}}}</h2>
+                    <p><a id="wps-collection-title" href="{{collection-link}}">{{{collection-title}}}</a></p>
+                </div>
+            </div>
+
+            {{#show-sub-collections}}
+                {{#gals}}	
+                    <span class="wps-tag" style="background-color: {{wpsc_cat_bg_color}}; color: {{wpsc_cat_color}};">	
+                        <i class="images outline icon"></i>	&nbsp;
+                        <a id="wps-sub-collections" href="{{link}}">{{{value}}}</a>
+                    </span>	
+                {{/gals}}	
+            {{/show-sub-collections}}
+
+            <div id="wpsc-nft-generic-message">{{{message}}}</div>
+
+            <div id="wpsc-wallet-mint-account-message"></div>
+
+            <div class="ui hidden divider"></div>
+
+            {{#show-moralis-warning}}
+            {{{moralis-warning}}}
+            {{/show-moralis-warning}}
+
+            <!-- NFT -->
+
+            <div style="display: flex;">
+                {{{page-content}}}
+            </div> 
+
+            <div class="ui raised stackable grid">
+
+                <!-- Left Column -->
+
+                <div class="nine wide column">
+
+                    <!-- NFT Item media and data -->
+
+                    <div class="wps-dashboard-grid small">
+                        <input type="hidden" id="wpsc-media-type" value="{{wpsc-media-type}}">
+                        <input type="hidden" id="wpsc-nft-media-json" value="{{wpsc-nft-media-json}}">
+                        <div class="content">
+                            <div class="ui basic segment">
+                                <div class="ui labels">
+                                    {{#cats}}
+                                        <a href="{{link}}" class="wps-tag" style="background-color: {{wpsc_cat_bg_color}}; color: {{wpsc_cat_color}};">{{{value}}}</a>
+                                    {{/cats}}
+                                </div>
+                            </div>
+                            <div id="wpsc-nft-media-preview-media" class="nft-media">
+                                {{#video}}
+                                    <video controls="" controlslist="nodownload" oncontextmenu="return false;">
+                                        {{#media_files}}
+                                        <source src="{{url}}" type="{{mime}}">
+                                        {{/media_files}}
+                                    </video>
+                                {{/video}}
+                                {{#audio}}
+                                    <audio controls="" controlslist="nodownload" oncontextmenu="return false;">
+                                        {{#media_files}}
+                                        <source src="{{url}}" type="{{mime}}">
+                                        {{/media_files}}
+                                    </audio>    
+                                {{/audio}}
+                                {{#image}}
+                                    {{#media_files}}
+                                        <img oncontextmenu="return false;" class="ui medium rounded centered bordered image wpsc-nft-image" src="{{url}}" {{#wpsc_pixelated_images}}style="image-rendering: pixelated;"{{/wpsc_pixelated_images}}>
+                                    {{/media_files}}
+                                {{/image}}
+                                {{#doc}}
+                                    {{#media_files}}
+                                    <div class="wpsc-pdf-iframe-container">
+                                        <iframe src="{{url}}"></iframe>
+                                    </div>
+                                    {{/media_files}}
+                                {{/doc}}
+                                {{#model}}
+                                <script type="module" src="{{model-viewer}}"></script>
+                                <div class="image">
+                                    {{#media_files}}
+                                        <model-viewer auto-rotate="true" autoplay="true" camera-controls="true" src="{{url}}" ar-status="not-presenting" class="wpsc-3dmodel"></model-viewer>
+                                    {{/media_files}}
+                                </div>
+                                {{/model}}
+                            </div>
+                            <div class="ui basic segment">
+                                <div class="ui labels">
+                                    {{#tags}}
+                                    <a href="{{link}}" class="wps-tag" style="background-color: {{wpsc_tag_bg_color}}; color: {{wpsc_tag_color}};">{{{value}}}</a>
+                                    {{/tags}}
+                                </div>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="meta">
+                                <span class="date">
+                                    {{#author}}
+                                    <a href="{{wpsc_author_url}}" class="wps-tag">
+                                        {{#original_author_avatar}}
+                                        <img class="ui right spaced avatar image" src="{{original_author_avatar}}">
+                                        {{/original_author_avatar}}
+                                        {{author-label}} @{{author}}
+                                    </a>
+                                    {{/author}}
+                                    {{#wpsc_creator}}
+                                    <span class="wps-tag">
+                                        {{#wpsc_creator_blockie}}
+                                        <img class="ui right spaced avatar image" src="{{wpsc_creator_blockie}}" style="width: 22px!important">
+                                        {{/wpsc_creator_blockie}}
+                                        <a href="{{etherscan}}address/{{wpsc_creator}}" target="_blank">{{wpsc_creator_short}}</a>
+                                        <i class="copy icon" onclick="copyToClipboard('{{wpsc_creator}}', 'wpsc-nft-item-creator')"></i>
+                                        <span id="wpsc-nft-item-creator" data-creator="{{wpsc_creator}}"></span>
+                                    </span>
+                                    {{/wpsc_creator}}
+                                    {{#wpsc_txid_short}}
+                                    <div class="wpsc-small">
+                                        {{genesis}}: <a href="{{etherscan}}tx/{{wpsc_txid}}" target="_blank">{{wpsc_txid_short}}</a>
+                                        <i class="copy icon" onclick="copyToClipboard('{{wpsc_txid}}', 'wpsc-nft-item-txid')"></i>
+                                        <span id="wpsc-nft-item-txid"></span>
+                                    </div>
+                                    <div class="ui divider"></div>
+                                    {{/wpsc_txid_short}}
+                                </span>
+                            </div>
+                            <div class="description">
+                                {{{content}}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- / NFT Item media and data -->
+
+                    <!-- NFT meta data -->
+
+                    <div class="ui divider"></div>
+                    <div class="wps-dashboard-grid medium">
+                        <div class="content">
+                            <div class="ui labels">
+                                <span class="wps-tag">
+                                    <span class="wps-tag-label">{{network}}</span>
+                                    <span class="wps-tag-value">  
+                                        <span style="color: {{color}}; margin-right: 10px">⬤</span> 
+                                        {{network_val}}
+                                    </span>
+                                </span>
+
+                                <span class="wps-tag">
+                                    <span class="wps-tag-label">{{flavor}}</span>
+                                    <span class="wps-tag-value">  
+                                        <span class="wps-bg-{{wpsc_flavor_color}} color">⬤</span> 
+                                        {{wpsc_contract_flavor}}
+                                    </span>
+                                </span>
+
+                                <div class="wps-tag">
+                                    <span class="wps-tag-label">{{smart-contract}}</span>
+                                    <span class="wps-tag-value">
+                                        <a href="{{etherscan}}address/{{wpsc_collection_contract}}" target="_blank">{{wpsc_collection_contract_short}}</a>
+                                    </span>
+                                </div>
+                                {{#wpsc_nft_id}}
+                                <div class="wps-tag">
+                                    <span class="wps-tag-label">{{token-id}}</span>
+                                    <span class="wps-tag-value">
+                                        <a href="{{etherscan}}token/{{wpsc_collection_contract}}?a={{wpsc_nft_id}}" target="_blank">#{{wpsc_nft_id}}</a>
+                                    </span>
+                                </div>
+                                {{/wpsc_nft_id}}
+                                {{#endpoint}}
+                                <div class="wps-tag">
+                                    <a href="{{endpoint}}" target="_blank">{{view-token-uri}}</a>
+                                </div>
+                                {{/endpoint}}
+                                {{#show-opensea}}
+                                <div class="wps-tag">
+                                    <img src="{{opensea-icon}}" class="avatar">
+                                    <a href="{{opensea-link}}" target="_blank" class="tag-main-text">{{view-in-openSea}}</a>
+                                </div>
+                                {{/show-opensea}}
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+                <!-- / NFT meta data -->
+
+                </div>
+
+                <!-- / Left Column -->
+                <!-- Right Column -->
+
+                <div class="seven wide column">
+
+                    <div class="wps-dashboard-grid medium">
+                        <input type="hidden" id="wpsc-nft-highest-bid">
+                        <div class="content">
+                            <span class="wps-tag wpsc-erc-721" style="display: none;">
+                                <img id="wpsc-nft-owner-blockie" class="ui right spaced avatar image" style="display: none;">
+                                {{owned-by}}&nbsp; <a id="wpsc-nft-owner-link" href="" target="_blank"></a>
+                                <i id="wpsc-nft-owner-link-copy" class="copy icon"></i>
+                                <span id="wpsc-nft-owner-link-copy-span"></span>
+                            </span>
+
+                            <!-- erc-1155 example 3 -->
+                            <span class="wpsc-erc-1155" style="display: none;">
+                                <span class="wps-tag wpsc-show-nft-owners">
+                                    <i class="ui users icon"></i> <u><span id="wpsc-erc-1155-owners"></span>&nbsp;{{owners}}</u> 
+                                </span>
+                                <span class="wps-tag">
+                                    <i class="ui th icon"></i> <span id="wpsc-erc-1155-total"></span>&nbsp;{{total}} 
+                                </span>
+                                <span id="wpsc-erc-1155-you-own-label" class="wps-tag" style="display: none;">
+                                    <i class="ui user icon"></i> {{you-own}}&nbsp;<span id="wpsc-erc-1155-you-own"></span> 
+                                </span>
+                                <span id="wpsc-nft-owner-link-copy-span"></span>
+                            </span>
+
+
+                            <!-- table owners -->
+
+                            <div id="wpsc-nft-owners" style="max-height: 250px; overflow-y: scroll; display: none;">
+                            <table id="wpsc-table-owners-main" class="ui striped padded unstackable table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">{{owned-by}} </th>
+                                        <th>{{n-items}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="wpsc-table-owners"></tbody>
+                            </table>
+                            </div>
+
+                            <div class="ui divider"></div>
+                            <div class="description">
+                                <div class="ui grid">
+                                    <div class="two column row">
+                                        <div id="wpsc-nft-col1" class="column">
+                                            <span id="wpsc-nft-col1-price-label" style="display: none;"></span>
+                                            <span id="wpsc-nft-col1-price" class="wps-tag" style="display: none;"></span>
+                                            <div id="wpsc-nft-col1-reserve-price" class="ui label" style="display: none; margin-top: 10px;"></div>
+                                        </div>
+                                        <div id="wpsc-nft-col2" class="column">
+                                            <div id="wpsc-nft-place-higher-bid" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" {{#is-suika}}data-modal="wpsc-bid-modal-token"{{/is-suika}} {{^is-suika}}data-modal="wpsc-bid-modal"{{/is-suika}}>{{place-higher-bid}}</div>
+                                            <div id="wpsc-nft-place-bid" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px;display: none;" {{#is-suika}}data-modal="wpsc-bid-modal-token"{{/is-suika}} {{^is-suika}}data-modal="wpsc-bid-modal"{{/is-suika}}>{{place-bid}}</div>
+                                            <div id="wpsc-nft-buy" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px;display: none;" {{#is-suika}}data-modal="wpsc-buy-modal-token"{{/is-suika}}{{^is-suika}}data-modal="wpsc-buy-modal"{{/is-suika}}>{{buy}}</div>
+                                            <div id="wpsc-nft-finalize" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px;display: none;" data-modal="wpsc-finalize-modal">{{finalize}}</div>
+                                        </div>
+                                    </div>
+                                    <div id="wpsc-nft-buttons" class="one column row" style="display: none;">
+                                        <div class="column">
+                                            <div id="wpsc-nft-burn-button" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-burn-modal">{{burn}}</div>
+                                            <div id="wpsc-nft-mint-more-button" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-mint-more-modal">{{mint}}</div>
+                                            <div id="wpsc-nft-transfer-button" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-transfer-modal">{{transfer}}</div>
+                                            {{#wpsc_nft_voucher_show}}
+                                                <div id="wpsc-nft-lazy-mint" class="wps-cta wps-secondary-auto wps-center wpsc-modal-button" tabindex="0" style="margin-top: 10px; display: none;" {{#is_ikasumi}}data-modal="wpsc-lazy-minting-token-modal"{{/is_ikasumi}}{{#is_azuki}}data-modal="wpsc-lazy-minting-modal"{{/is_azuki}}>
+                                                    {{mint}}
+                                                    <span class="ui basic left pointing green label">{{wpsc_nft_voucher_price_human}}</span>
+                                                </div>
+                                            {{/wpsc_nft_voucher_show}}
+                                            <div id="wpsc-nft-offer-button" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-offer-modal">{{make-an-offer}}</div>
+                                            <div id="wpsc-nft-offer-button-ikasumi" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-offer-ikasumi-modal">{{make-an-offer}}</div>
+                                            <div id="wpsc-nft-sell-button" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-sell-modal">{{sell}}</div>
+                                            <div id="wpsc-nft-auction-button" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-auction-modal">{{auction}}</div>
+                                            <div id="wpsc-nft-withdraw-button" class="wps-cta wps-secondary-auto wpsc-modal-button wps-center" style="margin-top: 10px; display: none;" data-modal="wpsc-withdraw-modal">{{withdraw}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="wpsc-nft-auction-timer" style="display: none">
+                                <div class="ui divider"></div>
+                                <div class="ui fluid label" style="text-align: center;">
+                                    <i class="gavel icon"></i>
+                                    <div id="wpsc-nft-auction-timer-msg" class="detail">
+                                        {{auction-ends-in}}
+                                        <span id="wpsc-nft-days"></span> {{days}}
+                                        <span id="wpsc-nft-hours"></span> {{hrs}}
+                                        <span id="wpsc-nft-minutes"></span> {{min}}
+                                        <span id="wpsc-nft-seconds"></span> {{sec}}    
+                                    </div>	
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- ERC-1155 Listings -->
+                    <div id="wpsc-table-listing-buy-container" class="wps-dashboard-grid medium" style="display: none">
+                        <h3 class="ui dividing header wpsc-erc-1155">
+                            {{buy}}
+                        </h3>    
+                        <div class="content">
+                            <div id="wpsc-nft-erc-1155-listings" class="wpsc-erc-1155-listings" style="max-height: 250px; overflow-y: scroll; font-size: 12px;">
+                                <table id="wpsc-table-owners-main" class="ui striped padded unstackable table">
+                                    <thead>
+                                        <tr>
+                                            <th>{{quantity}}</th>
+                                            <th>{{unit-price}}</th>
+                                            <th>{{total}}</th>
+                                            <th>{{account}}</th>                                    
+                                            <th>{{action}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="wpsc-table-listing-sell" style="text-align: center"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ERC-1155 Offers -->
+                    <div id="wpsc-table-listing-sell-container" class="wps-dashboard-grid medium" style="display: none">
+                        <h3 class="ui dividing header wpsc-erc-1155">
+                            {{sell}}
+                        </h3>
+                        <div class="content">
+                            <div id="wpsc-nft-erc-1155-listings" class="wpsc-erc-1155-listings" style="max-height: 250px; overflow-y: scroll; font-size: 12px;">
+                                <table id="wpsc-table-owners-main" class="ui striped padded unstackable table">
+                                    <thead>
+                                        <tr>
+                                            <th>{{quantity}}</th>
+                                            <th>{{unit-price}}</th>
+                                            <th>{{total}}</th>
+                                            <th>{{account}}</th>                                    
+                                            <th>{{action}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="wpsc-table-listing-buy" style="text-align: center">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Graph -->
+                    <div id="wpsc-nft-graph" style="display: none">
+                        <div class="ui hidden divider"></div>
+                        <h3 class="ui dividing header">
+                            {{graph}}
+                        </h3>
+                        <div class="wps-dashboard-grid medium">
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+                            <canvas id="nftChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <!-- / Graph -->
+
+                    <!-- History -->
+                    <div class="ui hidden divider"></div>
+                    {{#wpsc_txid_short}}
+                    <div class="history-container">
+                    
+                        <h3 class="ui dividing header">
+                            {{history}}
+                        </h3>
+                        <div id="wpsc-nft-history"></div>
+                        <div class="wps-tag">
+                            <input type="hidden" id="wpsc_graph_line_color" value="{{wpsc_graph_line_color}}">
+                            <input type="hidden" id="wpsc_graph_bg_color" value="{{wpsc_graph_bg_color}}">
+                            <div class="ui image label">
+                                <img src="{{wpsc_creator_blockie}}">
+                                <a href="{{wpsc_creator_link}}" target="_blank">{{wpsc_creator_short}}</a>
+                                <div class="detail">
+                                    <a href="{{wpsc_txid_link}}" target="_blank">TxId {{wpsc_txid_short}}</a>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                {{mint}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/wpsc_txid_short}}
+                    <!-- / History -->
+
+                    {{#next_nft}}
+                        <a href="{{next_nft}}" class="wps-cta wps-secondary-auto" style="float: right;">
+                            {{next}} &raquo;
+                        </a>
+                    {{/next_nft}}
+
+                </div>
+
+                <!-- / Right Column -->
+
+            </div>  
+
+            <!-- / NFT -->
+
+            <script>
+            jQuery('.ui.dropdown')
+            .dropdown()
+            ;
+
+            function checkValue(sender) {
+                let min = sender.min;
+                let max = sender.max;
+                let value = parseInt(sender.value);
+                if (value>max) {
+                    sender.value = min;
+                } else if (value<min) {
+                    sender.value = max;
+                }
+            }
+            </script>
+            
+        </div>
+    </div>
+</div>
+
+{{{modals}}}
+

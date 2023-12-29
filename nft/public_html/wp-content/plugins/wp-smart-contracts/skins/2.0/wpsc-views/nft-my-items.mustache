@@ -1,0 +1,64 @@
+<input type="hidden" id="wpsc-contract-flavor" name="wpsc-contract-flavor" value="{{wpsc-contract-flavor}}">
+<input type="hidden" id="wpsc-nft-marketplace-contract" name="wpsc-nft-marketplace-contract" value="{{wpsc-nft-marketplace-contract}}">
+<input type="hidden" id="wpsc-collection-id" name="wpsc-collection-id" value="{{collection-id}}">
+<input type="hidden" id="wpsc-nft-current-page" value="0">
+<input type="hidden" id="wpsc-nft-items-per-page" value="{{nft-items-per-page}}">
+<input type="hidden" id="wpsc-nft-option" value="{{wpsc-nft-option}}">
+<input type="hidden" id="wpsc-nft-etherscan" value="{{etherscan}}">
+<input type="hidden" id="wpsc-nft-params-nft-ids" value="{{wpsc-nft-params-nft-ids}}">
+<input type="hidden" id="wpsc-nft-network" value="{{wpsc-nft-network}}">
+
+<input type="hidden" id="wpsc-suika-token" value="">
+<input type="hidden" id="wpsc-suika-token-decimals" value="">
+<input type="hidden" id="wpsc-suika-token-symbol" value="">
+<input type="hidden" id="wpsc-suika-token-network-val" value="{{network_val}}">
+
+<div id="wpsc-nft-my-items"></div>
+
+<div id="wpsc-nft-navigation" class="wps-full-wrapper wps-halpage">
+    <div class="wps-content-page">
+        <div style="padding: 0 10px">
+            {{{main-nav}}}
+        </div>
+        <div class="wps-dashboard-grid small">
+            {{{view-metamask}}}
+            {{{nft-view-menu}}}
+        </div>
+    </div>
+</div>
+<div id="wpsc-nft-container" class="wps-full-wrapper wps-halpage  wps-notop">
+    <div class="wps-content-page">
+        {{#show-sub-collections}}
+        {{{galleries-menu}}}
+        {{/show-sub-collections}}
+        <div class="wps-dashboard-grid">
+            {{#custom-title}}
+                {{{custom-title}}}
+            {{/custom-title}}
+            {{^custom-title}}
+            <div class="wps-description-box-out-border wps-description-box-out-border-bottom">
+                <div class="wps-description-box medium">
+                    <img src="{{#page-thumbnail}}{{page-thumbnail}}{{/page-thumbnail}}{{^page-thumbnail}}{{blockie}}{{/page-thumbnail}}"
+                        class="wps-big-icon medium">
+                    <h2 class="wps-box-heading">{{{page-title}}}</h2>
+                </div>
+            </div>
+            {{/custom-title}}
+            <div class="ui hidden divider"></div>
+            <div id="wpsc-nft-generic-message"></div>
+
+            <div style="display: flex;">
+                {{{page-content}}}
+            </div> 
+
+            <div id="wpsc-nft-items-container" class="wps-cards"></div>
+            <div>
+                <a id="wpsc-nft-load-more" class="wps-cta" style="display: none; float: right">
+                    {{load-more}}
+                    <i class="right arrow icon wps-semantic-icon"></i>
+                </a>
+            </div>
+            <div class="ui hidden divider"></div>
+        </div>
+    </div>
+</div>

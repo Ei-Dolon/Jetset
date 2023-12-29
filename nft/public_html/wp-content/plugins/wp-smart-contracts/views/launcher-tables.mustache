@@ -1,0 +1,73 @@
+<div id="{{launcher-id}}" class="wps-full-wrapper light-theme">
+    <!-- MAIN WRAPPER -->
+    <div class="wps-main-wrapper">
+      {{{sidebar}}}
+      <!-- WPS CONTENT -->
+      <div class="wps-content-page">
+        {{{main-nav}}}
+        <!-- GRID -->
+        <div class="wps-dashboard-grid">
+          {{{call-to-action}}}
+          <div class="wps-colums">
+            <div class="wps-dash-column" style="width: 100%;">
+              <!-- TOKENS column -->
+              <div class="wps-panel-aaa">
+                <div class="wps-panel wps-panel-content">
+                  <div class="wps-column-box wps-column-box-inner">
+                    <div class="wps-colBox-title-lg">
+                      <img src="{{logo}}">{{text}}
+                    </div>  
+                    <div style="padding: 0 4px;">
+                      <div class="wps-view-switch">
+                        <a href="#" id="wpsc-launcher-set-grid" class="wps-view-grid current"><span class="screen-reader-text">{{grid-view}}</span></a>
+                        <a href="#" id="wpsc-launcher-set-table" class="wps-view-list"><span class="screen-reader-text">{{list-view}}</span></a>
+                      </div>
+                      <div class="wps-cards" id="launcher-see-all-body2">
+                        <p class="wps-small-text-center"><img src="{{path-to-launcher}}img/not-found.png" class="wps-center-icon"><br>{{no-smart-contract-found}}</p>
+                      </div>
+                      <div style="overflow-x: auto">
+                        <table id="launcher-table" cellspacing="0" class="wps-smartContracts-table wps-table no-border" style="width: 100%;padding-top: 15px;border-spacing: 5px;display: none;">
+                          <thead style="text-align: left;">
+                            <tr>
+                              <th>
+                                <div class="wps-th">
+                                  {{text-name-symbol}}
+                                </div>
+                              </th>
+                              <th>
+                                <div class="wps-th">
+                                  {{text-network}}
+                                </div>
+                              </th>
+                              <th>
+                                <div class="wps-th">
+                                  {{text-smart-contract}}
+                                </div>
+                              </th>
+                              <th>
+                                <div class="wps-th">
+                                {{text-flavor}}
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody id="launcher-see-all-body">
+                            <tr><td colspan="4">
+                              <img src="{{path-to-launcher}}img/not-found.png" class="wps-center-icon">
+                              <p class="wps-small-text-center">{{no-smart-contract-found}}</p>
+                            </td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="wps-colBox-cta">
+                      <a id="wps-launcher-load-more" class="wps-colBox-seeAll">{{load-more}} &raquo;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

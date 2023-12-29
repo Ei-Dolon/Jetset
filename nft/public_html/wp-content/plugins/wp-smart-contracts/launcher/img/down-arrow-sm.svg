@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Light-theme" transform="translate(-878.000000, -34.000000)" fill="#F52D56" fill-rule="nonzero">
+            <g id="Last-7-days-dropdown" transform="translate(746.000000, 19.000000)">
+                <path d="M140.61375,15.5 L137,19.11375 L133.38625,15.5 C133.1425,15.25625 132.74625,15.25625 132.5025,15.5 C132.25875,15.74375 132.25875,16.14 132.5025,16.38375 L136.55625,20.4375 C136.67875,20.56 136.84,20.62125 137,20.6200188 C137.16125,20.6200188 137.32125,20.56 137.44375,20.4375 L141.4975,16.38375 C141.74125,16.14 141.74125,15.74375 141.4975,15.5 C141.25375,15.25625 140.8575,15.25625 140.61375,15.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

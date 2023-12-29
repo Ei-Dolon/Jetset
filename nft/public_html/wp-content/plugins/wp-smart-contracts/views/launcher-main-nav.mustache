@@ -1,0 +1,287 @@
+            <!-- MAIN NAV -->
+            <nav id="wpsc-main-navigation" class="wps-main-nav wps-main-nav-principal" style="padding: 40px 30px;" 
+                data-current-user="{{current_user}}" 
+                {{#registration_enabled}}data-registration-enabled="true"{{/registration_enabled}}
+                {{#email_required}}data-email-required="true"{{/email_required}}
+            >
+
+                {{#mobile-menu}}
+                <section class="wps-top-nav">
+                    <input id="wps-menu-toggle" type="checkbox" />
+                    <label class='wps-menu-button-container' for="wps-menu-toggle">
+                        <div class='wps-menu-button'></div>
+                    </label>
+                    <ul class="wps-menu">
+                        <li class="wps-heading-link wps-connect-mobile">
+                            <span class="wps-nav-main-link">
+                                <img src="{{path-to-launcher}}img/connect.png">
+                                <a href="#" class="wps-connect">{{connect}}</a>
+                            </span>
+                        </li>
+                        <li class="wps-heading-link">
+                            <span class="wps-nav-main-link">
+                                <img src="{{path-to-launcher}}img/home-logo.png">
+                                <a href="{{dashboard_link}}">{{dashboard}}</a>
+                            </span>
+                        </li>
+                        <li class="wps-heading-link">
+                            <span class="wps-nav-main-link">
+                                <img src="{{path-to-launcher}}img/nfts-logo.svg">
+                                {{nft}}
+                            </span>
+                        </li>
+                        <li><a href="{{nft_link}}" class="wps-inside-link {{#active_nft}}wpsc-active{{/active_nft}}">
+                            {{create-a-collection}}
+                           
+                        </a></li>
+                        <li><a href="{{nft_manage_link}}" class="wps-inside-link {{#active_nft_manage}}wpsc-active{{/active_nft_manage}}">
+                            {{manage-sc}}
+                        </a></li>
+                        <li class="wps-heading-link">
+                            <span class="wps-nav-main-link">
+                                <img src="{{path-to-launcher}}img/stakings-logo.svg">
+                                {{staking}}
+                            </span>
+                        </li>
+                        <li><a href="{{staking_link}}" class="wps-inside-link {{#active_staking}}wpsc-active{{/active_staking}}">
+                            {{create-staking}}
+                        </a></li>
+                        <li><a href="{{staking_manage_link}}" class="wps-inside-link {{#active_staking_manage}}wpsc-active{{/active_staking_manage}}">
+                            {{manage-sc}}
+                        </a></li>
+                        <li class="wps-heading-link ">
+                            <span class="wps-nav-main-link">
+                                <img src="{{path-to-launcher}}img/services.png">
+                                {{token-services}}
+                            </span>
+                        </li>
+                        <li><a href="{{services_link}}" class="wps-inside-link {{#active_services}}wpsc-active{{/active_services}}">
+                            {{create-service}}
+                        </a></li>
+                        <li><a href="{{services_manage_link}}" class="wps-inside-link {{#active_service_manage}}wpsc-active{{/active_service_manage}}">
+                            {{manage-sc}}
+                        </a></li>
+                        <li class="wps-heading-link ">
+                            <span class="wps-nav-main-link">
+                                <img src="{{path-to-launcher}}img/tokens-logo.svg">
+                                {{tokens}}
+                            </span>
+                        </li>
+                        <li><a href="{{token_link}}" class="wps-inside-link {{#active_token}}wpsc-active{{/active_token}}">
+                            {{create-token}}
+                        </a></li>
+                        <li><a href="{{token_manage_link}}" class="wps-inside-link {{#active_token_manage}}wpsc-active{{/active_token_manage}}">
+                            {{manage-sc}}
+                        </a></li>
+                    </ul>
+                </section>
+                {{/mobile-menu}}
+                <div class="left">
+                    <span class="wps-breadcrumb"><a href="{{dashboard_link}}">{{dashboard}}</a></span>
+                    {{#section-2}}
+                        <span class="wps-breadcrumb">{{section-2}}</span>
+                    {{/section-2}}
+                    {{#section-3}}
+                        <span class="wps-breadcrumb">{{section-3}}</span>
+                    {{/section-3}}
+                    {{#section-4}}
+                        <span class="wps-breadcrumb">{{section-4}}</span>
+                    {{/section-4}}
+                    </ul>
+                </div>
+                <div id="wps-dashboard-connected" class="right" style="position:relative; display: none;" {{#suggested_network_id}}data-suggested-network-id="{{suggested_network_id}}"{{/suggested_network_id}}>
+                    <div class="wps-settings">
+                        <div class="wps-user">
+                            <span id="wps-blockie-user-container" class="wps-box-title">
+                                <span id="wps-blockie-user" class="wps-box-title-icon"></span>
+                            </span>
+                            <span id="defaultAccount" class="wps-account wps-colBox-title-lg"></span>
+                            <span id="wps-network-icon" class="wps-box-title">
+                                <span class="wps-box-title-icon wps-update-network"></span>
+                            </span>
+                            <div id="wpsc-different-account" class="wps-small-text wps-hide-mobile" style="display: none; width: 150px;padding-top: 25px;" title="Your logged-in and your wallet connected account are not the same. Please log out and log in again to the correct account">
+                                ⚠ <a href="" id="wpsc-logout-link">{{logout}}</a>
+                            </div>
+                            <div id="wps-should-login" class="wps-small-text wps-hide-mobile" style="display: none; width: 150px;padding-top: 25px;" title="{{login-to-unlock}}">
+                                ⚠ <a href="javascript:void(0);" id="wpsc-login-link">{{login}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="wps-dashboard-not-connected" class="right" style="position:relative; display: none;">
+                    <div id="wps-metamask-connect" class="wps-settings">
+                        <span id="wps-icon-network-connect" class="wps-box-title">
+                            <span class="wps-box-title-icon wps-update-network"></span>
+                        </span>
+                        <a id="wpsc-connect-with-metamask" href="#" class="wps-cta" style="font-size: 16px">{{connect}}</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="wps-modal" id="modal-one">
+                <div class="wps-modal-bg wps-modal-exit"></div>
+                <div class="wps-modal-container wps-step-content wps-step-two wps-step-content-active wps-connect-modal-window">
+                    <div class="wps-description-box-out-border" style="margin-bottom: 0; ">
+                        <div class="wps-description-box" style="border-radius: 30px;margin-bottom: -3px;">
+                            <h2 class="wps-box-heading">{{connect-wallet}}</h2>
+                            <div class="wps-boxes">
+                                <div class="wps-box">
+                                    <img src="{{fox}}" class="wps-icon">
+                                    <p class="wps-box-title" style="margin-left: 0;">
+                                        <a id="wpsc-connect-with-metamask" href="#" class="wps-cta" style="font-size: 14px;margin-top: 0; margin-left: auto; margin-right: auto">Metamask</a>
+                                    </p>
+                                </div>
+                                <div class="wps-box">
+                                    <img src="{{wc}}" class="wps-icon">
+                                    <p class="wps-box-title" style="text-align: center;">
+                                        {{use-trust-wallet}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="wps-modal-close wps-modal-exit">X</button>
+                </div>
+            </div>
+
+            <div class="wps-modal" id="modal-deploy">
+                <div class="wps-modal-bg wps-modal-exit"></div>
+                <div class="wps-modal-container wps-step-content wps-step-two wps-step-content-active wps-deploy-window">
+                    <div class="wps-description-box-out-border" style="margin-bottom: 0; ">
+                        <div class="wps-description-box" style="border-radius: 30px;margin-bottom: -3px;">
+                            <h2 class="wps-box-heading">{{{transaction-in-progress}}}</h2>
+                            <div class="wps-boxes" style="margin: 45px">
+                                <img src="{{deploy-identicon}}" class="wps-icon" style="margin-right: 43px">
+                                <div>
+                                    <div id="wps-contract-data"></div>
+                                    <p class="wps-small-text" style="margin-top: 15px;">{{{confirm-tx}}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{{#hide-edit-name}}
+<span id="wps-hide-edit-button"></span>
+{{/hide-edit-name}}
+<span id="wps-link-edit" style="display: none;">{{wps-link-edit}}</span>
+
+<span id="path-to-launcher" style="display: none;">{{path-to-launcher}}</span>
+{{=<% %>=}}
+<textarea id="wps-row-see-all-template" style="display: none;">
+  <tr style="border-bottom: solid 1px #d8d8d8;">
+    <td>
+        <p>
+            <a id="wps-name-link-{{id}}" href="{{link}}" class="wps-paragraph no-margin">{{name}}</a>
+            <button class="wps-edit-button wps-table-qr">
+                <a href="{{link-edit}}" style="{{hide-edit}}">
+                    [{{edit}}]
+                </a>
+            </button>
+        </p>
+    </td>
+    <td>
+      <span class="wps-tag">
+        <span style="color: {{color-network}}; margin-right: 10px">⬤</span> 
+        {{network}}
+      </span>
+    </td>
+    <td>
+      <button class="wps-table-qr">
+        <img id="wpsc-qr-{{id}}" src="{{path-to-launcher}}img/copy-solid-icon.svg" onclick="copyToClipboard('{{contract}}', 'wpsc-qr-{{id}}')">
+      </button>
+      <a href="{{etherscan}}address/{{contract}}" target="_blank" class="wps-paragraph no-margin">{{contract-short}}</a>
+      <button class="wps-table-qr">
+        <img src="{{path-to-launcher}}img/qrcode-solid.svg">
+        <div class="wps-tooltip">
+          <img src="{{qr}}">
+          <div class="wps-tooltip-bottom-content">{{contract}}</div>
+        </div>
+      </button>
+    </td>
+    <td>
+      <span class="wps-tag">
+        <span class="wps-bg-{{color-flavor}} color">⬤</span> 
+        {{flavor}}
+      </span>
+    </td>
+  </tr>
+</textarea>
+<%={{ }}=%>
+
+{{=<% %>=}}
+<textarea id="wps-row-see-all-template2" style="display: none;">
+    <div class="wps-card">
+        <div class="wps-panel-aaa">
+            <div class="wps-panel wps-panel-content">
+                <div class="wps-column-box wps-column-box-inner" style="margin-top: 0">
+                    <div class="wps-smartContracts-table card wps-table" style="padding-bottom: 120px; padding-top: 30px;">
+                        <p>
+                            <a id="wps-name-link-{{id}}" href="{{link}}" class="wps-title-link">{{name}}</a>
+                            <button class="wps-edit-button wps-table-qr">
+                                <a href="{{link-edit}}" style="{{hide-edit}}">
+                                    [{{edit}}]
+                                </a>
+                            </button>    
+                        </p>
+                        <p class="wps-centered">
+                            <span class="wps-tag">
+                                <span class="wps-tag-label">{{network}}</span>
+                                <span class="wps-tag-value">  
+                                    <span style="color: {{color-network}}; margin-right: 10px">⬤</span> 
+                                    {{network}}
+                                </span>
+                            </span>
+                        </p>
+                        <p class="wps-centered">
+                            <span class="wps-tag">
+                                <span class="wps-tag-label">{{flavor}}</span>
+                                <span class="wps-tag-value">  
+                                    <span class="wps-bg-{{color-flavor}} color">⬤</span> 
+                                    {{flavor}}
+                                </span>
+                            </span>
+                        </p>
+                        <p class="wps-centered">
+                            {{smart-contract}}
+                        </p>
+                        <p class="wps-centered">
+                            <button class="wps-table-qr">
+                                <img id="wpsc-qr-2-{{id}}" src="{{path-to-launcher}}img/copy-solid-icon.svg" onclick="copyToClipboard('{{contract}}', 'wpsc-qr-2-{{id}}')">
+                            </button>
+                            <a href="{{etherscan}}address/{{contract}}" target="_blank" class="wps-a-contract">{{contract-short}}</a>
+                            <button class="wps-table-qr">
+                                <img src="{{path-to-launcher}}img/qrcode-solid.svg">
+                                <div class="wps-tooltip">
+                                <img src="{{qr}}">
+                                <div class="wps-tooltip-bottom-content">{{contract}}</div>
+                                </div>
+                            </button>
+                        </p>
+                        <a href="{{link}}" class="wps-cta wps-center wps-mini-text" style="margin:30px auto">
+                            {{view}}
+                            <img src="{{path-to-launcher}}img/right-arrow-white.png" class="wps-arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</textarea>
+<%={{ }}=%>
+
+<script>
+function switchInput(name, id) {
+  if (jQuery("#wps-"+name+"-link-"+id).is(":visible")) {
+    jQuery("#wps-"+name+"-link-"+id).hide();
+    jQuery("#wps-"+name+"-input-"+id).fadeIn(500);
+    jQuery("#wpsc-update-name-"+id).fadeIn(500);
+  } else if (jQuery("#wps-"+name+"-input-"+id).is(":visible")) {
+    jQuery("#wps-"+name+"-link-"+id).fadeIn(500);
+    jQuery("#wps-"+name+"-input-"+id).hide();
+    jQuery("#wpsc-update-name-"+id).hide();
+  }
+}
+</script>

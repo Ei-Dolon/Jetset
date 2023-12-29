@@ -1,0 +1,73 @@
+<ul class="wps-tab-container">
+	<li id="wps-tab-1" class="wps-tab tabSelected"><a id="wps-new-smart-contract" class="wps-tab-a">{{new-smart-contract}}</a></li>
+	<li id="wps-tab-2" class="wps-tab selected"><a id="wps-load-contract" class="wps-tab-a">{{load-existing-contract}}</a></li>
+</ul>
+<div id="wps-tab-deployer-1" class="form-box-container wps-smartContracts-table card" style="margin-top:-10px">
+    <div class="wps-form-box wps-deply-box" style="width:100%">
+        <div class="wsp-top-badge">
+            <span id="wps-fee-0" class="left"></span>
+            <span id="wps-fee-1" class="right"></span>
+        </div>
+        <div class="wps-deploy-box-content">
+            <div class="wps-box-ctas">
+                <h2 class="wps-deply-box-heading">{{beta}}</h2>
+                <div style="margin-top: 30px">
+                    {{{tos}}}
+                </div>
+
+                <div style="width: 100%; text-align: left; margin-top: 30px;margin-bottom: 10px">
+                    <div class="switch-label" style="color: grey;">
+                        <label class="switch">
+                            <input id="wps-tos" type="checkbox" class="theToggle">
+                            <span class="slider round"></span>
+                        </label>
+                        {{accept-tos}}
+                    </div>
+                </div>
+                <div style="width: 100%; text-align: left">
+                    <div class="switch-label" style="color: grey;">
+                        <label class="switch">
+                            <input id="wps-age" type="checkbox" class="theToggle">
+                            <span class="slider round"></span>
+                        </label>
+                        {{accept-legal-age}}
+                    </div>
+                </div>
+                <a id="wps-deploy-button" href="#" class="wps-cta wps-center">{{deploy}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="wps-tab-deployer-2" class="form-box-container wps-smartContracts-table card" style="margin-top:-10px; display: none;">
+    <div class="wps-form-box wps-deply-box style="width:100%">
+        <div class="wps-deploy-box-content">
+            <h2 class="wps-deply-box-heading">{{load-existing-contract}}</h2>
+            <p>&nbsp;</p>
+            <div class="wps-box-ctas">
+                <div class="wpsc-tos">
+                    <p>{{load-existing-contract-desc}}</p>
+                    <br><br>
+                    <p>* {{load-existing-contract-bullet-1}}</p>
+                    <p>* {{load-existing-contract-bullet-2}}</p>
+                    <p>* {{load-existing-contract-bullet-3}}</p>
+                    <p>* {{load-existing-contract-bullet-4}}</p>
+                </div>
+                <div style="width: 100%;">
+                    <label>
+                        {{smart-contract-address}}
+                        <input id="wps-load-contract-address" type="text" placeholder="0x...">
+                        <br><br>
+                        {{transaction-id}}
+                        <input id="wps-load-txid" type="text" placeholder="0x...">
+                        <br><br>
+                        {{block-hash}}
+                        <input id="wps-load-block" type="text" placeholder="0x...">
+                        <br>
+                        <a id="wps-load-button" href="#" class="wps-cta" style="display: inline-flex;">{{load}}</a>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

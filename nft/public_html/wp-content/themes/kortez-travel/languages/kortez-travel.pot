@@ -1,0 +1,1330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-23 10:57+0545\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: 404.php:27
+msgid "404"
+msgstr ""
+
+#: 404.php:28
+msgid "Oops! that page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:29
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: archive.php:113 search.php:41
+#: template-parts/latest-posts/latest-posts.php:139
+msgid "Next"
+msgstr ""
+
+#: archive.php:113 search.php:41
+#: template-parts/latest-posts/latest-posts.php:139
+msgid "Next page"
+msgstr ""
+
+#: archive.php:114 search.php:42
+#: template-parts/latest-posts/latest-posts.php:140
+msgid "Prev"
+msgstr ""
+
+#: archive.php:114 search.php:42
+#: template-parts/latest-posts/latest-posts.php:140
+msgid "Previous page"
+msgstr ""
+
+#: archive.php:115 search.php:43
+#: template-parts/latest-posts/latest-posts.php:141
+msgid "Page"
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:62
+msgid "Comments are closed."
+msgstr ""
+
+#: header.php:50
+msgid "Skip to content"
+msgstr ""
+
+#: inc/admin-functions.php:18
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/admin-functions.php:20 inc/admin-functions.php:30
+#: inc/admin-functions.php:40 inc/admin-functions.php:50
+#: inc/admin-functions.php:61
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/admin-functions.php:28
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/admin-functions.php:38
+msgid "WooCommerce Right Sidebar"
+msgstr ""
+
+#: inc/admin-functions.php:48
+msgid "WooCommerce Left Sidebar"
+msgstr ""
+
+#: inc/admin-functions.php:59
+msgid "Footer Sidebar"
+msgstr ""
+
+#: inc/back-compat.php:37 inc/back-compat.php:50 inc/back-compat.php:65
+#, php-format
+msgid ""
+"Kortez Travel requires at least WordPress version 4.7. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+
+#: inc/template-functions.php:138
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-functions.php:140
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-functions.php:142
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:26
+msgid "You must supply a valid number."
+msgstr ""
+
+#: inc/template-tags.php:28
+msgid "Minimum no of Excerpt Lenght is 1"
+msgstr ""
+
+#: inc/template-tags.php:30
+msgid "Maximum no of Excerpt Lenght is 50"
+msgstr ""
+
+#: inc/template-tags.php:123
+#, php-format
+msgid "Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:140
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:156 inc/template-tags.php:171
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:168
+msgid "Tags"
+msgstr ""
+
+#: inc/template-tags.php:208
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:229
+#, php-format
+msgid "EDIT<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/woocommerce-functions.php:86 inc/woocommerce-functions.php:129
+msgid "Compare"
+msgstr ""
+
+#: inc/core/common-functions.php:197
+msgid "Full Size"
+msgstr ""
+
+#: inc/core/common-functions.php:198
+msgid "Large Size"
+msgstr ""
+
+#: inc/core/common-functions.php:199
+msgid "Medium Size"
+msgstr ""
+
+#: inc/core/common-functions.php:200
+msgid "Medium Large Size"
+msgstr ""
+
+#: inc/core/common-functions.php:201
+msgid "Thumbnail Size"
+msgstr ""
+
+#: inc/core/common-functions.php:202
+msgid "1536x1536 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:203
+msgid "2048x2048 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:204
+msgid "1920x550 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:205
+msgid "1370x550 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:206
+msgid "590x310 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:207
+msgid "420x380 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:208
+msgid "420x300 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:209
+msgid "420x200 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:210
+msgid "290x150 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:211
+msgid "80x60 Size"
+msgstr ""
+
+#: inc/core/common-functions.php:575
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/core/common-functions.php:579
+msgid "Oops! That page can&#39;t be found."
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:47
+msgid "Primary"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:107
+msgid "Tan"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:112
+msgid "Yellow"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:117
+msgid "Orange"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:122
+msgid "Red"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:127
+msgid "Pink"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:132
+msgid "Purple"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:137
+msgid "Blue"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:142
+msgid "Green"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:147
+msgid "Brown"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:152
+msgid "Grey"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:157
+msgid "Black"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:166
+msgid "small"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:167
+msgid "S"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:172
+msgid "regular"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:173
+msgid "M"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:178
+msgid "larger"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:179
+msgid "L"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:184
+msgid "huge"
+msgstr ""
+
+#: inc/core/kortez-travel-after-theme-setup.php:185
+msgid "XL"
+msgstr ""
+
+#: inc/customizer/customizer.php:40
+msgid "Kortez Pro"
+msgstr ""
+
+#: inc/customizer/customizer.php:41
+msgid "Upgrade To Pro"
+msgstr ""
+
+#: inc/customizer/customizer.php:85
+msgid "Getting started will install and activate the recommended plugins."
+msgstr ""
+
+#: inc/customizer/customizer.php:87
+#, php-format
+msgid "Get Started with %s"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:12
+msgid "Single Post"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:18
+msgid "Post Title"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:24
+#: inc/customizer/options/blog.php:279 inc/customizer/options/page.php:25
+msgid "Enable in all"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:25
+#: inc/customizer/options/blog.php:280 inc/customizer/options/page.php:24
+msgid "Disable from all"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:31
+#: inc/customizer/options/page.php:45
+msgid "Feature Image"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:37
+#: inc/customizer/options/page.php:51
+msgid "Show in all Pages"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:38
+#: inc/customizer/options/page.php:52
+msgid "Disable in all Pages"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:44
+#: inc/customizer/options/blog.php:205
+msgid "Disable Date"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:53
+#: inc/customizer/options/blog.php:223
+msgid "Disable Comments Link"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:62
+msgid "Disable category"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:71
+msgid "Disable Tag Links"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:80
+#: inc/customizer/options/blog.php:214
+msgid "Disable Author"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:89
+msgid "Author Section Title"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:105
+msgid "Disable Related Posts"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:114
+msgid "Related Posts Section Title"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:130
+#: inc/customizer/options/blog.php:176 inc/customizer/options/page.php:60
+#: inc/customizer/options/page.php:101
+msgid "Choose Image Size"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:131
+msgid "For related posts."
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:136
+#: inc/customizer/options/blog.php:181 inc/customizer/options/page.php:65
+#: inc/customizer/options/page.php:106
+msgid "Select Image Size"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:149
+msgid "Related Posts Items"
+msgstr ""
+
+#: inc/customizer/options/blog-single.php:150
+msgid "Total number of related posts to show."
+msgstr ""
+
+#: inc/customizer/options/blog.php:12
+msgid "Blog Homepage"
+msgstr ""
+
+#: inc/customizer/options/blog.php:21 inc/widgets/latest-posts.php:91
+msgid "Latest Posts"
+msgstr ""
+
+#: inc/customizer/options/blog.php:22
+msgid "More options are available in Blog Page Section."
+msgstr ""
+
+#: inc/customizer/options/blog.php:29
+msgid "Disable Latest Posts Section From Homepage"
+msgstr ""
+
+#: inc/customizer/options/blog.php:38
+msgid "Disable Section Title"
+msgstr ""
+
+#: inc/customizer/options/blog.php:47
+msgid "Section Title"
+msgstr ""
+
+#: inc/customizer/options/blog.php:63
+msgid "Disable Section Description"
+msgstr ""
+
+#: inc/customizer/options/blog.php:72
+msgid "Section Description"
+msgstr ""
+
+#: inc/customizer/options/blog.php:88
+msgid "Section Title and Description Alignment"
+msgstr ""
+
+#: inc/customizer/options/blog.php:94
+#: inc/customizer/options/woocommerce.php:102 inc/widgets/author.php:61
+msgid "Left"
+msgstr ""
+
+#: inc/customizer/options/blog.php:95
+#: inc/customizer/options/woocommerce.php:103 inc/widgets/author.php:60
+msgid "Center"
+msgstr ""
+
+#: inc/customizer/options/blog.php:96
+#: inc/customizer/options/woocommerce.php:104 inc/widgets/author.php:62
+msgid "Right"
+msgstr ""
+
+#: inc/customizer/options/blog.php:116
+msgid "Choose Category"
+msgstr ""
+
+#: inc/customizer/options/blog.php:117
+msgid "Recent posts will show if any category is not chosen."
+msgstr ""
+
+#: inc/customizer/options/blog.php:122
+msgid "Select category"
+msgstr ""
+
+#: inc/customizer/options/blog.php:131
+msgid "Blog Page"
+msgstr ""
+
+#: inc/customizer/options/blog.php:139 inc/customizer/options/header.php:20
+#: inc/customizer/options/woocommerce.php:20
+msgid "Style"
+msgstr ""
+
+#: inc/customizer/options/blog.php:146
+msgid "Post Layouts"
+msgstr ""
+
+#: inc/customizer/options/blog.php:147
+msgid "Grid / List / Single"
+msgstr ""
+
+#: inc/customizer/options/blog.php:161
+msgid "Post View Number"
+msgstr ""
+
+#: inc/customizer/options/blog.php:162
+msgid "Number of posts to show."
+msgstr ""
+
+#: inc/customizer/options/blog.php:187
+msgid "Disable Post Title"
+msgstr ""
+
+#: inc/customizer/options/blog.php:196
+#: inc/customizer/options/woocommerce.php:1084
+msgid "Disable Category"
+msgstr ""
+
+#: inc/customizer/options/blog.php:232
+msgid "Disable Excerpt"
+msgstr ""
+
+#: inc/customizer/options/blog.php:241
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/options/blog.php:242
+msgid "Select number of words to display in excerpt"
+msgstr ""
+
+#: inc/customizer/options/blog.php:266
+msgid "Elements"
+msgstr ""
+
+#: inc/customizer/options/blog.php:273
+msgid "Blog Archive Pages Title"
+msgstr ""
+
+#: inc/customizer/options/blog.php:286
+msgid "Disable Pagination"
+msgstr ""
+
+#: inc/customizer/options/footer.php:12
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/options/footer.php:20
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/customizer/options/footer.php:27
+msgid "Widget Columns Layouts"
+msgstr ""
+
+#: inc/customizer/options/general.php:12
+msgid "Logo Image Width"
+msgstr ""
+
+#: inc/customizer/options/general.php:27
+msgid "Disable Site Title"
+msgstr ""
+
+#: inc/customizer/options/general.php:36
+msgid "Disable Site Tagline"
+msgstr ""
+
+#: inc/customizer/options/general.php:48
+msgid "Body Text Color"
+msgstr ""
+
+#: inc/customizer/options/general.php:65
+msgid "General Heading Text Color (H1 - H6)"
+msgstr ""
+
+#: inc/customizer/options/general.php:85
+msgid "Sidebar"
+msgstr ""
+
+#: inc/customizer/options/general.php:91
+msgid "Sidebar Layouts"
+msgstr ""
+
+#: inc/customizer/options/general.php:92
+msgid "Right / Left / Both / None"
+msgstr ""
+
+#: inc/customizer/options/general.php:107
+msgid "Disable Sticky Position"
+msgstr ""
+
+#: inc/customizer/options/general.php:123
+msgid "Disable Sidebar in Blog Page"
+msgstr ""
+
+#: inc/customizer/options/general.php:139
+msgid "Disable Sidebar in Single Post"
+msgstr ""
+
+#: inc/customizer/options/general.php:155
+msgid "Disable Sidebar in Page"
+msgstr ""
+
+#: inc/customizer/options/general.php:171
+msgid "Disable Sidebar in WooCommerce"
+msgstr ""
+
+#: inc/customizer/options/general.php:187
+msgid "Disable Sidebar in WooCommerce Shop"
+msgstr ""
+
+#: inc/customizer/options/general.php:208
+msgid "Disable Sidebar in WooCommerce Single Product"
+msgstr ""
+
+#: inc/customizer/options/general.php:232
+msgid "Preloader"
+msgstr ""
+
+#: inc/customizer/options/general.php:238
+msgid "Disable Preloading"
+msgstr ""
+
+#: inc/customizer/options/general.php:247
+msgid "Preloading Animations"
+msgstr ""
+
+#: inc/customizer/options/general.php:253
+msgid "Animation One"
+msgstr ""
+
+#: inc/customizer/options/general.php:254
+msgid "Animation Two"
+msgstr ""
+
+#: inc/customizer/options/general.php:255
+msgid "Animation Three"
+msgstr ""
+
+#: inc/customizer/options/general.php:256
+msgid "Animation Four"
+msgstr ""
+
+#: inc/customizer/options/general.php:257
+msgid "Animation Five"
+msgstr ""
+
+#: inc/customizer/options/general.php:263
+msgid "Image Width"
+msgstr ""
+
+#: inc/customizer/options/general.php:281
+#: inc/customizer/options/general.php:287
+msgid "Breadcrumbs"
+msgstr ""
+
+#: inc/customizer/options/general.php:293
+msgid "Disable in all Pages Only"
+msgstr ""
+
+#: inc/customizer/options/general.php:294
+msgid "Disable in all Pages & Posts"
+msgstr ""
+
+#: inc/customizer/options/general.php:295
+msgid "Show in all Pages & Posts"
+msgstr ""
+
+#: inc/customizer/options/header.php:12
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/options/header.php:27
+msgid "Header Height (in px)"
+msgstr ""
+
+#: inc/customizer/options/header.php:28
+msgid ""
+"This option will only apply to Desktop. Please click on below Desktop Icon "
+"to see changes. Automatically adjust by theme default in the responsive "
+"devices.\n"
+"\t"
+msgstr ""
+
+#: inc/customizer/options/page.php:12
+msgid "Pages"
+msgstr ""
+
+#: inc/customizer/options/page.php:18
+msgid "Page Title"
+msgstr ""
+
+#: inc/customizer/options/page.php:26
+msgid "Disable from frontpage only"
+msgstr ""
+
+#: inc/customizer/options/page.php:32
+msgid "Page Title Position"
+msgstr ""
+
+#: inc/customizer/options/page.php:38
+msgid "Below Feature Image"
+msgstr ""
+
+#: inc/customizer/options/page.php:39
+msgid "Top of the Page"
+msgstr ""
+
+#: inc/customizer/options/page.php:53
+msgid "Disable in Frontpage only"
+msgstr ""
+
+#: inc/customizer/options/page.php:54
+msgid "Show in Frontpage only"
+msgstr ""
+
+#: inc/customizer/options/page.php:83
+msgid "404 Page"
+msgstr ""
+
+#: inc/customizer/options/page.php:89
+msgid "Image"
+msgstr ""
+
+#: inc/customizer/options/page.php:90
+msgid "Recommended image size 360x200 pixel."
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:13
+msgid "General / Style"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:19
+msgid "General"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:25
+msgid "Disable Shop Page Title"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:44
+#: inc/customizer/options/woocommerce.php:365
+msgid "Product Wrapper Options"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:56
+msgid "Product Layout Type"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:76
+msgid "Product Card Layout"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:96
+msgid "Text Alignment"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:117
+#: inc/customizer/options/woocommerce.php:144
+msgid "Products Per Row"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:118
+#: inc/customizer/options/woocommerce.php:145
+msgid "How many products should be shown per row?"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:171
+msgid "Product Display Per Page"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:195
+#: inc/customizer/options/woocommerce.php:450
+msgid "Add To Cart Button Options"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:207
+msgid "Add To Cart Button Layout"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:232
+#: inc/customizer/options/woocommerce.php:649
+msgid "Icon Group Options"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:244
+msgid "Icon Group Layout"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:245
+msgid ""
+"Yith WooCommerce Compare, Wishlist and Quick View are grouped together. "
+"Install these plugins to use this option."
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:270
+#: inc/customizer/options/woocommerce.php:841
+msgid "Sale Tag Options"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:282
+msgid "Sale Tag Layout"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:307
+msgid "Sale Badge Text"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:323
+msgid "Enable Sale Badge Percentage"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:324
+msgid "Replaces sale badge text with sale percent."
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:340
+msgid "Sale Badge Percentage Text"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:341
+msgid ""
+"Input text to accompany with percentage {value} tag. Example: {value}% OFF!"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:377
+msgid "Product Card Style"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:398
+msgid "Product Image Radius"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:420
+msgid "Product Card Border Radius"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:462
+#: inc/customizer/options/woocommerce.php:488
+msgid "Add to Cart Button Background Color"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:514
+#: inc/customizer/options/woocommerce.php:540
+#: inc/customizer/options/woocommerce.php:566
+msgid "Add to Cart Button Text Color"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:592
+msgid "Add to Cart Button Radius"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:619
+msgid "Add to Cart Button Spacing"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:661
+msgid "Icon Group Background Color"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:682
+msgid "Icon Color"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:703
+#: inc/customizer/options/woocommerce.php:730
+#: inc/customizer/options/woocommerce.php:757
+#: inc/customizer/options/woocommerce.php:784
+msgid "Icon Group Border Radius"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:811
+msgid "Icon Group Spacing"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:853
+msgid "Sale Tag Background Color"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:869
+msgid "Sale Tag Text Color"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:890
+msgid "Sale Button Border Radius"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:912
+msgid "Sale Button Spacing"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:934
+msgid "Product Title Typography"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:966
+msgid "Product Price Typography"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:998
+msgid "Add to Cart Button Typography"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1036
+msgid "Single Products"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1042
+msgid "Image Zoom / Magnification"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1043
+msgid ""
+"Every slider step changes 10% zoom to the previous zoom level. For example: "
+"1.1 zoom level is now 110% zoom."
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1057
+msgid "Disable Single Product Page Title"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1066
+msgid "Disable Breadcrumbs"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1075
+msgid "Disable SKU"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1093
+msgid "Disable Tags"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1102
+msgid "Disable Product Tabs"
+msgstr ""
+
+#: inc/customizer/options/woocommerce.php:1111
+msgid "Disable Related Products"
+msgstr ""
+
+#: inc/getting-started/getting-started.php:20
+msgid "Processing..."
+msgstr ""
+
+#: inc/getting-started/getting-started.php:59
+msgid "All plugins are installed. To hide this notice click on dismiss."
+msgstr ""
+
+#: inc/getting-started/getting-started.php:62
+#, php-format
+msgid "Welcome to %1$s."
+msgstr ""
+
+#: inc/getting-started/getting-started.php:62
+msgid ""
+"Clicking on get started will install and activate Kortez Toolset, Kirki, "
+"Advanced Import, Elementor, ElementsKit Lite, Breadcrumb NavXT and Contact "
+"Form 7."
+msgstr ""
+
+#: inc/getting-started/getting-started.php:62
+#: inc/theme-info/theme-info.php:868
+#, php-format
+msgid "Get started with %s"
+msgstr ""
+
+#: inc/getting-started/getting-started.php:118
+msgid "Sorry, you are not allowed to install plugins on this site."
+msgstr ""
+
+#: inc/getting-started/getting-started.php:211
+msgid "Unable to connect to the filesystem. Please confirm your credentials."
+msgstr ""
+
+#: inc/theme-info/theme-info.php:43
+msgid " Info"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:44
+msgid " Setup"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:288
+msgid "All plugins are installed."
+msgstr ""
+
+#: inc/theme-info/theme-info.php:518
+msgid "Install"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:523
+msgid "Activate"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:529
+msgid "Deactivate"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:584
+msgid "Download"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:587
+msgid "Live Preview"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:824
+#, php-format
+msgid "Welcome to %s - "
+msgstr ""
+
+#: inc/theme-info/theme-info.php:828
+#, php-format
+msgid "We wish you luck on your journey with %s."
+msgstr ""
+
+#: inc/theme-info/theme-info.php:836
+#, php-format
+msgid "%s Details"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:841
+#, php-format
+msgid "%s Demo"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:845
+msgid "View Kortez Pro"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:850
+#, php-format
+msgid "Rate %s"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:856
+msgid "Getting Started"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:857
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:858
+msgid "Free VS Pro"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:859
+msgid "Documentation"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:860
+msgid "Changelog"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:866
+msgid "Click on get started to begin your journey."
+msgstr ""
+
+#: inc/theme-info/theme-info.php:911
+#, php-format
+msgid "Check our documentation to understand how to use %1$s."
+msgstr ""
+
+#: inc/theme-info/theme-info.php:912
+msgid "Read full documentation"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:922
+msgid "Free VS Pro Features"
+msgstr ""
+
+#: inc/theme-info/theme-info.php:923
+msgid "Check out the perks of our pro theme, Kortez Pro."
+msgstr ""
+
+#: inc/theme-info/theme-info.php:924
+msgid "Check All Features"
+msgstr ""
+
+#: inc/widgets/author.php:16
+msgid "Display your Profile Page with Social Media Links."
+msgstr ""
+
+#: inc/widgets/author.php:22
+msgid "Kortez Travel Author"
+msgstr ""
+
+#: inc/widgets/author.php:28
+msgid "Widget Title"
+msgstr ""
+
+#: inc/widgets/author.php:30 inc/widgets/author.php:185
+msgid "About Author"
+msgstr ""
+
+#: inc/widgets/author.php:33
+msgid "Select Page"
+msgstr ""
+
+#: inc/widgets/author.php:37
+msgid "Enable Full Size Feature Image"
+msgstr ""
+
+#: inc/widgets/author.php:42
+msgid "Enable Page Title"
+msgstr ""
+
+#: inc/widgets/author.php:47
+msgid "Excerpt Words count to show."
+msgstr ""
+
+#: inc/widgets/author.php:52
+msgid "Sub Title"
+msgstr ""
+
+#: inc/widgets/author.php:54
+msgid "Lifestyle Blogger"
+msgstr ""
+
+#: inc/widgets/author.php:57
+msgid "Content Alignment"
+msgstr ""
+
+#: inc/widgets/author.php:66
+msgid "= Social Icons ="
+msgstr ""
+
+#: inc/widgets/author.php:70
+msgid ""
+"Input Icon name. For Example:- fab fa-facebook For more icons https://"
+"fontawesome.com/icons?d=gallery&m=free"
+msgstr ""
+
+#: inc/widgets/author.php:74
+msgid "Social Icon 1"
+msgstr ""
+
+#: inc/widgets/author.php:78
+msgid "Social Icon Link 1"
+msgstr ""
+
+#: inc/widgets/author.php:82
+msgid "Social Icon 2"
+msgstr ""
+
+#: inc/widgets/author.php:86
+msgid "Social Icon Link 2"
+msgstr ""
+
+#: inc/widgets/author.php:90
+msgid "Social Icon 3"
+msgstr ""
+
+#: inc/widgets/author.php:94
+msgid "Social Icon Link 3"
+msgstr ""
+
+#: inc/widgets/author.php:98
+msgid "Social Icon 4"
+msgstr ""
+
+#: inc/widgets/author.php:102
+msgid "Social Icon Link 4"
+msgstr ""
+
+#: inc/widgets/author.php:106
+msgid "Social Icon 5"
+msgstr ""
+
+#: inc/widgets/author.php:110
+msgid "Social Icon Link 5"
+msgstr ""
+
+#: inc/widgets/author.php:114
+msgid "Social Icon 6"
+msgstr ""
+
+#: inc/widgets/author.php:118
+msgid "Social Icon Link 6"
+msgstr ""
+
+#: inc/widgets/author.php:122
+msgid "Social Icon 7"
+msgstr ""
+
+#: inc/widgets/author.php:126
+msgid "Social Icon Link 7"
+msgstr ""
+
+#: inc/widgets/author.php:130
+msgid "Social Icon 8"
+msgstr ""
+
+#: inc/widgets/author.php:134
+msgid "Social Icon Link 8"
+msgstr ""
+
+#: inc/widgets/author.php:138
+msgid "Social Icon 9"
+msgstr ""
+
+#: inc/widgets/author.php:142
+msgid "Social Icon Link 9"
+msgstr ""
+
+#: inc/widgets/author.php:146
+msgid "Social Icon 10"
+msgstr ""
+
+#: inc/widgets/author.php:150
+msgid "Social Icon Link 10"
+msgstr ""
+
+#: inc/widgets/class-base-widget.php:75
+msgid "Type Not Supported."
+msgstr ""
+
+#: inc/widgets/class-base-widget.php:95 inc/widgets/class-base-widget.php:223
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:17
+msgid "Kortez Travel Latest Posts"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:19
+msgid ""
+"Display your site’s most recent Posts or a Selected Category Posts with "
+"Thumbnail."
+msgstr ""
+
+#: inc/widgets/latest-posts.php:33
+msgid "Title"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:37
+msgid "Select a Category"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:41
+msgid "Number of Posts"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:48
+msgid "Show Date & Comments"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:53
+msgid "Layout"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:56
+msgid "Left Image"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:57
+msgid "Right Image"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:58
+msgid "Full Image"
+msgstr ""
+
+#: inc/widgets/latest-posts.php:122
+msgid "No Posts Found."
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:18 template-parts/content-single.php:20
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-page.php:31
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: template-parts/content-related-posts.php:47
+msgid "No Related Post"
+msgstr ""
+
+#: template-parts/site-info.php:11
+msgid "Copyright &copy; "
+msgstr ""
+
+#: template-parts/site-info.php:13
+msgid ". Powered by"
+msgstr ""
+
+#: template-parts/site-info.php:15
+msgid "https://kortezthemes.com/"
+msgstr ""
+
+#: template-parts/site-info.php:17
+msgid "Kortez Themes"
+msgstr ""
+
+#: template-parts/header/header-one.php:20
+msgid "Primary Menu"
+msgstr ""

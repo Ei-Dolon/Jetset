@@ -1,0 +1,128 @@
+
+<div class="wps-form-col">
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{symbol}}</label>
+        <p class="wps-form-text-tooltip">{{symbol-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-symbol" name="symbol" type="text" placeholder="{{symbol-label}}" {{#is_edit}}disabled{{/is_edit}} value="{{wpsc_symbol}}">
+            <img src="{{path-to-launcher}}img/key-solid.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{sales}}</label>
+        <p class="wps-form-text-tooltip">
+            {{sales-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{sales-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-sales-old" type="hidden" value="{{wpsc_commission}}">
+            <input id="wps-sales" type="number" min="0" max="100" value="{{wpsc_commission}}">
+            <img src="{{path-to-launcher}}img/percent-solid.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{royalty}}</label>
+        <p class="wps-form-text-tooltip">
+            {{royalty-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{royalty-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-royalty-old" type="hidden" value="{{wpsc_royalties}}">
+            <input id="wps-royalty" type="number" min="0" max="100" value="{{wpsc_royalties}}">
+            <img src="{{path-to-launcher}}img/percent-solid.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{mint}}</label>
+        <p class="wps-form-text-tooltip">{{mint-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{mint-tip}}</span>
+            </span>
+        </p>
+        <input id="wps-who-old" type="hidden" value="{{wpsc_anyone_can_mint}}">
+        <select id="wps-who" placeholder-text="1%" class="select-dropdown__button">
+            <option value="0" class="select-dropdown__list-item" {{#wpsc_anyone_can_mint_0}}selected{{/wpsc_anyone_can_mint_0}} {{^wpsc_anyone_can_mint_0}}{{^wpsc_anyone_can_mint_1}}{{^wpsc_anyone_can_mint_2}}selected{{/wpsc_anyone_can_mint_2}}{{/wpsc_anyone_can_mint_1}}{{/wpsc_anyone_can_mint_0}}>{{only-minter}}</option>
+            <option value="1" class="select-dropdown__list-item" {{#wpsc_anyone_can_mint_1}}selected{{/wpsc_anyone_can_mint_1}} >{{only-creator}}</option>
+            <option value="2"  class="select-dropdown__list-item" {{#wpsc_anyone_can_mint_2}}selected{{/wpsc_anyone_can_mint_2}}>{{anyone-can-mint}}</option>
+        </select>                
+    </div>
+
+</div>
+<div class="wps-form-col">
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{name}}</label>
+        <p class="wps-form-text-tooltip">{{name-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{name-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-name-old" type="hidden" value="{{wpsc_name}}">
+            <input id="wps-name" type="text" placeholder="{{name-label}}" {{#is_edit}}disabled{{/is_edit}} value="{{wpsc_name}}">
+            <img src="{{path-to-launcher}}img/symbol-icon.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{wallet}}</label>
+        <p class="wps-form-text-tooltip">
+            {{wallet-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{wallet-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-wallet-old" type="hidden" value="{{wpsc_wallet}}">
+            <input id="wps-wallet" type="text" value="{{wpsc_wallet}}">
+            <img src="{{path-to-launcher}}img/ethereum.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{payments}}</label>
+        <p class="wps-form-text-tooltip">
+            {{payments-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{payments-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-payments-old" type="hidden" value="{{wpsc_token}}">
+            <input id="wps-payments" type="text" value="{{wpsc_token}}">
+            <img src="{{path-to-launcher}}img/ethereum.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <div class="switch-label" style="color: grey;">
+            <span class="wps-form-label">{{pixel}}</span>
+            <label class="switch">
+                <input id="wps-pixel-old" type="hidden" value="{{wpsc_pixelated_images}}">
+                <input id="wps-pixel" type="checkbox" class="theToggle" {{#wpsc_pixelated_images}}checked{{/wpsc_pixelated_images}}>
+                <span class="slider round"></span>
+            </label>
+            <p class="wps-form-text-tooltip">{{pixel-desc}}
+                <span class="wps-form-tooltip-icon">
+                    <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                    <span class="wps-form-tooltip">{{pixel-tip}}</span>
+                </span>
+            </p>
+        </div>
+    </div>
+
+</div>

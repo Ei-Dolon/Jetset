@@ -1,0 +1,231 @@
+body {
+    background-color: #f9daf9b0 !important
+}
+.wps-colBox-title-lg {
+    background-image: radial-gradient(circle at 1.7% 12%, #930062 0, #730055 43%, #2d3b63 87%, #12686b 127%);
+    color: #fff;
+}
+.wps-description-box {
+    background-image: radial-gradient(circle at 1.7% 12%, #841E62 0, #58094F 43%, #346B6D 87%, #2A445E 127%);
+}
+.wps-full-wrapper .wps-inner-content .wps-deply-box .wsp-top-badge {
+    background-image: radial-gradient(circle at 1.7% 12%, #930062 0, #730055 43%, #2d3b63 87%, #12686b 127%);
+}
+.wps-full-wrapper .wps-form-box .wps-form-tooltip-icon .wps-form-tooltip {
+    background-color: #ffffff;
+}
+.wps-tag {
+    border: 1px solid #94005b;
+    background-color: #fdedff;
+}
+.wps-big-icon {
+    background-image: radial-gradient(circle at 1.7% 12%, #fff 0, #c10587 43%, #38285f 87%, #000000 127%)
+}
+.wps-th {
+    background-image: radial-gradient(circle at 1.7% 12%, #a20060 0, #92005b 43%, #5e005b 87%, #1c3e65 127%);
+}
+.wps-top-nav {
+    background: radial-gradient(circle at 1.7% 12%, #8b005f 0, #4f0157 43%, #41175b 87%, #000000 127%)
+}
+.wps-tag.extra.content {
+    background-image: radial-gradient(circle at 1.7% 12%, #edfffe 0, #eff7ff 43%, #eff1ff 87%, #ffecf4 127%);
+}
+.menu.wps-dashboard-grid.small.transition.visible {
+    background-image: radial-gradient(circle at 1.7% 12%, #fff 0, #e5fffe 43%, #e3e8ff 87%, #ffe6f1 127%);
+}
+.wps-tag .menu.left.transition.visible {
+    background-image: radial-gradient(circle at 1.7% 12%, #edfffe 0, #eff7ff 43%, #eff1ff 87%, #ffecf4 127%);
+}
+    
+.wps-full-wrapper .wps-box-heading {
+    color: #F3AA20;
+}
+
+.wps-full-wrapper .wps-sidebar-nav .wps-active-heading .wps-nav-main-link {
+    background-color: #F3AA20;
+}
+
+.wps-cta {
+    background: #F3AA20;
+    box-shadow: 0 7px 7px #F3AA204f;
+}
+
+img.wps-nav-main-link, .wps-nav-main-link img {
+    background-color: #F3AA20;
+}
+
+.wps-full-wrapper .wps-sidebar-nav .wps-nav-main-link {
+    color: #F3AA20;
+}
+
+.wps-full-wrapper .wps-main-nav.wps-main-nav-principal .wps-breadcrumb a,
+.wps-full-wrapper .wps-main-nav.wps-main-nav-principal .wps-theme .wps-theme-text,
+.wps-full-wrapper .wps-main-nav.wps-main-nav-principal .wps-user {
+    color: #F3AA20
+}
+
+.wps-full-wrapper .wps-main-nav {
+    background-color: #930061;
+}
+
+.wps-tag-label {
+    background-color: #83005b2b;
+}
+
+.wps-full-wrapper .wps-dashboard-grid {
+    background-color: rgba(255, 255, 255, 25%);
+}
+
+.wps-full-wrapper .wps-smartContracts-table.card {
+    background: #ffffff88;
+}
+
+.wps-tag, .wps-tag-value {
+    color: black;
+}
+
+.wps-full-wrapper .wps-main-nav .wps-breadcrumb {
+    color: #F3AA20;
+}
+
+.wps-full-wrapper .wps-inner-content .wps-step-nav-active .wps-step-icon {
+    background-color: #F3AA20;
+    color: #fff
+}
+
+.wps-full-wrapper .wps-inner-content .wps-step-nav-active .wps-step-heading {
+    color: #F3AA20
+}
+
+.wps-full-wrapper .wps-inner-content .wps-step-icon {
+    color: #F3AA20;
+}
+
+.wps-full-wrapper .wps-inner-content .wps-step-text {
+    color: #242e42;
+}
+
+.wps-view-switch .wps-view-list.current:before {
+    color: #63e7d9
+}
+
+.wps-view-switch .wps-view-grid.current:before {
+    color: #63e7d9
+}
+
+.wps-view-switch .wps-view-list:before {
+    color: #9a93e3;
+}
+
+.wps-view-switch .wps-view-grid:before {
+    color: #9a93e3;
+}
+
+.wps-paragraph {
+    color: #242e42;
+}
+
+#launcher-table td {
+    border-bottom: solid 1px #b7ebe6
+}
+
+.wps-full-wrapper .wps-form-box .wps-form-label {
+    color: #242e42;
+}
+
+.wps-full-wrapper .wps-form-box .wps-form-text-tooltip {
+    color: #242e42;
+}
+
+.tabSelected {
+    border: 1px solid #00c7c3;
+}
+
+.wps-full-wrapper .slider {
+    background-color: #3b2461;
+}
+
+.wps-full-wrapper input:checked+.slider {
+    background-color: #95005c
+}
+
+.wps-full-wrapper .wps-inner-content .wps-deply-box .wps-deply-box-heading {
+    color: #242e42;
+}
+
+.wpsc-tos {
+    color: #444;
+}
+
+.wpsc-active {
+    background-color: #F3AA20;
+}
+
+.wps-cta.wps-secondary-auto {
+    background-color: #c3820c;
+}
+
+.wps-cta.wps-secondary {
+    background-color: #c3820c;
+}
+
+.wps-smartContracts-table.card.wps-table.finalized {
+    background: #0a9ea736;
+}
+
+.wpsc-grey-row {
+    background-color: #ffffff85!important;
+}
+
+.wps-full-wrapper .wps-sidebar-nav .wps-inside-link {
+    color: #626d82
+}
+
+.wps-tag-label {
+    color: #374c4b;
+}
+
+.wps-full-wrapper .wps-dashboard-grid .wps-colBox-seeAll {
+    color: #9c005f;
+}
+
+.wps-main-wrapper {
+    border: 2px solid #F3AA202e;
+}
+
+.wps-full-wrapper .wps-main-nav {
+    border: 1px solid #F3AA202e;
+}
+
+.wps-full-wrapper .wps-smartContracts-table.card {
+    border: 1px solid #2d86ca52;
+}
+
+.wps-full-wrapper .wps-dashboard-grid {
+    border: 1px solid #F3AA202e;
+}
+
+.wps-heading-link.wps-active-heading .wps-nav-main-link {
+    color: white;
+}
+
+.wps-title-link {
+    color: #F3AA20 !important;
+}
+
+.wps-box-description {
+    color: white
+}
+
+#wpsc-accept-tos .switch-label, #wpsc-accept-age .switch-label {
+    color: #444!important;
+}
+
+.wpsc-gallery .active.item {
+    background-image: radial-gradient(circle at 1.7% 12%, #930062 0, #730055 43%, #2d3b63 87%, #12686b 127%)!important;
+    color: #fff!important;
+}
+
+#wps-collection-title {
+    color: #fff
+}

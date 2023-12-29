@@ -1,0 +1,232 @@
+Embr widget <div class="elementor-widget-container"><script async type="module" id="embrCheckout" src="https://scripts.embr.org/checkout/checkout.js" data-chain="bsc" data-address="0x405be90996e7f995a08c2fbd8d8822ef5b03466c"></script></div>
+
+import "./main-833199f5.js";
+
+https://scripts.embr.org/checkout/main-833199f5.js
+
+Floating button in bottom right of currently visible screen
+JetsetLogo-Black circle with blue double J Text=Buy JTS
+Click to show checkout popup
+Botton button changes to down arrow same text
+
+;************************
+Checkout popup:
+
+Swap Jetset						Connect_btn
+
+Combined shape of selected token = BNB with chain shape in lower left corner BNB chain
+BNB	1						BNB token letter id in circle > it is a button that brings the select token popup listing 5 most common
+$294.60							Bal: 0 Max			//bnb balance of connected wallet	Blue Max btn to add max possible bnb
+					Swap tokens position
+Combined shape of selected token = JST with chain shape in lower left corner BNB chain
+Jetset	1,059,880		JTS token letter id in circle
+1 JTS = 0.0000009435 BNB ($0.0002779)		Exchange rate with drop down toggle button that gives:
+Expected Output				1,059,880 JTS
+Estimated Gas				0.0013708 BNB
+Connect Wallet button
+Credit card symbol Buy BNB with Debit Card
+
+Grey footer:
+Powered by Embr • Get your own swap
+
+BUSD	1
+JTS		3,660.44		JTS token letter id in circle
+
+
+;************************
+Token selection popup:
+
+Select a token												X
+Textfield: <Search token name or address>
+
+Search all BNB Chain tokens or pick a popular token
+
+Combined shape: main circle of selected token icon, small circle of chain ID icon in lower left corner of main circle
+Token Text ID
+Token Name
+
+BNB/BNB
+BNB
+BNB
+
+BUSD_Token/BNB
+BUSD
+BUSD Token
+
+USDC_Coin/BNB
+USDC
+USDC Coin
+
+Tether/BNB
+USDT
+Tether
+
+Wrapped_BNB/BNB
+WBNB
+Wrapped BNB
+
+Combined shape of selected token = BNB with chain shape in lower left corner
+<svg xmlns="http://www.w3.org/2000/svg" width="256px" height="256px" viewBox="0 0 256 256" version="1.1" class="w-full h-auto">
+<rect id="Rectangle" fill="#F3BA2F" x="0" y="0" width="256" height="256" rx="128"></rect>
+<path d="M162.136193,141 L182,160.88398 L181.990287,160.895105 L128.000694,215 L74.0277524,160.913182 L74,160.885371 L93.8818466,141.016687 L128.000694,175.207009 L162.136193,141 Z M196.420098,107.42416 L216.307696,127.311758 L196.419115,147.20034 L176.531516,127.312741 L196.420098,107.42416 Z M60.1937231,107.41479 L80.0813218,127.302388 L60.1927402,147.19097 L40.3051415,127.303371 L60.1937231,107.41479 Z M128,107 L147.990361,126.989673 L147.9821,126.989673 L148,126.999312 L147.990361,127.010327 L128,147 L108.027539,127.028226 L108,126.999312 L111.529088,123.470345 L113.225473,121.772641 L113.22685,121.772641 L128,107 Z M127.990977,39 L182,93.1052691 L162.140149,113 L127.990977,78.7922429 L93.8598512,112.981923 L74,93.0871918 L127.990977,39 Z" id="Combined-Shape" fill="#FFFFFF">
+</path>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="256px" height="256px" viewBox="0 0 256 256" version="1.1" class="w-full h-auto">
+<rect id="Rectangle" fill="#F3BA2F" x="0" y="0" width="256" height="256" rx="128"></rect>
+<path d="M162.136193,141 L182,160.88398 L181.990287,160.895105 L128.000694,215 L74.0277524,160.913182 L74,160.885371 L93.8818466,141.016687 L128.000694,175.207009 L162.136193,141 Z M196.420098,107.42416 L216.307696,127.311758 L196.419115,147.20034 L176.531516,127.312741 L196.420098,107.42416 Z M60.1937231,107.41479 L80.0813218,127.302388 L60.1927402,147.19097 L40.3051415,127.303371 L60.1937231,107.41479 Z M128,107 L147.990361,126.989673 L147.9821,126.989673 L148,126.999312 L147.990361,127.010327 L128,147 L108.027539,127.028226 L108,126.999312 L111.529088,123.470345 L113.225473,121.772641 L113.22685,121.772641 L128,107 Z M127.990977,39 L182,93.1052691 L162.140149,113 L127.990977,78.7922429 L93.8598512,112.981923 L74,93.0871918 L127.990977,39 Z" id="Combined-Shape" fill="#FFFFFF">
+</path>
+</svg>
+
+<img alt="Jetset" src="https://d3kdei7cs9pk0w.cloudfront.net/56_0x405be90996e7f995a08c2fbd8d8822ef5b03466c_small.png" class="h-full w-full pointer-events-none object-cover">
+Rendered size:	40 × 40 px
+Rendered aspect ratio:	1∶1
+Intrinsic size:	50 × 50 px
+Intrinsic aspect ratio:	1∶1
+File size:	4.9 kB
+Current source:	https://d3kdei7cs9pk0w.cloudfront.net/56_0x405be90996e7f995a08c2fbd8d8822ef5b03466c_small.png
+
+<img alt="BUSD Token" src="https://d3kdei7cs9pk0w.cloudfront.net/56_0xe9e7cea3dedca5984780bafc599bd69add087d56_small.png" class="h-full w-full pointer-events-none object-cover">
+Rendered size:	40 × 40 px
+Rendered aspect ratio:	1∶1
+Intrinsic size:	50 × 50 px
+Intrinsic aspect ratio:	1∶1
+File size:	1.1 kB
+Current source:	https://d3kdei7cs9pk0w.cloudfront.net/56_0xe9e7cea3dedca5984780bafc599bd69add087d56_small.png
+
+<img alt="Tether" src="https://d3kdei7cs9pk0w.cloudfront.net/56_0x55d398326f99059ff775485246999027b3197955_small.png" class="h-full w-full pointer-events-none object-cover">
+Rendered size:	40 × 40 px
+Rendered aspect ratio:	1∶1
+Intrinsic size:	50 × 50 px
+Intrinsic aspect ratio:	1∶1
+File size:	1.6 kB
+Current source:	https://d3kdei7cs9pk0w.cloudfront.net/56_0x55d398326f99059ff775485246999027b3197955_small.png
+
+
+
+https://scripts.embr.org/checkout/checkout.js ->
+yue = _ue, wue = {
+  id: 56,
+  slug: "bsc",
+  name: "Binance Smart Chain Mainnet",
+  niceName: "BNB Chain",
+  nativeCurrency: {
+    chainId: 56,
+    name: "BNB",
+    symbol: "BNB",
+    decimals: 18,
+    address: od,
+    isNativeToken: !0
+  },
+  explorers: [
+    {
+      name: "bscscan",
+      url: "https://bscscan.com",
+      standard: "EIP3091"
+    }
+  ],
+  rpc: [
+    "https://bsc-dataseed1.binance.org",
+    "https://bsc-dataseed2.binance.org",
+    "https://bsc-dataseed3.binance.org",
+    "https://bsc-dataseed4.binance.org",
+    "https://bsc-dataseed1.defibit.io",
+    "https://bsc-dataseed2.defibit.io",
+    "https://bsc-dataseed3.defibit.io",
+    "https://bsc-dataseed4.defibit.io",
+    "https://bsc-dataseed1.ninicoin.io",
+    "https://bsc-dataseed2.ninicoin.io",
+    "https://bsc-dataseed3.ninicoin.io",
+    "https://bsc-dataseed4.ninicoin.io"
+  ],
+  endpoint: "https://bsc.api.0x.org/",
+  wrappedAddress: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+  usdAddress: "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+  // usdPairAddress: '0xd99c7F6C65857AC913a8f880A4cb84032AB2FC5b'
+  usdPairAddress: "0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae"
+}, Eue = wue
+
+IK = GV(
+  ZX({
+    publicClient: dUe,
+    webSocketPublicClient: fUe,
+    autoConnect: !0,
+    walletConnectProjectId: "47e964ecdcb6c59e56ba5de5a6b61c30",
+    appName: "Checkout",
+    appDescription: "Transactions powered by Embr",
+    appUrl: "https://embr.org",
+    appIcon: "https://checkout.embr.org/images/seo/icon-192.png",
+    chains: lUe
+  })
+
+
+
+function Ba(e, t) {
+  if (!e)
+    throw t;
+}
+var LQ = () => {
+  const { tokenIn: e, tokenOut: t, tokenInAmount: n } = dn(), [r] = QZe(), { address: i } = Dn(), [o] = jQ(), a = GI(e) || 0, c = n, u = JZe();
+  try {
+    Ba(
+      e,
+      1
+      /* TOKENIN */
+    ), Ba(
+      t,
+      2
+      /* TOKENOUT */
+    ), Ba(
+      i,
+      0
+      /* ACCOUNT */
+    ), Ba(
+      r,
+      4
+      /* CHAIN */
+    ), Ba(
+      Pt(a).gt(0),
+      6
+      /* BALANCE */
+    ), Ba(
+      n && Pt(n).gt(0),
+      5
+      /* INPUT */
+    ), Ba(
+      c && Pt(c).lte(a),
+      6
+      /* BALANCE */
+    ), Ba(
+      o,
+      3
+      /* ALLOWANCE */
+    ), Ba(
+      u,
+      8
+      /* NETWORK */
+    );
+    return;
+  } catch (d) {
+    return d;
+  }
+}, eqe = () => {
+  const e = u4(), { chain: t, tokenIn: n } = dn(), r = LQ(), [i, o, s] = MQ(t?.id), { setOpen: a } = t2(), [c, u, d] = jQ(), h = () => (e("openConnect", null), a(!0)), p = () => (e("switchChain", null), s());
+  switch (r) {
+    case 1:
+      return ["Select a sell token", void 0];
+    case 2:
+      return ["Select a buy token", void 0];
+    case 0:
+      return ["Connect wallet", h];
+    case 8:
+      return ["No internet connection", void 0];
+    case 5:
+      return ["Enter an amount", void 0];
+    case 6:
+      return [`Not enough ${n.symbol}`, void 0];
+    case 4:
+      return [`Switch to ${t.niceName}`, p, o];
+    case 3:
+      return [`Enable ${n.symbol}`, u, d];
+  }
+  return [void 0, void 0];
+};

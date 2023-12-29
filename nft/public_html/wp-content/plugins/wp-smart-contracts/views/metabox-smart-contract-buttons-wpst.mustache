@@ -1,0 +1,202 @@
+            <div class="ui placeholder segment">
+              <div class="ui two column stackable center aligned grid">
+                <div class="ui bottom attached mini label" style="font-weight: 400;">
+                  {{one-time-deployment-fee}}<br>
+                  {{prices-in-use-are-estimates}}<br>
+                  <br>
+                  <strong>{{DYOR}}</strong><br>
+                  {{we-recommend-dyor}}<br>
+                  {{use-at-your-risk}}
+                </div>
+                <div class="middle aligned row">
+                    <div class="ui top left attached green label" id="wpsc-deploy-fee-ether">
+                      <div class="ui active centered inline mini loader"></div>
+                    </div>
+                    <div class="column">
+
+                      <div class="ui dividing header" style="margin-top: 20px;">
+                        {{deploy-selected-network}}
+                      </div>
+                      <p>
+                        <span id="wpsc-selected-evm"></span>
+                      </p>
+                      <div class="ui hidden divider"></div>
+
+                      <div class="ui buttons">
+                        <a id="wpsc-deploy-buy-coin" target="_blank" class="ui labeled icon button big wpsc-other-networks" style="margin-right: 10px;"></a>
+                        <button id="{{button-id}}" class="ui labeled icon green button big wpsc-the-deploy-button">
+                          <i class="cloud upload icon"></i>
+                          {{{deploy}}}
+                        </button>
+                      </div>
+
+
+                      <div class="ui divider"></div>
+
+                      <p class="wpsc-other-networks">{{other-networks}}</p>
+
+                      <table id="wpsc-pricing-table" class="ui striped small table wpsc-other-networks">
+                        <thead>
+                          <tr><th>{{network}}</th>
+                          <th>{{type}}</th>
+                          <th>{{pricing}}</th> 
+                          <th></th>
+                        </tr></thead>
+                        <tbody id="wpsc-other-available-networks"></tbody>
+                      </table>
+
+                      <a href="javacript:void(0);" id="show-all-network-labels" style="font-size: 12px; text-decoration: none;" class="wpsc-other-networks">{{expand-all}}<i class="angle down icon"></i> </a>
+
+                      <div id="dashboard-not-found" style="display: none;">
+                        <div class="ui divider"></div>
+                        <div class="ui warning small message">
+                          {{please-enable-more-options}}
+                          <a href="javascript:void" id="wpsc-reset-filter">{{reset-the-filter}}</a>
+                        </div>  
+                      </div>
+        
+                      <div id="wpsc-network-filter" style="display: none;">
+                        <p>{{filter-by}}</p>
+                        <div class="ui checkbox wpsc-small">
+                          <input type="checkbox" name="check_mainnet" checked="checked">
+                          <label>
+                            {{mainnet}}
+                          </label>
+                        </div>
+                        <div class="ui checkbox wpsc-small">
+                          <input type="checkbox" name="check_testnet" checked="checked">
+                          <label>{{testnet}}</label>
+                        </div>
+                        <br/><br/>
+                        <div class="ui checkbox wpsc-small">
+                          <input type="checkbox" name="check_ethereum" checked="checked">
+                          <label>Ethereum</label>
+                        </div>
+                        <div class="ui checkbox wpsc-small">
+                          <input type="checkbox" name="check_other_blockchain_type" checked="checked">
+                          <label>{{others}}</label>
+                        </div>
+                        <br/><br/>
+                        <a href="javacript:void(0);" id="collapse-all-network-labels" style="font-size: 12px; text-decoration: none;">{{collapse-all}}<i class="angle up icon"></i> </a>
+                      </div>
+
+                      <div class="ui divider wpsc-other-networks"></div>
+                      <a href="https://wpsmartcontracts.com/networks/" target="_blank" class="ui label wpsc-other-networks">{{learn-more-networks}} <i class="external alternate icon"></i></a>  
+                      <p>&nbsp;</p>
+                      <p>&nbsp;</p>
+                      
+                    </div>
+
+                    <div class="ui top right attached blue label" id="wpsc-deploy-fee-wpst"></div>
+                    <div class="column">
+
+                      <div id="wpsc-wpic-dimmer" class="ui dimmer">
+                        <div class="content">
+                          <div class="center">
+                            <h2 class="ui inverted icon header">
+                            <i class="eye slash icon"></i>{{wpic-not-available}}<div id="reason" class="sub header"></div>
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+
+                      <img src="{{deploy-token-image}}" class="ui centered tiny image">
+                      <div class="ui center aligned icon header" id="deploy-token-header">
+                        {{{deploy-token}}}
+                      </div>
+
+                      <div class="ui basic segment" id="wpsc-no-wpst" style="display: none;">
+                        <div class="ui message">
+                          <div class="content">
+                            <p class="wpsc-left">
+                              {{{no-wpst}}}
+                            </p>
+                          </div>
+                        </div>  
+                      </div>
+
+                      <div class="ui basic segment" id="not-enough-wpst" style="display: none;">
+                        <div class="ui message">
+                          <div class="content">
+                            <p class="wpsc-left">
+                              {{{not-enough-wpst}}}
+                            </p>
+                          </div>
+                        </div>  
+                      </div>
+
+                      <span id="wpsc-deploy-steps" style="display: none;">
+                        <div class="ui basic segment">
+                          <div class="ui message">
+                            <div class="content">
+                              <p class="wpsc-left">
+                                {{{deploy-desc-token}}}
+                              </p>
+                              <div class="ui bulleted mini list wpsc-left">
+                                <div class="item">{{{deploy-desc-token-1}}}</div>
+                                <div class="item">{{{deploy-desc-token-2}}}</div>
+                              </div>
+                            </div>
+                          </div>  
+                        </div>
+                        <div class="ui hidden divider"></div>
+                        <button class="ui labeled icon blue button big" id="{{authorize-button-id}}">
+                          <i class="check icon"></i>
+                          {{{authorize}}}
+                        </button>  
+                        <div class="ui divider"></div>
+                      </span>
+
+                      <span  id="wpsc-deploy-ready" style="display: none;">
+                        <div class="ui basic segment">
+                          <div class="ui message">
+                            <div class="content">
+                              <p class="wpsc-left">
+                                {{{authorize-complete}}}
+                              </p>
+                            </div>
+                          </div>  
+                        </div>
+                        <div class="ui hidden divider"></div>
+                        <button class="ui labeled icon blue button big" id="{{deploy-button-wpst}}">
+                          <i class="cloud upload icon"></i>
+                          {{{deploy}}}
+                        </button>
+                        <div class="ui divider"></div>
+                      </span>
+
+                      <div class="ui image label" id="wpsc-wpst-balance" style="display: none;">
+                        <img src="" class="ui tiny image" id="wpsc-balance-blockie">
+                        <span id="wpst-balance"></span>
+                        <a class="detail">{{{wpst-balance}}}</a>
+                      </div>
+
+                      <p>
+                        <a href="https://wpsmartcontracts.com/wp-ice-cream/" target="_blank" class="ui label wpsc-other-networks">{{wpic-learn-more}}<i class="external alternate icon"></i></a>  
+                      </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="ui hidden divider"></div>
+              <div class="ui hidden divider"></div>
+          </div>
+
+          {{#show_load}}
+            {{#load-desc}}
+              <p class="wpsc-centered">
+                {{{do-you-have-an-erc20-address}}}
+              </p>
+              <p class="wpsc-centered">
+                <button id="wpsc-load-contract-button" class="ui button">
+                  {{{load-desc}}}
+                </button>
+              </p>
+            {{/load-desc}}
+          {{/show_load}}
+
+          <script>
+            jQuery('.ui.dropdown')
+              .dropdown()
+            ;
+          </script>

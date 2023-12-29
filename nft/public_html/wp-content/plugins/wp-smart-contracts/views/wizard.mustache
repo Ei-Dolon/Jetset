@@ -1,0 +1,56 @@
+<div id="wizard-container" class="wps-full-wrapper light-theme">
+    <!-- MAIN WRAPPER -->
+    <div class="wps-main-wrapper">
+
+        {{{sidebar}}}
+
+        <!-- WPS CONTENT -->
+        <div class="wps-content-page">
+
+            {{{main-nav}}}
+
+            <div class="wps-dashboard-grid">
+                <!-- WSP GRID -->
+                {{{banner-wizard}}}
+
+                <div class="wps-inner-content">
+
+                    <!-- STEPS -->
+                    <div class="wps-steps-container">
+                        <div class="wps-step-nav">
+
+                            <div class="wps-step-nav-col wps-step-nav-two wps-step-nav-active wps-center-mobile">
+                                <div class="wps-step-icon">1</div>
+                                <h2 class="wps-step-heading">{{what}}</h2>
+                                <p class="wps-step-desc">{{choose-sc}}</p>
+                            </div>
+
+                            <div class="wps-step-nav-col wps-step-nav-two wps-hide-mobile">
+                                <div class="wps-step-icon">2</div>
+                                <h2 class="wps-step-heading">{{how}}</h2>
+                                <p class="wps-step-desc">{{choose-flavor}}</p>
+                            </div>
+
+                            <div class="wps-step-nav-col wps-step-nav-two wps-hide-mobile">
+                                <div class="wps-step-icon">3</div>
+                                <h2 class="wps-step-heading">{{where}}</h2>
+                                <p class="wps-step-desc">{{choose-network}}</p>
+                            </div>
+
+                            <div class="wps-step-nav-col wps-step-nav-three wps-hide-mobile">
+                                <div class="wps-step-icon">4</div>
+                                <h2 class="wps-step-heading">{{deploy}}</h2>
+                                <p class="wps-step-desc">{{deploy-desc}}</p>
+                            </div>
+
+                        </div>
+                        <div class="wps-step-content wps-step-two wps-step-content-active">
+                        <p class="wps-step-text">{{choose-type-sc}}</p>
+                            {{{cards}}}
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

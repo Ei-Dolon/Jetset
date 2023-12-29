@@ -1,0 +1,20 @@
+<span class="ui label">
+    <span>Token</span>
+    <div class="detail">
+        {{symbol}} 
+        <i class="ui copy icon" onclick="copyToClipboard('{{address}}', 'wpsc-nft-menu-token-span')"></i> 
+        <a href="{{etherscan}}" target="_blank" style="color: white">
+            {{short}} <i class="ui external alternate icon"></i>
+        </a>
+        <span id="wpsc-nft-menu-token-span"></span>
+        <img id="wpsc-add-to-metamask"
+            src="{{fox}}"
+            class="ui mini right floated image" 
+            data-address="{{address}}"
+            data-symbol="{{symbol}}" 
+            data-name="" 
+            title="Add token to Metamask" 
+            data-network="{{network-name}}"
+            style="max-width: 20px;">
+    </div>
+</span>

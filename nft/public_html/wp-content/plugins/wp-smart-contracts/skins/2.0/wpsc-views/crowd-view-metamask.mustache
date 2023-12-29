@@ -1,0 +1,41 @@
+<div class="wpsc-top-metamask">
+	<div class="wps-tag" id="wpsc-install-metamask"  style="display: none; float: left;">
+		<div class="ui label">
+			{{metamask-not-found}}
+			<a href="https://metamask.io/" target="_blank" class="ui detail">{{click-to-install}}</a>
+		</div>
+	</div>
+	
+	<div class="wps-tag" id="wpsc-connect-with-metamask"  style="display: none; float: left;">
+		<div class="ui label">
+			<a id="wpsc-wrong-net-connect">{{connect-to-metamask}}</a>
+		</div>
+	</div>
+	
+	<div class="wps-tag" id="wpsc-connect-with-right-network"  style="display: none; float: left;">
+		<div class="ui image label">
+			<i class="ui exclamation circle icon"></i>
+			{{{text-wrong-net}}}
+			<a id="wpsc-wrong-net-switch"></a>
+			<span id="wpsc-wrong-net-switch-span" style="color: #999"></span>
+		</div>
+	</div>
+
+	<div class="wps-tag" id="wpsc-wallet-connect-wrong-net" style="display: none; float: left;">
+		<div class="ui label">
+			{{wrong-network}}. {{please-disconnect-and-connect-wallet-to}}<br>&raquo; <a id="wpsc-wallet-connect-disconnect">{{network-name}}</a>
+		</div>
+	</div>
+
+	<div class="wps-tag" id="wpsc-no-wc-provider" style="display: none; float: left;">
+		<div class="ui label">
+			{{no-web3-provider-options-found-for-wallet-connect}}
+		</div>
+	</div>
+	
+	<div class="wps-tag" id="wpsc-wp-disconnect"  style="display: none; float: left;">
+		<div class="ui label">
+			<a id="wpsc-wallet-connect-disconnect">{{disconnect}}</a>
+		</div>
+	</div>
+</div>

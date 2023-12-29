@@ -1,0 +1,108 @@
+<div class="ui divider"></div>
+
+<div class="wpsc">
+
+    <div class="ui inverted segment">
+        <div class="ui inverted segment">
+            <h1 class="ui header"> 
+                <i class="circle icon"></i>
+                {{lazy-minting}}
+            </h1>
+            <a class="ui grey button right floated" href="https://wpsmartcontracts.com/docs/" target="_blank">
+                {{learn-more}}
+            </a>
+            <p>{{sign-a-voucher}}</p>
+        </div>
+    </div>
+
+    <div class="ui secondary segment ">
+        <div class="ui stackable three column grid">
+            <div class="column">
+                <h3 class="ui dividing header">{{{unit-price}}}</h3>
+                <h4 class="ui header">
+                    <div class="sub header">
+                        {{{unit-price-desc}}}
+                        {{{unit-price-desc-tooltip}}}
+                    </div>
+                </h4>
+                <div class="ui fluid icon input" id="wpsc-nft-voucher-price-div">
+                    <input id="wpsc-nft-voucher-price" name="wpsc-nft-voucher-price" type="number" step="any" value="{{{wpsc_nft_voucher_price}}}">
+                    <input id="wpsc-nft-voucher-price-human" name="wpsc-nft-voucher-price-human" type="hidden" value="{{{wpsc_nft_voucher_price_human}}}">
+                    <i class="circle icon"></i>
+                </div>
+            </div>
+            <div class="column">
+                <h3 class="ui dividing header">{{{qty}}}</h3>
+                <h4 class="ui header">
+                    <div class="sub header">
+                        {{{qty-desc}}}
+                        {{{qty-desc-tooltip}}}
+                    </div>
+                </h4>
+                <div class="ui fluid icon input" id="wpsc-nft-voucher-qty-div">
+                    <input id="wpsc-nft-voucher-qty" name="wpsc-nft-voucher-qty" type="number" value="{{{wpsc_nft_voucher_qty}}}">
+                    <i class="database icon"></i>
+                </div>
+            </div>
+            <div id="erc-1155-supply" class="column">
+                <h3 class="ui dividing header">{{{author}}}</h3>
+                <h4 class="ui header">
+                    <div class="sub header">
+                        {{{author-desc}}}
+                        {{{author-desc-tooltip}}}
+                    </div>
+                </h4>
+                <div class="ui fluid icon input" id="wpsc-nft-voucher-author-div">
+                    <input id="wpsc-nft-voucher-author" name="wpsc-nft-voucher-author" type="text" value="{{{wpsc_nft_voucher_author}}}">
+                    <i class="ethereum icon"></i>
+                </div>
+            </div>
+        </div>
+        <input id="wpsc-nft-voucher-sign" name="wpsc-nft-voucher-sign" type="hidden" value="{{{wpsc_nft_voucher_sign}}}">
+        <input id="wpsc-nft-voucher-salt" name="wpsc-nft-voucher-salt" type="hidden" value="{{{wpsc_nft_voucher_salt}}}">
+        <input id="wpsc-nft-voucher-id" name="wpsc-nft-voucher-id" type="hidden" value="{{{wpsc_nft_voucher_id}}}">
+        {{#wpsc_nft_voucher_sign}}
+        <div class="ui info mini message">
+            <h4 class="ui header">
+                <div class="sub header">
+                    The signature has been stored successfully
+                </div>
+            </h4>
+            <div class="ui fluid icon input">
+                <input type="text" value="{{{wpsc_nft_voucher_sign}}}" readonly style="background: transparent; border: none;">
+            </div>
+        </div>
+        {{/wpsc_nft_voucher_sign}}
+        {{^wpsc_nft_voucher_sign}}
+        <div class="ui mini message">
+            <h4 class="ui header">
+                <div class="sub header">
+                    No signature has been generated yet
+                </div>
+            </h4>
+        </div>
+        {{/wpsc_nft_voucher_sign}}
+    </div>
+
+    <div id="wpsc-mint-nft-item" class="ui placeholder segment" style="">
+        <div class="ui one column center aligned grid">
+            <div class="middle aligned row">
+                <div class="column">
+                    <div class="ui icon header">
+                        {{sign-lazy-minting}}
+                    </div>
+                    <p>
+                        <span id="wpsc-sign-selected-evm"></span>
+                    </p>
+                    <div class="ui hidden divider"></div>
+                    <button id="wpsc-sign-voucher" class="ui labeled icon blue button big">
+                        <i class="cloud upload icon"></i>
+                        {{sign}}
+                    </button>
+                </div>
+            </div>
+            <div class="ui info mini message">{{lazy-minting-is-supported}}</div>
+        </div>
+    </div>
+
+</div>

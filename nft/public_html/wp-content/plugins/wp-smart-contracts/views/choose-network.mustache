@@ -1,0 +1,96 @@
+<div class="ui grid">
+    <div class="sixteen wide column">
+        <div class="ui right floated dropdown labeled icon button" style="max-width: 16rem!important;">
+            <input type="hidden" id="wpsc-choose-network-hidden" name="wpsc-choose-network-value">
+            <i class="ethereum icon"></i>
+            <span class="text" style="width: 130px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;font-size: 12px;">{{choose-network}}</span>
+            <div class="menu">
+                <div class="scrolling menu">
+                    <div class="header">
+                        <i class="angle up icon"></i>
+                        Avalanche (Layer 1 Blockchain)
+                    </div>
+                    <div class="item" data-value="43114">
+                        <div class="ui red empty circular label"></div>
+                        Avalanche Mainnet C-Chain
+                    </div>
+                    <div class="item" data-value="43113">
+                        <div class="ui red empty circular label"></div>
+                        Avalanche FUJI Testnet
+                    </div>
+
+                    <div class="header">
+                        <i class="certificate icon"></i>
+                        Binance Smart Chain
+                    </div>
+                    <div class="item" data-value="56">
+                        <div class="ui yellow empty circular label"></div>
+                        BSC Mainnet
+                    </div>
+                    <div class="item" data-value="97">
+                        <div class="ui yellow empty circular label"></div>
+                        BSC Testnet
+                    </div>
+                    <div class="header">
+                        <i class="ethereum icon"></i>
+                        Ethereum
+                    </div>
+                    <div class="item" data-value="1">
+                        <div class="ui green empty circular label"></div>
+                        Ethereum Mainnet
+                    </div>
+                    <div class="item" data-value="61">
+                        <div class="ui olive empty circular label"></div>
+                        Ethereum Classic Mainnet
+                    </div>
+                    <div class="item" data-value="4">
+                        <div class="ui yellow empty circular label"></div>
+                        Rinkeby Testnet
+                    </div>
+                    <div class="item" data-value="3">
+                        <div class="ui pink empty circular label"></div>
+                        Ropsten Testnet
+                    </div>
+                    <div class="item" data-value="42">
+                        <div class="ui purple empty circular label"></div>
+                        Kovan Testnet
+                    </div>
+                    <div class="item" data-value="5">
+                        <div class="ui blue empty circular label"></div>
+                        Göerli Testnet
+                    </div>
+
+                    <div class="header">
+                        <i class="cube icon"></i>
+                        Fantom (Layer 1 Blockchain)
+                    </div>
+                    <div class="item" data-value="250">
+                        <div class="ui blue empty circular label"></div>
+                        Fantom Mainnet
+                    </div>
+                    <div class="item" data-value="4002">
+                        <div class="ui blue empty circular label"></div>
+                        Fantom Testnet
+                    </div>
+                    <div class="header">
+                        <i class="square icon"></i>
+                        Polygon (previously Matic)
+                    </div>
+                    <div class="item" data-value="137">
+                        <div class="ui blue empty circular label"></div>
+                        Polygon Mainnet
+                    </div>
+                    <div class="item" data-value="80001">
+                        <div class="ui blue empty circular label"></div>
+                        Polygon Testnet
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sixteen wide column">
+        <button id="wpsc-choose-network" class="ui left floated button">
+            {{switch}}
+        </button>
+    </div>
+</div>

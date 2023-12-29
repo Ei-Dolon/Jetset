@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>moon-solid</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#B426CC" offset="0%"></stop>
+            <stop stop-color="#EC2E68" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Light-theme" transform="translate(-1206.000000, -28.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(1206.000000, 22.000000)">
+                <g id="moon-solid" transform="translate(0.000000, 6.000000)">
+                    <path d="M8.72718589,0 C3.90478116,0 0,4.02991071 0,9 C0,13.9700893 3.90478116,18 8.72718589,18 C11.0934833,18 13.2372081,17.0276786 14.8108349,15.4526786 C15.006074,15.2558036 15.0568362,14.9504464 14.9318832,14.7013393 C14.8069302,14.4522321 14.5375003,14.3116071 14.2680704,14.3598214 C13.8854018,14.428125 13.4949237,14.4642857 13.0927312,14.4642857 C9.30899828,14.4642857 6.23984029,11.2982143 6.23984029,7.39285714 C6.23984029,4.74910714 7.64556151,2.446875 9.72680987,1.23348214 C9.96500152,1.09285714 10.0860497,0.811607143 10.027478,0.538392857 C9.9689063,0.265178571 9.74242899,0.0602678571 9.46909431,0.0361607143 C9.2230931,0.0160714286 8.97709189,0.00401785714 8.72718589,0.00401785714 L8.72718589,0 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

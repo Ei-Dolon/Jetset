@@ -1,0 +1,208 @@
+<p>&nbsp;</p>
+
+<style>
+  .wpsc-wizard-card .extra.content.wpsc-small {
+    color: green;
+    font-weight: 500;
+  }
+</style>
+
+<div class="ui container">
+    <div class="ui inverted segment" style="min-height: 140px;">
+        <img src="{{logo}}" class="ui large left floated image">
+        <h1 class="ui header" style="text-align: center;">{{dashboard}}</h1>
+    </div>
+
+    {{#welcome}}
+    <div class="ui info massive message">
+      <div class="header">
+        {{welcome}}
+      </div>
+    </div>
+    {{/welcome}}
+
+    <div class="ui teal segment">
+
+      <h1 class="ui centered header">{{wizards}}</h1>
+
+      {{#warning-launcher}}
+      <div class="ui warning big message">
+        <div class="header">
+          {{launcher-is-not-activated}}
+        </div>
+        <p>{{to-get-the-most}}</p>
+        <a href="{{wizard03_link}}" class="ui basic black button">{{run-the-setup-wizard}}</a>
+      </div>
+      {{/warning-launcher}}
+
+      {{#warning-remove-pages}}
+      <div class="ui info big message">
+        <div class="header">
+          {{launcher-deactivated-but-pages-active}}
+        </div>
+        <p>{{keep-in-mind-if-previously-activated}}</p>
+      </div>  
+      {{/warning-remove-pages}}
+
+      <div class="ui fluid centered cards">
+        <div class="card">
+          <i class="magic blue massive icon" style="text-align: center;margin: 25px auto;"></i>
+          <div class="content">
+            <div class="header">{{smart-contracts-wizard}}</div>
+            <div class="meta">{{create-smart-contracts-in-four-steps}}</div>
+            <div class="description">{{choose-contract-and-deploy}}</div>
+          </div>
+          <div class="extra content">
+            <div class="ui two buttons">
+              <a href="{{wizard01_link}}" class="ui basic blue button">{{create-a-smart-contract}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <i class="tint massive violet icon" style="text-align: center;margin: 25px auto;"></i>
+          <div class="content">                
+            <div class="header">{{batch-mint-nft-wizard}}</div>
+            <div class="meta">{{bulk-minting-in-four-steps}}</div>
+            <div class="description">{{create-multiple-nfts-in-one-process}}</div>
+          </div>
+          <div class="extra content">
+            <div class="ui two buttons">
+              <a href="{{wizard02_link}}" class="ui basic violet button">{{bulk-mint-nft-items}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <i class="settings massive icon" style="text-align: center;margin: 25px auto;"></i>
+          <div class="content">
+            <div class="header">{{setup-wizard}}</div>
+            <div class="meta">{{set-up-website-ui-affiliate-program}}</div>
+            <div class="description">{{run-the-wizard-again}}</div>
+          </div>
+          <div class="extra content">
+            <div class="ui two buttons">
+              <a href="{{wizard03_link}}" class="ui basic black button">{{setup-wizard}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui placeholder center aligned segment">
+        <h1 class="ui header">{{affiliate-program}}</h1>
+        <p>{{generate-cryptocurrency-income}}</p>
+        <img src="{{40}}" class="ui centered circular spaced image" style="width: 220px;margin-bottom: 20px;">
+
+        {{#warning-launcher}}
+        <div class="ui warning big message">
+          <div class="header">
+            {{affiliate-program-not-activated}}
+          </div>
+          <p>{{activate-program-and-setup}}</p>
+          <a href="{{wizard03_link}}" class="ui basic black button">{{run-the-setup-wizard}}</a>
+        </div>
+        {{/warning-launcher}}
+
+        {{#no-wallets}}
+        <div class="ui warning big message">
+          <div class="header">
+            {{affiliate-program-not-set-up}}
+          </div>
+          <p>{{activate-program-set-up-wallet}}</p>
+          <a href="{{wizard03_link}}" class="ui basic black button">{{run-the-setup-wizard}}</a>
+        </div>
+        {{/no-wallets}}
+
+        <div class="ui stackable grid">
+          <div class="ten wide column">
+            <h2 class="ui header">{{wallets-payments}}</h2>
+            <p>{{enter-wallet-receive-commissions}}</p>
+            <form action="admin.php?page=wpsc_dashboard" method="post">
+              <input type="hidden" name="wpsc-go-wallet" value="1">
+              <div class="description" style="margin: 20px 0">
+                <input type="hidden" id="wps-rest-url-affp" value="{{rest_url}}">
+                <table class="ui teal striped celled table">
+                  <thead>
+                    <tr><th>{{network}}</th>
+                    <th>{{wallet}}</th>
+                    <th>{{payments}}</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td class="wpsc-small">{{ethereum}}</td>
+                      <td>
+                        <input class="wpsc-small" name="affp_wallet_1" type="text" onfocus="this.select();" onmouseup="return false;" value="{{affp_wallet_1}}">
+                      </td>
+                      <td id="wps-payments-1" class="right aligned" class="wpsc-small">
+                    </tr>
+                    <tr>
+                      <td class="wpsc-small">{{arbitrum}}</td>
+                      <td class="wpsc-small">
+                        <input class="wpsc-small" name="affp_wallet_42161" type="text" onfocus="this.select();" onmouseup="return false;" value="{{affp_wallet_42161}}">
+                      </td>
+                      <td class="wpsc-small" id="wps-payments-42161" class="right aligned"></td>
+                    </tr>
+                    <tr>
+                      <td class="wpsc-small">{{binance-smart-chain}}</td>
+                      <td class="wpsc-small">
+                        <input class="wpsc-small" name="affp_wallet_56" type="text" onfocus="this.select();" onmouseup="return false;" value="{{affp_wallet_56}}">
+                      </td>
+                      <td class="wpsc-small" id="wps-payments-56" class="right aligned"></td>
+                    </tr>
+                    <tr>
+                      <td class="wpsc-small">{{polygon-matic}}</td>
+                      <td class="wpsc-small">
+                        <input class="wpsc-small" name="affp_wallet_137" type="text" onfocus="this.select();" onmouseup="return false;" value="{{affp_wallet_137}}">
+                      </td>
+                      <td class="wpsc-small" id="wps-payments-137" class="right aligned"></td>
+                    </tr>
+                    <tr>
+                      <td class="wpsc-small">{{avalanche}}</td>
+                      <td class="wpsc-small">
+                        <input class="wpsc-small" name="affp_wallet_43114" type="text" onfocus="this.select();" onmouseup="return false;" value="{{affp_wallet_43114}}">
+                      </td>
+                      <td class="wpsc-small" id="wps-payments-43114" class="right aligned"></td>
+                    </tr>
+                    <tr>
+                      <td class="wpsc-small">{{fantom}}</td>
+                      <td class="wpsc-small">
+                        <input class="wpsc-small" name="affp_wallet_250" type="text" onfocus="this.select();" onmouseup="return false;" value="{{affp_wallet_250}}">
+                      </td>
+                      <td class="wpsc-small" id="wps-payments-250" class="right aligned"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                <input type="submit" class="ui basic green button" value="{{save}}">
+              </p>
+            </form>
+          </div>
+          <div class="six wide column">
+            <h2 class="ui header">{{promote-your-site}}</h2>
+            <p>{{get-promotional-materials}}</p>
+            <p><strong>{{use-link-direct-affiliates}}</strong></p>
+            <input type="text" onfocus="this.select();" onmouseup="return false;" value="{{link-launcher}}" readonly>
+
+            <h4 class="ui header" style="margin: 0">{{use-this-banner}}</h4>
+            {{{html-show}}}
+            <p>HTML code:</p>
+            <textarea class="wps-textarea" rows="3" readonly onfocus="this.select();" onmouseup="return false;" style="width:100%">{{{html}}}</textarea>
+
+            <div class="extra content">
+              <div class="ui two buttons">
+                <a href="{{affp_link}}" class="ui basic green button">{{see-more}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+</div>
+
+<script>
+jQuery('.ui.sticky')
+  .sticky({
+    context: '#wpsc-networks'
+  })
+;
+</script>

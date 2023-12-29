@@ -1,0 +1,58 @@
+<div class="wps-form-col">
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{symbol}}</label>
+        <p class="wps-form-text-tooltip">{{symbol-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-symbol" name="symbol" type="text" placeholder="{{symbol-label}}">
+            <img src="{{path-to-launcher}}img/key-solid.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{decimals}}</label>
+        <p class="wps-form-text-tooltip">{{decimals-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{decimals-fixed}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-decimals" name="decimals" type="number" min="0" max="18" placeholder="18" value="18" value="18" readonly>
+            <img src="{{path-to-launcher}}img/calculator.png">
+        </div>
+    </div>
+
+</div>
+<div class="wps-form-col">
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{name}}</label>
+        <p class="wps-form-text-tooltip">{{name-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{name-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-name" name="sales-commissions" type="text" placeholder="{{name-label}}">
+            <img src="{{path-to-launcher}}img/symbol-icon.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{supply}}</label>
+        <p class="wps-form-text-tooltip">{{supply-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{supply-tip}}
+                </span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-supply" name="royalty-creators" type="number" placeholder="1000000">
+            <img src="{{path-to-launcher}}img/coins.png">
+        </div>
+    </div>
+
+</div>

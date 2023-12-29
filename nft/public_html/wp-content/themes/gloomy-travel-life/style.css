@@ -1,0 +1,660 @@
+/**
+Theme Name: Gloomy Travel Life
+Theme URI: https://themepalace.com/downloads/gloomy-travel-life
+Author: themepalace
+Author URI: https://themepalace.com
+Version: 1.0.1
+Requires PHP: 5.6
+Tested up to: 5.8
+Requires at least: 5.0
+Template: travel-life
+Text Domain: gloomy-travel-life
+Description: Gloomy Travel Life is a splendid WordPress child theme for any kind of travel agencies, tour operators or travel business owner. It offer various flexibility and possibilities to setup destinations and tour packages. Travel business owner can show services, booking form, blog, testimonial and other aspects of company. Besides that, it can also be used as a portfolio page for solo travelers or travel guide. The theme is beautifully crafted, clean, easy to use, responsive, features different layouts with sidebar position and allows unlimited color selection. It has been designed for everybody with or without previous coding experience to effectively and helps to speedily put together polished, professional quality websites without having to so much as peek at a single line of code.
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: translation-ready, custom-background, theme-options, custom-menu, threaded-comments, featured-images, footer-widgets, editor-style, right-sidebar, full-width-template, two-columns, grid-layout, custom-colors, custom-header, custom-logo, featured-image-header, blog, portfolio, entertainment
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+ul.contact-info li {
+    float: right;
+    border-right: none;
+}
+
+.site-branding {
+    border-right: none;
+}
+
+.home-page #masthead {
+    position: absolute;
+}
+
+.home-page.dark-version #masthead {
+    background-color: transparent;
+}
+
+.site-branding-wrapper {
+    border-bottom: 2px solid rgb(255 252 252 / 10%);
+}
+
+.site-description {
+    color: #e9e9e9;
+}
+
+.enquiry-button{
+    display: none;
+}
+
+.page-section {
+    padding: 40px 0;
+}
+.main-navigation svg.icon-down{
+    fill:#a9a9a9;
+}
+
+.resp-accordion,
+.panel-title,
+.wp-travel-related-posts h2,
+.entry-header .entry-title{
+    color:#fff;
+}
+
+.wp-travel-booking__panel-bottom {
+    padding: 10px 70px;
+}
+
+.resp-accordion.resp-tab-active,
+.left-info p,
+.right-info p,
+.left-info strong,
+.wp-travel-booking__trip-option-list strong,
+.qty-spinner span{
+    color: #000;
+}
+
+.menu-toggle:focus{
+    outline: thin dotted #fff;
+}
+/*--------------------------------------------------------------
+# Featured Slider Section
+--------------------------------------------------------------*/
+#featured-slider-section .cloud-image {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Best Destination Section
+--------------------------------------------------------------*/
+#best-destinations .featured-image:before,
+#best-destinations .featured-image:after {
+    display: none;
+}
+#best-destinations .entry-container {
+    margin-top: 25px;
+}
+
+/*--------------------------------------------------------------
+# Counter Section
+--------------------------------------------------------------*/
+#counter-section, 
+.default-design #top-destinations + #counter-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+#counter-section .counter-value {
+    font-size: 42px;
+}
+#counter-section .counter-layer,
+.default-design #counter-section .counter-layer {
+    display: none;
+}
+#counter-section .counter-title {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.navigation.post-navigation a, .navigation.posts-navigation a {
+    color: #fff;
+}
+
+.nav-previous span{
+    padding-left: 10px;
+}
+
+.nav-next span{
+    padding-right: 10px;
+}
+
+#travel_life_popular_destination_section {
+    background: #333;
+}
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+.backtotop,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.main-navigation li.search-menu a:hover,
+.main-navigation li.search-menu a:focus,
+.main-navigation .count span,
+.pagination .page-numbers.current,
+.pagination .page-numbers:hover,
+.pagination .page-numbers:focus,
+#secondary .jetpack_subscription_widget input[type="submit"]:hover,
+#secondary .jetpack_subscription_widget input[type="submit"]:focus,
+.author-name:after,
+.reply a,
+.btn,
+.slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus,
+.slick-dots li.slick-active button,
+#top-destinations .btn:hover,
+#top-destinations .btn:focus,
+#testimonial-section .separator,
+#subscribe-now button[type="submit"],
+.single-wrapper .entry-meta > span.tags-links a:hover,
+.single-wrapper .entry-meta > span.tags-links a:focus,
+.enquiry-button .btn,
+#magazine-highlighted-posts ul.post-categories li a:hover,
+#magazine-featured-posts ul.post-categories li a:hover,
+#magazine-recent-posts ul.post-categories li a:hover,
+#magazine-popular-posts ul.post-categories li a:hover,
+#magazine-three-column-posts ul.post-categories li a:hover,
+#magazine-single-column-posts ul.post-categories li a:hover,
+#magazine-latest-posts ul.post-categories li a:hover,
+#magazine-most-viewed-posts ul.post-categories li a:hover,
+#magazine-highlighted-posts ul.post-categories li a:focus,
+#magazine-featured-posts ul.post-categories li a:focus,
+#magazine-recent-posts ul.post-categories li a:focus,
+#magazine-popular-posts ul.post-categories li a:focus,
+#magazine-three-column-posts ul.post-categories li a:focus,
+#magazine-single-column-posts ul.post-categories li a:focus,
+#magazine-latest-posts ul.post-categories li a:focus,
+#magazine-most-viewed-posts ul.post-categories li a:focus,
+#blog-slider .cat-links a,
+#blog-featured-posts .cat-links a,
+#blog-popular-posts .cat-links a,
+#blog-latest-posts .cat-links a,
+.seventh-design.home .read-more .btn:hover,
+.seventh-design.home .read-more .btn:focus,
+.wp-travel-search input[type="submit"] {
+    background-color: #0cb8b6;
+}
+
+a,
+.site-title a:hover,
+.site-title a:focus,
+.main-navigation ul#primary-menu li.current-menu-item > a,
+.main-navigation ul#primary-menu li:hover > a,
+.main-navigation ul#primary-menu li:focus > a,
+.main-navigation a:hover,
+.main-navigation a:focus,
+.main-navigation ul.nav-menu > li > a:hover,
+.main-navigation ul.nav-menu > li > a:focus,
+.post-navigation a, 
+.posts-navigation a,
+.navigation.post-navigation a:hover,
+.navigation.posts-navigation a:hover,
+.navigation.post-navigation a:focus,
+.navigation.posts-navigation a:focus,
+.widget_popular_post h3 a:hover,
+.widget_popular_post h3 a:focus,
+.widget_popular_post a:hover time,
+.widget_popular_post a:focus time,
+.widget_latest_post h3 a:hover,
+.widget_latest_post h3 a:focus,
+.widget_latest_post a:hover time,
+.widget_latest_post a:focus time,
+.widget_featured_courses .course-wrapper h5 a:hover,
+.widget_featured_courses .course-wrapper h5 a:focus,
+.widget_featured_courses .tp-course-price,
+.widget_popular_courses .course-wrapper h5 a:hover,
+.widget_popular_courses .course-wrapper h5 a:focus,
+.widget_popular_courses .tp-course-price,
+#secondary .cat-links a,
+#secondary a:hover,
+#secondary a:focus,
+.page-header small,
+.single-wrapper span.tags-links a:hover,
+.single-wrapper span.tags-links a:focus,
+.section-title a:hover,
+.section-title a:focus,
+.entry-title a:hover,
+.entry-title a:focus,
+#top-destinations .entry-title a:hover,
+#top-destinations .entry-title a:focus,
+#top-destinations .btn,
+#about-us .entry-title a:hover,
+#about-us .entry-title a:focus,
+#counter-section .counter-value,
+.archive-blog-wrapper .posted-on a:hover,
+.archive-blog-wrapper .posted-on a:focus,
+.entry-meta span:not(:last-child):after,
+ul.post-categories li a,
+#colophon a:hover,
+#colophon a:focus,
+#colophon .widget_text .widget-title,
+#colophon .site-info a,
+.contact-info a:hover, 
+.contact-info a:focus,
+.seventh-design.home .read-more .btn {
+    color: #0cb8b6;
+}
+
+.loader-container svg,
+.contact-info svg,
+.main-navigation ul#primary-menu li:hover > svg,
+.main-navigation ul#primary-menu li:focus > svg,
+.main-navigation li.menu-item-has-children:hover > a > svg,
+.main-navigation li.menu-item-has-children > a:hover > svg,
+.main-navigation li.menu-item-has-children > a:focus > svg,
+.main-navigation ul#primary-menu > li.current-menu-item > a > svg,
+.main-navigation ul.nav-menu > li > a.search:hover svg.icon-search,
+.main-navigation ul.nav-menu > li > a.search:focus svg.icon-search,
+.navigation.post-navigation a:hover svg,
+.navigation.posts-navigation a:hover svg,
+.navigation.post-navigation a:focus svg,
+.navigation.posts-navigation a:focus svg,
+.widget_search form.search-form button.search-submit:hover svg,
+.widget_search form.search-form button.search-submit:focus svg,
+.single-wrapper span.posted-on svg,
+.single-wrapper span.cat-links svg,
+.more-link a svg {
+    fill: #0cb8b6;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.pagination .page-numbers.current,
+.pagination .page-numbers:hover,
+.pagination .page-numbers:focus,
+.single-wrapper span.tags-links a:hover,
+.single-wrapper span.tags-links a:focus,
+.reply a,
+.btn,
+.slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus,
+.slick-dots li button,
+#top-destinations .btn:hover,
+#top-destinations .btn:focus,
+#subscribe-now button[type="submit"],
+.single-wrapper .entry-meta > span.tags-links a:hover,
+.single-wrapper .entry-meta > span.tags-links a:focus,
+.enquiry-button .btn,
+.seventh-design.home .read-more .btn,
+.wp-travel-search input[type="submit"] {
+    border-color: #0cb8b6;
+}
+
+.wp-travel-search p select {
+    width: 90%;
+    padding: 3px;
+    border-radius: 10px;
+}
+/*--------------------------------------------------------------
+# Dark Version
+--------------------------------------------------------------*/
+.dark-version #counter-section img {
+    filter: brightness(0) invert(1);
+}
+.dark-version,
+.dark-version .wp-travel-search p input[type=text],
+.dark-version .wp-travel-search p select {
+    background-color: #222;
+}
+
+.dark-version #masthead,
+.dark-version .wp-travel-search form,
+.dark-version #top-destinations .entry-container,
+.dark-version #testimonial-section .testimonial-item,
+.dark-version #secondary .widget,
+.dark-version .pagination .page-numbers, 
+.dark-version .pagination .page-numbers.dots:hover, 
+.dark-version .pagination .page-numbers.dots:focus, 
+.dark-version .pagination .page-numbers.prev, 
+.dark-version .pagination .page-numbers.next,
+.dark-version .navigation.post-navigation, 
+.dark-version .navigation.posts-navigation,
+.dark-version .comment-content,
+.dark-version input[type="text"], 
+.dark-version input[type="email"], 
+.dark-version input[type="search"] 
+.dark-version textarea,
+.dark-version .comment-respond .comment-form-comment textarea,
+.dark-version.second-design #best-destinations, 
+.dark-version.second-design #counter-section, 
+.dark-version.second-design #our-gallery, 
+.dark-version.second-design #latest-posts,
+.dark-version.third-design #about-us, 
+.dark-version.third-design #counter-section, 
+.dark-version.third-design #our-gallery, 
+.dark-version.third-design #latest-posts,
+.dark-version.fourth-design #about-us, 
+.dark-version.fourth-design #counter-section, 
+.dark-version.fourth-design #our-gallery, 
+.dark-version.fourth-design #latest-posts,
+.dark-version.fifth-design #best-destinations, 
+.dark-version.fifth-design #counter-section, 
+.dark-version.fifth-design #our-gallery, 
+.dark-version.fifth-design #latest-posts,
+.dark-version #blog-featured-posts .entry-container,
+.dark-version #blog-popular-posts .entry-container,
+.dark-version  #blog-latest-posts .blog-post-wrapper,
+.dark-version #counter-section, 
+.dark-version #travel_life_counter_section, 
+.dark-version.default-design #top-destinations + #counter-section {
+    background-color: #333;
+}
+
+.dark-version .pagination .page-numbers.current, 
+.dark-version .pagination .page-numbers:hover, 
+.dark-version .pagination .page-numbers:focus,
+.dark-version #colophon {
+    background-color: #111;
+}
+
+body.dark-version, 
+.dark-version button, 
+.dark-version input, 
+.dark-version textarea,
+.dark-version .entry-title a,
+.dark-version .section-title,
+.dark-version .contact-info a, 
+.dark-version .contact-info .location,
+.dark-version .contact-info span,
+.dark-version .wp-travel-search p label,
+.dark-version #top-destinations .entry-title a,
+.dark-version #counter-section .counter-title,
+.dark-version .section-title a,
+.dark-version .archive-blog-wrapper .posted-on a,
+.dark-version #colophon .widget-title, 
+.dark-version #secondary .widget-title,
+.dark-version #colophon a, 
+.dark-version #colophon p, 
+.dark-version #colophon li,
+.dark-version #secondary a,
+.main-navigation ul.nav-menu > li > a
+.dark-version .pagination .page-numbers, 
+.dark-version .pagination .page-numbers.dots:hover, 
+.dark-version .pagination .page-numbers.dots:focus, 
+.dark-version .pagination .page-numbers.prev, 
+.dark-version .pagination .page-numbers.next,
+.dark-version .single-wrapper a, 
+.dark-version #reply-title, 
+.dark-version .comments-title,
+.dark-version #respond label,
+.dark-version .site-title a,
+.dark-version.woocommerce #respond input#submit, 
+.dark-version.woocommerce a.button, 
+.dark-version.woocommerce button.button, 
+.dark-version.woocommerce input.button,
+.dark-version .woocommerce-loop-product__title,
+.dark-version .category-title,
+.dark-version #trending-products .entry-title a,
+.dark-version #magazine-featured-posts .entry-content, 
+.dark-version #magazine-recent-posts .entry-content, 
+.dark-version #magazine-popular-posts .entry-content, 
+.dark-version #magazine-sports-section .entry-content, 
+.dark-version #magazine-three-column-posts .entry-content, 
+.dark-version #magazine-two-column-posts .entry-content, 
+.dark-version #magazine-latest-posts .entry-content,
+.dark-version .wp-travel-search p input[type=text],
+.dark-version .wp-travel-search p select,
+.dark-version .menu-label {
+    color: #fff;
+}
+
+.dark-version .contact-info a:hover,
+.dark-version .contact-info a:focus,
+.dark-version .more-link a:hover,
+.dark-version  ul.post-categories li a:hover, 
+.dark-version  ul.post-categories li a:focus,
+.dark-version .archive-blog-wrapper .posted-on a:hover,
+.dark-version .entry-title a:hover,
+.dark-version .entry-title a:focus,
+.dark-version #colophon a:hover, 
+.dark-version #colophon a:focus,
+.dark-version #secondary .cat-links a, 
+.dark-version #secondary a:hover, 
+.dark-version #secondary a:focus,
+.dark-version .single-wrapper a:hover,
+.dark-version .site-title a:hover,
+.dark-version #trending-products .entry-title a:hover, 
+.dark-version #trending-products .entry-title a:focus  {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.dark-version #masthead .main-navigation .social-menu ul li a svg,
+.dark-version #colophon .social-icons li a svg,
+.dark-version .navigation.pagination svg,
+.dark-version .navigation.posts-navigation svg, 
+.dark-version .navigation.post-navigation svg,
+.dark-version #masthead .menu-toggle svg {
+    fill:#fff;
+}
+
+.dark-version .more-link a:hover svg,
+.dark-version .navigation.post-navigation a:hover svg, 
+.dark-version .navigation.posts-navigation a:hover svg, 
+.dark-version .navigation.post-navigation a:focus svg, 
+.dark-version .navigation.posts-navigation a:focus svg {
+    fill:#fff;
+    opacity: 0.8;
+}
+
+.dark-version .wp-travel-search p input[type=text],
+.dark-version .wp-travel-search p select {
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.dark-version .footer-widgets-area + .site-info .wrapper {
+    border-top-color: rgb(255 255 255 / 20%);
+}
+
+.wp-travel-search {
+    width: 100%;
+}
+
+.wp-travel-search p.wp-travel-search {
+    text-align: center;
+    width: 15%;
+    margin-top: 30px;
+}
+
+.wp-travel-search p {
+    width: 30%;
+}
+
+.wp-travel-tab-wrapper .tab-list.resp-tabs-list {
+    background: #262626;
+}
+
+.wp-travel-ert.gallery {
+    width: auto;
+}
+
+/*--------------------------------------------------------------
+# Buttons and Titles
+--------------------------------------------------------------*/
+.btn,
+button, 
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"],
+.wp-travel-search p label,
+#top-destinations .entry-title,
+#subscribe-now button[type="submit"],
+.contact-info a, 
+.contact-info .location {
+    font-weight: 400;
+}
+
+.section-title,
+#best-destinations .entry-title,
+#testimonial-section .entry-title,
+#colophon .widget-title, 
+#secondary .widget-title,
+.archive-blog-wrapper .entry-title {
+    font-weight: 500;
+}
+
+.featured-content-wrapper .entry-title,
+.site-title {
+    font-weight: 600;
+}
+
+#best-destinations .entry-title {
+    font-size: 26px;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.site-title,
+.contact-info a,
+.contact-info .location,
+.main-navigation a,
+.reply a,
+.btn,
+.more-link a,
+#subscribe-now button[type="submit"],
+.wp-travel-search p label {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media screen and (min-width: 767px) {
+    #about-us article.has-post-thumbnail .featured-image {
+        width: 55%;
+    }
+    #about-us article.has-post-thumbnail .entry-container {
+        width: 45%;
+        padding: 50px;
+    }
+    #about-us .featured-image img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #subscribe-now .section-header {
+        padding-right: 0px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .featured-slider article {
+        padding-top: 350px;
+    }
+    .slick-dots {
+        bottom: 100px;
+    }
+    .featured-content-wrapper {
+        top: 60%;
+    }
+
+    #travel_life_slider_section + #travel-search-section {
+        padding-top: 0;
+        margin-top: -80px;
+    }
+
+    .dark-version .main-navigation ul.nav-menu > li > a {
+        color: #fff;
+    }
+
+    .page-section {
+        padding: 60px 0;
+    }
+
+    #travel_life_package_section.page-section {
+        padding: 80px 0 60px 0;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .wp-travel-search p {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .wp-travel-search p {
+        margin-bottom: 20px;
+    }
+
+    #travel-search-section{
+        margin-top: 30px;
+    }
+
+    .wp-travel-search p.wp-travel-search {
+        width: 40%;
+    }
+    .dark-version #masthead .main-navigation .social-menu ul li a svg {
+        fill: #000;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid rgb(0 0 0 / 0.10);
+    }
+
+    .home-page #masthead {
+        position: inherit;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .dark-version #masthead .main-navigation .social-menu ul li a svg,
+    .dark-version #masthead .main-navigation .social-menu ul li a.count:hover svg,
+    .dark-version #masthead .main-navigation .social-menu ul li a.count:focus svg {
+        fill: #000;
+    }
+    .dark-version #masthead .main-navigation .social-menu ul li a:hover svg,
+    .dark-version #masthead .main-navigation .social-menu ul li a:focus svg {
+        fill: #fff;
+    }
+
+    .menu-toggle.active {
+        margin-right: auto;
+    }
+
+    .dark-version .contact-info li {
+        border-right: none;
+    }
+
+}
+

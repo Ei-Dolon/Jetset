@@ -1,0 +1,37 @@
+{{#show-sub-collections}}
+    {{^show-galleries-as-dropdown}}
+    <div class="ui top attached tabular menu wpsc-gallery" style="overflow-x: auto;overflow-y: hidden; max-width: 1280px; margin: auto;">
+        {{#galleries}}
+        <a href="{{url}}" class="{{#selected}}active {{/selected}}item">
+            {{{name}}}
+        </a>
+        {{/galleries}}
+    </div>
+    {{/show-galleries-as-dropdown}}
+    {{#show-galleries-as-dropdown}}
+    <div class="wpsc-gallery" style="max-width: 1280px; margin: auto;">
+        <label id="wps-filter-by-gallery">{{filter-by-gallery}}</label>
+        <div id="galleries-dropdown" class="ui search selection dropdown">
+            <input type="hidden" name="wpsc-gallery" value="{{actual-url}}">
+            <i class="dropdown icon"></i>
+            <div class="default text">{{choose-gallery}}</div>
+            <div class="menu">
+                {{#galleries}}
+                <div class="item{{#selected}} active selected{{/selected}} wps-galleries-item" data-value="{{url}}">{{{name}}}</div>
+                {{/galleries}}
+            </div>
+        </div>
+    </div>
+    <div class="ui hidden divider"></div>
+    <script>
+        jQuery( document ).ready(function() {
+            jQuery('#galleries-dropdown')
+            .dropdown({
+                onChange: function(value, text, selectedItem) {
+                    document.location = value;
+                }
+            });
+        });
+    </script>
+    {{/show-galleries-as-dropdown}}
+{{/show-sub-collections}}

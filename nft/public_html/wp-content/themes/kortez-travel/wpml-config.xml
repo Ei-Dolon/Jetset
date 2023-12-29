@@ -1,0 +1,12 @@
+<wpml-config>
+    <admin-texts>
+        <key name="theme_mods_kortez_travel">
+            <key name="latest_posts_section_title" />
+            <key name="latest_posts_section_description" />
+            <key name="single_post_author_title" />
+            <key name="related_posts_title" />
+            <key name="woocommerce_sale_badge_text" />
+            <key name="woocommerce_sale_badge_percent" />
+        </key>
+    </admin-texts>
+</wpml-config>

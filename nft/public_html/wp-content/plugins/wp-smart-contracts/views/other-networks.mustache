@@ -1,0 +1,38 @@
+<tr 
+    id="network-label-{{index}}" 
+    class="wpsc-network-labels network-row-{{id}} wpsc-wizard-card" 
+    data-network-type='{{#is_mainnet}}mainnet{{/is_mainnet}}{{^is_mainnet}}testnet{{/is_mainnet}}'
+    data-blockchain-type="{{#is_ethereum}}ethereum{{/is_ethereum}}{{#is_bitcoin}}bitcoin{{/is_bitcoin}}{{^is_ethereum}}{{^is_bitcoin}}other{{/is_bitcoin}}{{/is_ethereum}}"
+    {{{extra_style}}}
+>
+    <td>
+        <span class="ui">
+            <i class="{{#icon}}{{icon}}{{/icon}}{{^icon}}circle{{/icon}} {{color}} icon"></i>
+            <a href="https://api.wpsmartcontracts.com/redirect.php?i={{id}}&more=1" target="_blank">
+                {{name}}
+            </a>
+        </span>
+    </td>
+    <td>
+        <span class="ui">
+            <i class="circle {{#is_mainnet}}green{{/is_mainnet}}{{^is_mainnet}}grey{{/is_mainnet}} icon"></i>
+            {{type}}
+        </span>
+    </td>
+    <td>
+        {{#free}}Free{{#is_mainnet}}*{{/is_mainnet}}{{/free}}
+        {{^free}}
+            <span class="ui tag small label">{{fee}}<div class="detail">~{{fee_usd}}*</div></span>
+        {{/free}}
+    </td>
+    <td>
+        <span id="selected" style="display: none;">
+            <i class="icon checkmark"></i> {{selected}}
+        </span>
+        <span id="select">
+            <a class="ui mini label switch-to-other" data-network-id="{{id}}">
+                {{switch}} <i class="angle double right icon"></i>
+            </a>
+        </span>
+    </td>
+</tr>

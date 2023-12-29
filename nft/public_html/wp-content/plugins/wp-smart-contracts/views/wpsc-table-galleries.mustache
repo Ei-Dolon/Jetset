@@ -1,0 +1,47 @@
+<div class="ui compact grid">
+  <div class="eight wide column">
+    <div id="{{id}}">
+      <h3>{{title}}</h3>
+      <div id="wpsc-term-in-empty" style="display: none">
+        <span style="color: #666">{{the-user-has-no-galleries}}</span>
+      </div>
+      <div class="ui labels">
+        {{#galleries}}
+        <div id="{{id_term}}-{{term_id}}" class="ui label">
+          <span class="{{id_term}}" data-id="{{term_id}}" data-name="{{name}}" {{#confirm}}data-confirm="true"{{/confirm}}></span>
+          <a href="{{base-link}}?gal_id={{term_id}}&id={{collection-id}}">{{name}}</a>
+          <span class="wpsc-id">({{term_id}})</span>
+        </div>
+        {{/galleries}}
+      </div>
+      {{#add}}
+      <div class="field">
+        <label>
+          {{add-new-galleries-comma-separated}}
+          <span class="ui icon showfluid"><i class="small help icon circular"></i></span>
+          <div class="ui flowing popup top left transition hidden">
+            <p>{{do-you-want-to-add-new-galleries}}</p>
+            <p>{{add-them-on-a-comma-separated-list-here}}</p>
+          </div>
+        </label>
+        <input id="wpsc-new-galleries" type="text" name="wpsc-new-galleries">
+      </div>
+      {{/add}}
+    </div>
+  </div>
+  {{#id2}}
+  <div class="eight wide column">
+    <div id="{{id2}}" style="margin-right: 20px;">
+      <h3>{{title2}}</h3>
+      <div class="ui labels">
+        {{#galleries2}}
+        <div id="{{id_term2}}-{{term_id}}" class="ui label">
+          <span class="{{id_term2}}" data-id="{{term_id}}" data-name="{{name}}"></span>{{name}} <span class="wpsc-id">({{term_id}})</span>
+        </div>
+        {{/galleries2}}
+      </div>
+    </div>
+  </div>
+  {{/id2}}
+</div>
+<input type="hidden" id="wpsc-input-galleries" name="wpsc-galleries" value="{{the-hidden-value}}">

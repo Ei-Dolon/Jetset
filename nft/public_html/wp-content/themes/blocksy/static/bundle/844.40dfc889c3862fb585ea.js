@@ -1,0 +1,1 @@
+"use strict";(self.blocksyJsonP=self.blocksyJsonP||[]).push([[844],{844:function(n,t,a){a.r(t),a.d(t,{mountStackableIntegration:function(){return i}});const i=function(){window.stackableEntrance&&window.stackableEntrance.init&&window.stackableEntrance.init(),window.stackableTabs&&window.stackableTabs.init&&window.stackableTabs.init()}}}]);

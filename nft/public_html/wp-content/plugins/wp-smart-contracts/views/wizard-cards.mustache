@@ -1,0 +1,20 @@
+<div id="{{cards-id}}" class="wps-cards">
+    {{#cards}}
+    <div id="{{card-id}}" class="wps-card" {{#hidden}}style="display:none"{{/hidden}}>
+        <div class="wps-colBox-title-lg {{title-class}}"><img src="{{logo}}" class="wps-card-icon">{{title}}</div>
+        <div class="wps-smartContracts-table card wps-table" style="padding-bottom: 80px; padding-top: 30px;">
+            {{#tags}}
+            <span class="wps-tag">{{.}}</span>
+            {{/tags}}
+            <p class="wps-small-text">{{desc}}</p>
+            <a  {{#link}}href="{{link}}"{{/link}} 
+                class="wps-cta{{#button-data-class}} {{button-data-class}}{{/button-data-class}}" 
+                style="margin: auto" 
+                {{#button-data-url}}data-url="{{button-data-url}}{{/button-data-url}}" 
+                {{#button-data-id}}data-network-id="{{button-data-id}}{{/button-data-id}}">
+                {{select}} <img src="{{path-to-launcher}}img/right-arrow-white.png" class="wps-arrow">
+            </a>
+        </div>
+    </div>
+    {{/cards}}
+</div>

@@ -1,0 +1,33 @@
+<div class="wps-full-wrapper">
+    <div id="wpsc-main-navigation" class="wps-main-nav wps-main-nav-principal" style="padding: 40px 30px;max-width: fit-content; margin: auto auto 30px;border: 0" 
+        data-current-user="{{current_user}}" 
+        {{#registration_enabled}}data-registration-enabled="true"{{/registration_enabled}}
+        {{#email_required}}data-email-required="true"{{/email_required}}
+    >
+        <div id="wps-dashboard-connected" class="right" style="position:relative; display: none; width:100%" {{#suggested_network_id}}data-suggested-network-id="{{suggested_network_id}}"{{/suggested_network_id}}>
+            <div class="wps-user" style="margin: 0 auto">
+                <span id="wps-blockie-user-container" class="wps-box-title">
+                    <span id="wps-blockie-user" class="wps-box-title-icon"></span>
+                </span>
+                <span id="defaultAccount" class="wps-account wps-colBox-title-lg"></span>
+                <span id="wps-network-icon" class="wps-box-title">
+                    <span class="wps-box-title-icon wps-update-network"></span>
+                </span>
+                <div id="wpsc-different-account" class="wps-small-text wps-hide-mobile" style="display: none; width: 150px;padding-top: 25px;" title="Your logged-in and your wallet connected account are not the same. Please log out and log in again to the correct account">
+                    ⚠ <a href="" id="wpsc-logout-link">{{logout}}</a>
+                </div>
+                <div id="wps-should-login" class="wps-small-text wps-hide-mobile" style="display: none; width: 150px;padding-top: 25px; text-align: left; margin-left:10px">
+                    <a href="javascript:void(0);" id="wpsc-login-link">{{login}}</a>
+                </div>
+            </div>
+        </div>
+        <div id="wps-dashboard-not-connected" class="right" style="position:relative; display: none; width:100%">
+            <div id="wps-metamask-connect" style="margin: 0 auto">
+                <span id="wps-icon-network-connect" class="wps-box-title">
+                    <span class="wps-box-title-icon wps-update-network"></span>
+                </span>
+                <a id="wpsc-connect-with-metamask" href="javascript:void(0)" class="wps-cta" style="font-size: 16px; margin-top: 0px; text-transform: none; color:white">{{login-with-your-wallet}}</a>
+            </div>
+        </div>
+    </div>
+</div>

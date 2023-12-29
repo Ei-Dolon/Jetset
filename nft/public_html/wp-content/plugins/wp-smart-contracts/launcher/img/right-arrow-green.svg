@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dark-theme" transform="translate(-389.000000, -32.000000)" fill="#00C7C3" fill-rule="nonzero">
+            <g id="Breadcrumb" transform="translate(389.000000, 26.000000)">
+                <path d="M6.26516563,8.5 L2.65141563,12.11375 L-0.962334374,8.5 C-1.20608437,8.25625 -1.60233437,8.25625 -1.84608437,8.5 C-2.08983437,8.74375 -2.08983437,9.14 -1.84608437,9.38375 L2.20766563,13.4375 C2.33016563,13.56 2.49141563,13.62125 2.65141563,13.6200188 C2.81266563,13.6200188 2.97266563,13.56 3.09516563,13.4375 L7.14891563,9.38375 C7.39266563,9.14 7.39266563,8.74375 7.14891563,8.5 C6.90516563,8.25625 6.50891563,8.25625 6.26516563,8.5 Z" id="Shape" transform="translate(2.651416, 10.968603) rotate(-90.000000) translate(-2.651416, -10.968603) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,79 @@
+<div class="wps-form-col">                       
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{token}}</label>
+        <p class="wps-form-text-tooltip">{{token-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{token-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-token" type="text" placeholder="0x..." value="{{wpsc_token}}" {{#is_edit}}disabled{{/is_edit}}>
+            <img src="{{path-to-launcher}}img/ethereum.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{minimum}}</label>
+        <p class="wps-form-text-tooltip">{{minimum-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{minimum-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-minimum-time-old" type="hidden" value="{{wpsc_mst}}">
+            <input id="wps-minimum-time" type="number" placeholder="" value="{{wpsc_mst}}">
+            <img src="{{path-to-launcher}}img/hourglass.png">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{min-amount}}</label>
+        <p class="wps-form-text-tooltip">{{min-amount-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-minimum-amount-old" type="hidden" value="{{wpsc_minimum}}">
+            <input id="wps-minimum-amount" type="number" value="{{wpsc_minimum}}">
+            <img src="{{path-to-launcher}}img/small.png">
+        </div>
+    </div>
+
+</div>
+<div class="wps-form-col">
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{apy}}</label>
+        <p class="wps-form-text-tooltip">{{apy-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-apy-old" type="hidden" value="{{wpsc_apy}}">
+            <input id="wps-apy" type="number" value="{{wpsc_apy}}">
+            <img src="{{path-to-launcher}}img/percent-solid.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{penalization}}</label>
+        <p class="wps-form-text-tooltip">{{penalization-desc}}
+            <span class="wps-form-tooltip-icon">
+                <img src="{{path-to-launcher}}img/circle-question-solid.svg">
+                <span class="wps-form-tooltip">{{penalization-tip}}</span>
+            </span>
+        </p>
+        <div class="wsp-input-container">
+            <input id="wps-penalization-old" type="hidden" value="{{wpsc_penalty}}">
+            <input id="wps-penalization" type="number" value="{{wpsc_penalty}}">
+            <img src="{{path-to-launcher}}img/percent-solid.svg">
+        </div>
+    </div>
+
+    <div class="wsp-form-group">
+        <label class="wps-form-label">{{namestake}}</label>
+        <p class="wps-form-text-tooltip">{{namestake-desc}}</p>
+        <div class="wsp-input-container">
+            <input id="wps-name-old" type="hidden" value="{{title}}">
+            <input id="wps-name" type="text" placeholder="" value="{{title}}">
+            <img src="{{path-to-launcher}}img/symbol-icon.svg">
+        </div>
+    </div>
+
+</div>

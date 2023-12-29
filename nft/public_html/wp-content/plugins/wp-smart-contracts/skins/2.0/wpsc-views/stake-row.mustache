@@ -1,0 +1,66 @@
+{{#draw_div}}
+<div class="ui stackable grid wpsc-stake-row" id="stake-row-{{index}}">
+{{/draw_div}}
+
+    <div class="three wide column">
+        <div class="ui progress" data-percent="{{percent}}" id="progress-{{index}}" style="background-color: transparent!important">
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+            <div class="small label" style="font-size: 14px;">{{{from}}} {{#to}} to {{{to}}}{{/to}}</div>
+        </div>
+    </div>
+    <div class="six wide column">
+        <span class="wps-tag" title="Amount">
+            <i class="database icon"></i>
+            {{amount}}
+        </span>
+        <span class="wps-tag" title="{{#penalized}}Penalization{{/penalized}}{{^penalized}}Interest{{/penalized}}">
+            <i class="{{#penalized}}minus circle{{/penalized}}{{^penalized}}plus circle{{/penalized}} icon"></i>
+            <span id="wpsc-interest-{{index}}">{{#penalized}}{{penalization}}{{/penalized}}{{^penalized}}{{symbol}} {{gains}}{{/penalized}}</span>
+        </span>
+        <span class="wps-tag" title="Total">
+            <i class="calculator icon"></i>
+            <span id="wpsc-amount-{{index}}">{{symbol}} {{total}}</span>
+        </span>
+
+        {{^penalized}}
+        {{#gains2}}
+        <br>
+        <span class="wps-tag" title="Interest 2">
+            <i class="plus circle icon"></i>
+            <span id="wpsc-interest2-{{index}}">{{symbol2}} {{gains2}}</span>
+        </span>
+        {{/gains2}}
+        {{/penalized}}
+
+        {{#opened}}
+        <br>
+        <span id="wpsc-countdown-{{index}}" style="font-size: 10px; color: #a9d5de; /*background-image: linear-gradient(to right, transparent , #eaf6f9);*/ height: 20px; min-width: 200px;"></span>
+        {{/opened}}    
+    </div>
+    <div class="two wide column">
+        <span class="wps-tag {{#mature}}green{{/mature}}{{^mature}}olive{{/mature}} {{#opened}}wpsc-end-stake{{/opened}}" {{#opened}}data-stake-id="{{index}}"{{/opened}}>{{#opened}}{{opened_label}}{{/opened}}{{^opened}}{{ended_label}}{{/opened}}</span>
+    </div>
+    <div class="five wide column">
+        {{#opened}}
+        {{#canend}}
+        <a 
+            class="wps-cta wps-secondary end-stake" 
+            data-stake-id="{{index}}" 
+            {{#mature}}data-mature="yes"{{/mature}}{{^mature}}data-mature="no"{{/mature}}
+            {{^mature}}data-stake-warning="yes"{{/mature}}
+            data-stake-amount="{{symbol}} {{amount}}"
+            data-stake-date="{{from}}"
+        >
+            {{end_stake_label}}
+        </a>
+        {{/canend}}
+        {{/opened}}
+    </div>
+
+    <div class="ui hidden divider"></div>
+
+{{#draw_div}}
+</div>
+{{/draw_div}}

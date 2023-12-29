@@ -1,0 +1,41 @@
+<!-- Tags -->
+<div class="tag-container">
+
+    <div class="the-tag main-tag wpsc-nft-hide-no-account">
+        <img id="wpsc-nft-my-account-img" class="avatar" src="" style="display: none;">
+        <span class="tag-main-text" id="wpsc-nft-my-account-short"></span>
+        <div id="wpsc-nft-my-account-balance" class="detail"></div>
+    </div>
+
+    <div id="wpsc-menu-payment-token" style="display: none;" class="the-tag main-tag "></div>
+    {{#galleries-enabled}}	
+    <div class="the-tag main-tag wpsc-nft-hide-no-account">	
+        <i class="ui circle icon"></i>	
+        <a href="{{my-galleries-link}}" style="margin-left: 0">	
+            <span class="tag-main-text">My Galleries</span>	
+        </a>	
+    </div>	
+    {{/galleries-enabled}}
+    <div class="the-tag main-tag wpsc-nft-hide-no-account">
+        <i class="ui circle icon"></i>
+        <a href="{{my-items-link}}" style="margin-left: 0">
+            <span class="tag-main-text">My Items</span>
+        </a>
+    </div>
+
+    {{#edit-link}}
+    <div id="wpsc-edit-nft" class="the-tag yellow-tag right-aligned black-color" style="display: none;">
+        <a href="{{edit-link}}">
+            <span class="tag-main-text">Edit</span>
+        </a>
+    </div>
+    {{/edit-link}}
+
+    <div id="wpsc-nft-mint-button" class="the-tag yellow-tag right-aligned black-color">
+        <a href="{{mint-link}}">
+            <span class="tag-main-text">Mint a new Item</span>
+        </a>
+    </div>
+
+</div>
+  

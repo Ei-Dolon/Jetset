@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery("#next-travel-ui-tabs").tabs()});
