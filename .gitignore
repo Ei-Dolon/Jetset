@@ -5,47 +5,47 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
-nft/wp-admin/
-nft/wp-content/index.php
-nft/wp-content/languages
-nft/wp-content/plugins/index.php
-nft/wp-content/themes/index.php
-nft/wp-includes/
-nft/index.php
-nft/license.txt
-nft/readme.html
-nft/wp-*.php
-nft/xmlrpc.php
+nft/public_html/wp-admin/
+nft/public_html/wp-content/index.php
+nft/public_html/wp-content/languages
+nft/public_html/wp-content/plugins/index.php
+nft/public_html/wp-content/themes/index.php
+nft/public_html/wp-includes/
+nft/public_html/index.php
+nft/public_html/license.txt
+nft/public_html/readme.html
+nft/public_html/wp-*.php
+nft/public_html/xmlrpc.php
 
-token/wp-admin/
-token/wp-content/index.php
-token/wp-content/languages
-token/wp-content/plugins/index.php
-token/wp-content/themes/index.php
-token/wp-includes/
-token/index.php
-token/license.txt
-token/readme.html
-token/wp-*.php
-token/xmlrpc.php
+token/public_html/wp-admin/
+token/public_html/wp-content/index.php
+token/public_html/wp-content/languages
+token/public_html/wp-content/plugins/index.php
+token/public_html/wp-content/themes/index.php
+token/public_html/wp-includes/
+token/public_html/index.php
+token/public_html/license.txt
+token/public_html/readme.html
+token/public_html/wp-*.php
+token/public_html/xmlrpc.php
 
 # Configuration
-nft/wp-config.php
-token/wp-config.php
+nft/public_html/wp-config.php
+token/public_html/wp-config.php
 # Example themes
-nft/wp-content/themes/twenty*/
-token/wp-content/themes/twenty*/
+nft/public_html/wp-content/themes/twenty*/
+token/public_html/wp-content/themes/twenty*/
 # Example plugin
-nft/wp-content/plugins/hello.php
+nft/public_html/wp-content/plugins/hello.php
 token/wp-content/plugins/hello.php
 # Uploads
-nft/wp-content/uploads/
-token/wp-content/uploads/
+nft/public_html/wp-content/uploads/
+token/public_html/wp-content/uploads/
 # Log files
-nft/*.log
-token/*.log
+nft/public_html/*.log
+token/public_html/*.log
 # htaccess
-#nft/.htaccess
+#.htaccess
 
 # All plugins
 #
