@@ -22,5 +22,6 @@ For property rental, the intial assets to be released upon the platform, the blo
 A renter will deposit the necessary collateral to rent the NFT as well as paying any gas fee's for any changes to a booking after it has been made.
 This provides the renter with the rights to use that property (within limits) during their rental period.
 
+**DApp**
 The dApp will likely be using Node.js/Express.js as linking via Quicknode to the BNB Smart Chain which will contain the backend code (Solidity smart contracts).
 
