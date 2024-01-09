@@ -1,5 +1,5 @@
 # Jetset
-Project containing website implementation,  development, configuration, reference sources, etc. for the [Jetset BEP20 token("https://jetsettoken.com")], Jetset Lux NFT, as part of the luxury rental platform.
+Project containing website implementation,  development, configuration, reference sources, etc. for the [Jetset BEP20 token]("https://jetsettoken.com"), Jetset Lux NFT, as part of the luxury rental platform.
 Websites for information and interaction and to form the frontend of the dApp which will offer luxury rentals across multiple sectors.
 
 Currently two domain names registered:
