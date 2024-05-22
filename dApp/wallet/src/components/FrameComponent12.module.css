@@ -1,0 +1,82 @@
+.buttonIcon {
+  align-self: stretch;
+  height: 45px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.buttonInstance {
+  margin-left: -172px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-29xl) 0 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.frameChild {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.parentNotificationsIcon {
+  position: absolute;
+  top: 59.2px;
+  left: 92.8px;
+  width: 84px;
+  height: 89.2px;
+  object-fit: contain;
+  z-index: 1;
+}
+.vectorParent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.notificationsIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.buttonInstanceParent,
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.frameParent {
+  width: 208px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: var(--padding-38xl) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+}
+.buttonInstanceParent {
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-133xl);
+  gap: var(--gap-53xl);
+}

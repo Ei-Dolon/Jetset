@@ -1,0 +1,161 @@
+.frameChild {
+  position: absolute;
+  top: 39.95px;
+  left: 0;
+  border-radius: 50%;
+  border: 0 solid var(--white);
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-87deg);
+  transform-origin: 0 0;
+}
+.sendIcon {
+  position: absolute;
+  top: 7.8px;
+  left: 9.8px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  z-index: 1;
+}
+.ellipseParent {
+  height: 42px;
+  width: 42px;
+  position: relative;
+}
+.sendInner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-10xs) 0 var(--padding-11xs);
+}
+.tipTap {
+  position: relative;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 47px;
+}
+.send {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+  z-index: 1;
+}
+.frameItem {
+  position: absolute;
+  top: 39.95px;
+  left: 0;
+  border-radius: 50%;
+  border: 0 solid var(--white);
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-87deg);
+  transform-origin: 0 0;
+  z-index: 1;
+}
+.callReceivedIcon {
+  position: absolute;
+  top: 8.7px;
+  left: 8.7px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  z-index: 2;
+}
+.ellipseGroup {
+  height: 42px;
+  width: 42px;
+  position: relative;
+}
+.frameContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-10xs) 0 var(--padding-11xs);
+}
+.receive {
+  position: relative;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 47px;
+  z-index: 1;
+}
+.frameParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameInner {
+  position: absolute;
+  top: 39.95px;
+  left: 0;
+  border-radius: 50%;
+  border: 0 solid var(--white);
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-87deg);
+  transform-origin: 0 0;
+}
+.attachMoneyIcon {
+  position: absolute;
+  top: 9.1px;
+  left: 9.1px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  z-index: 1;
+}
+.ellipseContainer {
+  width: 42px;
+  height: 42px;
+  position: relative;
+}
+.buy1 {
+  position: relative;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 24px;
+}
+.buyWrapper {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 var(--padding-4xs);
+}
+.buy,
+.buyWrapper,
+.frameWrapper,
+.sendParent {
+  display: flex;
+  align-items: flex-start;
+}
+.buy {
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  z-index: 1;
+}
+.frameWrapper,
+.sendParent {
+  flex-direction: row;
+}
+.sendParent {
+  justify-content: flex-start;
+  gap: var(--gap-9xl);
+}
+.frameWrapper {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-5xl) var(--padding-3xl) var(--padding-xl);
+  text-align: center;
+  font-size: var(--button-14-size);
+  color: var(--white);
+  font-family: var(--font-livvic);
+}

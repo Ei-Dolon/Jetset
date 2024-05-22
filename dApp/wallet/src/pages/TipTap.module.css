@@ -1,0 +1,79 @@
+.frameParent,
+.tokensWrapper {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent {
+  height: 296px;
+  flex-direction: column;
+  gap: 23.9px;
+  flex-shrink: 0;
+  debug_commit: 1de1738;
+}
+.tokensWrapper {
+  flex-direction: row;
+  padding: 0 0 var(--padding-236xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.jBlue1 {
+  margin-right: -992px;
+  width: 176px;
+  height: 232px;
+  position: relative;
+  object-fit: cover;
+  flex-shrink: 0;
+  debug_commit: 1de1738;
+}
+.tiptapText1,
+.tiptapTextJ1 {
+  position: absolute;
+  top: 134px;
+  left: 46px;
+  width: 158px;
+  height: 71px;
+  object-fit: contain;
+  z-index: 2;
+}
+.tiptapTextJ1 {
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  z-index: 3;
+}
+.tiptapText1Parent {
+  width: 260px;
+  height: 205px;
+  position: absolute;
+  margin: 0 !important;
+  top: 14px;
+  right: 44px;
+}
+.homeScreen,
+.tipTap {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+.homeScreen {
+  height: 800px;
+  flex: 1;
+  border-radius: var(--br-21xl);
+  background-color: var(--color-gray);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 117px;
+  max-width: 100%;
+}
+.tipTap {
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}

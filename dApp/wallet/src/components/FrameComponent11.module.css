@@ -1,0 +1,163 @@
+.buttonIcon,
+.notificationsIcon {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.buttonIcon {
+  margin-left: -332px;
+  height: 45px;
+  width: 100px;
+}
+.notificationsIcon {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.buttonInstance,
+.notificationsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) 0 0;
+}
+.buttonInstance {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-293xl);
+  gap: var(--gap-213xl);
+}
+.availableBalance {
+  align-self: stretch;
+  position: relative;
+  z-index: 1;
+}
+.receiveButton {
+  position: relative;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 1;
+}
+.sendButton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-55xl) 0 var(--padding-56xl);
+  text-align: left;
+  font-size: var(--font-size-21xl);
+}
+.rectangle {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-mediumblue-200);
+  border: 1px solid var(--color-royalblue);
+  box-sizing: border-box;
+}
+.vectorIcon {
+  width: 13px;
+  height: 13px;
+  position: relative;
+  z-index: 1;
+}
+.vectorWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.expandMoreIcon,
+.metamask {
+  position: relative;
+  z-index: 1;
+}
+.metamask {
+  font-weight: 500;
+  display: inline-block;
+  min-width: 69px;
+}
+.expandMoreIcon {
+  width: 6px;
+  height: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.expandMoreWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) 0 0;
+}
+.vectorIcon1 {
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  margin: 0 !important;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+}
+.wallet,
+.wallet1 {
+  flex-direction: row;
+}
+.wallet {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-6xs) var(--padding-4xs);
+  position: relative;
+  gap: var(--gap-xs-5);
+}
+.wallet1 {
+  z-index: 1;
+}
+.availableBalanceParent,
+.wallet1,
+.wallet1Wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.wallet1Wrapper {
+  flex-direction: row;
+  padding: 0 var(--padding-56xl);
+  font-size: var(--button-14-size);
+}
+.availableBalanceParent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+.frameWrapper {
+  width: 313px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-mid);
+  box-sizing: border-box;
+}
+.buttonInstanceParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 var(--padding-5xl) 0 0;
+  gap: var(--gap-21xl);
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--white);
+  font-family: var(--font-livvic);
+}

@@ -1,0 +1,102 @@
+.rectangle,
+.vectorIcon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rectangle {
+  margin: 0 !important;
+  right: 0;
+  bottom: 0;
+  border-radius: 39.84px;
+  background-color: var(--color-mediumblue-100);
+  border: 1.6px solid var(--color-mediumslateblue);
+  box-sizing: border-box;
+}
+.vectorIcon {
+  z-index: 1;
+  object-fit: contain;
+  transform: scale(1.622);
+}
+.wrapperVector {
+  width: 20.7px;
+  height: 20.7px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapperVectorWrapper {
+  height: 23.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs-1) 0 0;
+  box-sizing: border-box;
+}
+.expandMoreIcon,
+.metamask {
+  position: relative;
+  z-index: 1;
+}
+.metamask {
+  font-weight: 500;
+  display: inline-block;
+  min-width: 85px;
+}
+.expandMoreIcon {
+  width: 9.6px;
+  height: 4.8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.barNavigationInstance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mini-3) 0 0;
+}
+.vectorIcon1 {
+  height: 11.2px;
+  width: 11.2px;
+  position: absolute;
+  margin: 0 !important;
+  top: 19.1px;
+  left: 19.1px;
+  z-index: 2;
+}
+.wallet,
+.wallet1,
+.wallet1Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.wallet {
+  flex: 1;
+  justify-content: space-between;
+  padding: var(--padding-xs-2) var(--padding-mini-3) var(--padding-xs-8);
+  position: relative;
+  gap: var(--gap-xl);
+}
+.wallet1,
+.wallet1Wrapper {
+  justify-content: flex-start;
+}
+.wallet1 {
+  flex: 1;
+  z-index: 2;
+}
+.wallet1Wrapper {
+  align-self: stretch;
+  padding: 0 var(--padding-58xl);
+  text-align: center;
+  font-size: var(--font-size-3xl-3);
+  color: var(--white);
+  font-family: var(--font-livvic);
+}
