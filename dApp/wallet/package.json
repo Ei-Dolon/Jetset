@@ -1,7 +1,7 @@
 {
   "name": "wallet",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,13 +11,15 @@
   },
   "dependencies": {
     "@ethersproject/providers": "^5.7.2",
-    "@web3modal/ethers": "^4.2.1",
+    "@web3modal/ethers": "^4.2.2",
+    "@web3modal/react": "^2.7.1",
     "axios": "^1.7.2",
     "ethers": "^6.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
     "typescript": "^5.4.5",
+    "walletconnect-qrcode-modal": "^0.7.28",
     "web-vitals": "^4.0.0"
   },
   "devDependencies": {

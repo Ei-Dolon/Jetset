@@ -33,9 +33,9 @@
       "type":"image/png"
     },
     {
-      "src":"./JTS512.png",
-      "sizes":"512x512",
-      "type":"image/png"
+      "src":"./favicon2.ico",
+      "sizes":"16x16 32x32 48x48 64x64 76x76 96x96 120x120 144x144 178x178 180x180 256x256",
+      "type":"image/x-icon"
     }
   ]
 }
