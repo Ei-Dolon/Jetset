@@ -638,7 +638,7 @@
   overflow: hidden;
 }
 .homeScreen {
-  height: 800px;
+  height: 975px;
   flex: 1;
   border-radius: var(--br-21xl);
   background-color: var(--color-gray);

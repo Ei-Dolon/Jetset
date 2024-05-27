@@ -1,6 +1,6 @@
 import FrameComponent2 from "../components/FrameComponent21";
-import FrameComponent1 from "../components/FrameComponent11";
-import FrameComponent from "../components/FrameComponent4";
+import FrameComponent1 from "../components/FrameComponent12";
+import FrameComponent from "../components/FrameComponent5";
 import Tokens from "../components/Tokens";
 import styles from "./TipTap.module.css";
 
