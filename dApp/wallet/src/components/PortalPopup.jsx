@@ -1,5 +1,5 @@
 import { useMemo, useCallback, useState, useRef, useEffect } from "react";
-
+import PropTypes from 'prop-types';
 import { createPortal } from "react-dom";
 import styles from "./PortalPopup.module.css";
 
@@ -57,7 +57,7 @@ const PortalPopup = ({
     }
     style.opacity = 1;
     return style;
-  }, [placement, overlayColor, zIndex, relativeLayerRef?.current]);
+  }, [placement, overlayColor, zIndex]);
 
   const setPosition = useCallback(() => {
     const relativeItem = relativeLayerRef?.current?.getBoundingClientRect();
@@ -103,8 +103,7 @@ const PortalPopup = ({
     top,
     bottom,
     placement,
-    relativeLayerRef?.current,
-    relContainerRef?.current,
+    relativeLayerRef,
   ]);
 
   useEffect(() => {
@@ -145,6 +144,19 @@ const PortalPopup = ({
       </div>
     </Portal>
   );
+};
+
+PortalPopup.propTypes = {
+  children: PropTypes.node.isRequired,
+  overlayColor: PropTypes.string,
+  placement: PropTypes.string,
+  onOutsideClick: PropTypes.func,
+  zIndex: PropTypes.number,
+  left: PropTypes.number,
+  right: PropTypes.number,
+  top: PropTypes.number,
+  bottom: PropTypes.number,
+  relativeLayerRef: PropTypes.object,
 };
 
 export const Portal = ({ children, containerId = "portals" }) => {

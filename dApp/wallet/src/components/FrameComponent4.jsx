@@ -29,12 +29,7 @@ const FrameComponent = () => {
             <div className={styles.sendInner}>
               <div className={styles.ellipseParent}>
                 <div className={styles.frameChild} />
-                <img
-                  className={styles.sendIcon}
-                  loading="lazy"
-                  alt=""
-                  src="/send.svg"
-                />
+                <img className={styles.sendIcon} loading="lazy" alt="" src="/send.svg" />
               </div>
             </div>
             <div className={styles.tipTap}>TIP TAP</div>
@@ -43,12 +38,7 @@ const FrameComponent = () => {
             <div className={styles.frameContainer}>
               <div className={styles.ellipseGroup}>
                 <div className={styles.frameItem} />
-                <img
-                  className={styles.callReceivedIcon}
-                  loading="lazy"
-                  alt=""
-                  src="/call-received.svg"
-                />
+                <img className={styles.callReceivedIcon} loading="lazy" alt="" src="/call-received.svg" />
               </div>
             </div>
             <div className={styles.receive}>Receive</div>
@@ -56,12 +46,7 @@ const FrameComponent = () => {
           <div className={styles.buy} onClick={openFlooz}>
             <div className={styles.ellipseContainer}>
               <div className={styles.frameInner} />
-              <img
-                className={styles.attachMoneyIcon}
-                loading="lazy"
-                alt=""
-                src="/attach-money.svg"
-              />
+              <img className={styles.attachMoneyIcon} loading="lazy" alt="" src="/attach-money.svg" />
             </div>
             <div className={styles.buyWrapper}>
               <div className={styles.buy1}>Buy</div>

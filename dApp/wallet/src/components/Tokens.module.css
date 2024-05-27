@@ -412,6 +412,10 @@
   display: flex;
   align-items: flex-start;
 }
+.clickableButtonNav {
+  width: 375px;
+  height: 85px;
+}
 .clickableButton {
   width: 62.9px;
   flex-direction: column;

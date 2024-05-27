@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Tokens.module.css";
 
 const Tokens = () => {
@@ -5,6 +6,7 @@ const Tokens = () => {
     <div className={styles.tokens}>
       <div className={styles.tokensChild} />
       <img className={styles.textureIcon} alt="" src="/texture@2x.png" />
+
       <div className={styles.buttonEnabledSet}>
         <div className={styles.confirmationButtonParent}>
           <div className={styles.confirmationButton}>
@@ -39,6 +41,7 @@ const Tokens = () => {
               <img className={styles.roundIcon4} alt="" src="/round.svg" />
             </div>
           </div>
+
           <div className={styles.parentButtonSet}>
             <div className={styles.enabledButton}>
               <div className={styles.buttonbuttonenableyesnono5}>
@@ -71,11 +74,11 @@ const Tokens = () => {
           </div>
         </div>
       </div>
-      <img
-        className={styles.barNavigationIcon}
-        alt=""
-        src="/bar-navigation.svg"
-      />
+      <div className={styles.clickableButtonNav}>
+        <Link to="/">
+          <img className={styles.barNavigationIcon} alt="" src="/bar-navigation.svg" />
+        </Link>
+      </div>
     </div>
   );
 };

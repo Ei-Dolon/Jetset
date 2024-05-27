@@ -6,19 +6,14 @@ const FrameComponent1 = () => {
       <header className={styles.buttonInstance}>
         <img className={styles.buttonIcon} alt="" src="/button.svg" />
         <div className={styles.notificationsWrapper}>
-          <img
-            className={styles.notificationsIcon}
-            loading="lazy"
-            alt=""
-            src="/notifications.svg"
-          />
+          <img className={styles.notificationsIcon} loading="lazy" alt="" src="/notifications.svg" />
         </div>
       </header>
       <div className={styles.frameWrapper}>
         <div className={styles.availableBalanceParent}>
           <div className={styles.availableBalance}>Wallet Total:</div>
           <div className={styles.sendButton}>
-            <div className={styles.receiveButton}>$ ?</div>
+            <div className={styles.receiveButton}>$ 11,128.34</div>
           </div>
           <div className={styles.wallet1Wrapper}>
             <div className={styles.wallet1}>
@@ -29,19 +24,9 @@ const FrameComponent1 = () => {
                 </div>
                 <div className={styles.metamask}>BNB Chain</div>
                 <div className={styles.expandMoreWrapper}>
-                  <img
-                    className={styles.expandMoreIcon}
-                    loading="lazy"
-                    alt=""
-                    src="/expand-more.svg"
-                  />
+                  <img className={styles.expandMoreIcon} loading="lazy" alt="" src="/expand-more.svg" />
                 </div>
-                <img
-                  className={styles.vectorIcon1}
-                  loading="lazy"
-                  alt=""
-                  src="/vector-1.svg"
-                />
+                <img className={styles.vectorIcon1} loading="lazy" alt="" src="/vector-1.svg" />
               </div>
             </div>
           </div>
