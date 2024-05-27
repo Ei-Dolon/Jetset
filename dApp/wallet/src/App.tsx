@@ -3,6 +3,7 @@ import { Routes, Route, useNavigationType, useLocation, } from "react-router-dom
 import Wallet from "./pages/Wallet2";
 import TipTap from "./pages/TipTap";
 
+
 function App() {
   const action = useNavigationType();
   const location = useLocation();
@@ -43,11 +44,13 @@ function App() {
     }
   }, [pathname]);
 
+
+ 
   return (
-    <Routes>
-      <Route path="/" element={<Wallet />} />
-      <Route path="/tiptap" element={<TipTap />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Wallet />} />
+        <Route path="/tiptap" element={<TipTap />} />
+      </Routes>
   );
 }
 export default App;
